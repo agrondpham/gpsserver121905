@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListeningSocketGPS", "ListeningSocketGPS\ListeningSocketGPS.csproj", "{973D532C-FCEC-43A3-B2D5-9AAD47A6895E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientSocket", "ClientSocket\ClientSocket.csproj", "{CA4FA793-29BC-419A-B5E5-C4E927C8F6BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{973D532C-FCEC-43A3-B2D5-9AAD47A6895E}.Debug|x86.ActiveCfg = Debug|x86
+		{973D532C-FCEC-43A3-B2D5-9AAD47A6895E}.Debug|x86.Build.0 = Debug|x86
+		{973D532C-FCEC-43A3-B2D5-9AAD47A6895E}.Release|x86.ActiveCfg = Release|x86
+		{973D532C-FCEC-43A3-B2D5-9AAD47A6895E}.Release|x86.Build.0 = Release|x86
+		{CA4FA793-29BC-419A-B5E5-C4E927C8F6BA}.Debug|x86.ActiveCfg = Debug|x86
+		{CA4FA793-29BC-419A-B5E5-C4E927C8F6BA}.Debug|x86.Build.0 = Debug|x86
+		{CA4FA793-29BC-419A-B5E5-C4E927C8F6BA}.Release|x86.ActiveCfg = Release|x86
+		{CA4FA793-29BC-419A-B5E5-C4E927C8F6BA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
