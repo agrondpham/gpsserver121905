@@ -1,0 +1,5 @@
+d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ClientSocket\bin\Debug\ClientSocket.exe
+d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ClientSocket\bin\Debug\ClientSocket.pdb
+d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Debug\ClientSocket.exe
+d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Debug\ClientSocket.pdb
