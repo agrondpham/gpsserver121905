@@ -12,9 +12,6 @@ namespace ClientSocket
     {
         static void Main(string[] args)
         {
-            System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
-            Byte[] message = encoding.GetBytes("I am a little busy, come back later!");
-            
             TcpClient client = new TcpClient();
 
             IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2200);
@@ -24,7 +21,7 @@ namespace ClientSocket
             NetworkStream clientStream = client.GetStream();
 
             ASCIIEncoding encoder = new ASCIIEncoding();
-            byte[] buffer = encoder.GetBytes("Hello Server!");
+            byte[] buffer = encoder.GetBytes("$GPRMC,040302.663,A,3939.7,N,10506.6,W,0.27,358.86,200804,,*1A");
 
             clientStream.Write(buffer, 0, buffer.Length);
             clientStream.Flush();
