@@ -10,3 +10,4 @@ D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\obj\x86\Release\Listen
 D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\bin\Release\ListeningSocketGPS.exe
 D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\bin\Release\ListeningSocketGPS.pdb
 D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\bin\Release\ListeningSocketGPS.exe.config

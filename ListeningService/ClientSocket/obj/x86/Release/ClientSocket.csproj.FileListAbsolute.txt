@@ -8,3 +8,4 @@ D:\Projects\GPSServer\ListeningService\ClientSocket\bin\Release\ClientSocket.pdb
 D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ResolveAssemblyReference.cache
 D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ClientSocket.exe
 D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ClientSocket.pdb
+D:\Projects\GPSServer\ListeningService\ClientSocket\bin\Release\ClientSocket.exe.config
