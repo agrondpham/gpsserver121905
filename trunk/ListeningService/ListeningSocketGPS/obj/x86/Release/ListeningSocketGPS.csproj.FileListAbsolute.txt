@@ -5,3 +5,8 @@ D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ListeningSocketGPS\o
 D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ListeningSocketGPS\obj\x86\Release\ListeningSocketGPS.pdb
 d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ListeningSocketGPS\bin\Release\ListeningSocketGPS.exe.CodeAnalysisLog.xml
 d:\documents\visual studio 2010\Projects\ListeningSocketGPS\ListeningSocketGPS\bin\Release\ListeningSocketGPS.exe.lastcodeanalysissucceeded
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\obj\x86\Release\ListeningSocketGPS.exe
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\obj\x86\Release\ListeningSocketGPS.pdb
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\bin\Release\ListeningSocketGPS.exe
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\bin\Release\ListeningSocketGPS.pdb
+D:\Projects\GPSServer\ListeningService\ListeningSocketGPS\obj\x86\Release\ResolveAssemblyReference.cache

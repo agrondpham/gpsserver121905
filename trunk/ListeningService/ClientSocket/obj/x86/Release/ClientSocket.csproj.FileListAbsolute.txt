@@ -3,3 +3,8 @@ D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ClientSocket\bin\Rel
 D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Release\ResolveAssemblyReference.cache
 D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Release\ClientSocket.exe
 D:\Documents\Visual Studio 2010\Projects\ListeningSocketGPS\ClientSocket\obj\x86\Release\ClientSocket.pdb
+D:\Projects\GPSServer\ListeningService\ClientSocket\bin\Release\ClientSocket.exe
+D:\Projects\GPSServer\ListeningService\ClientSocket\bin\Release\ClientSocket.pdb
+D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ClientSocket.exe
+D:\Projects\GPSServer\ListeningService\ClientSocket\obj\x86\Release\ClientSocket.pdb
