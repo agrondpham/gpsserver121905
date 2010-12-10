@@ -1,0 +1,5 @@
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\Connection.Library\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\Connection.Library\bin\Debug\Connection.Library.dll
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\Connection.Library\bin\Debug\Connection.Library.pdb
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\Connection.Library\obj\Debug\Connection.Library.dll
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\Connection.Library\obj\Debug\Connection.Library.pdb

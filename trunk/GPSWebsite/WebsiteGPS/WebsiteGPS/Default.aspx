@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebsiteGPS.Default" %>
 
-<%@ Register src="Controls/Maps/googlemaps.ascx" tagname="googlemaps" tagprefix="uc1" %>
+<%--<%@ Register src="Controls/Maps/googlemaps.ascx" tagname="googlemaps" tagprefix="uc1" %>--%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,6 +9,8 @@
     <title>[GPSSystemTitle]</title>
 </head>
 <body onload="initialize()">
-    <uc1:googlemaps ID="googlemaps" runat="server" />
+    <asp:PlaceHolder ID="BodyHolder" runat="server" />
+   <%-- <uc1:googlemaps ID="googlemaps" runat="server" />--%>
+
 </body>
 </html>
