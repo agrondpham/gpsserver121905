@@ -1,5 +1,0 @@
-D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library\bin\Debug\WebsiteGPS.Library.dll
-D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library\bin\Debug\WebsiteGPS.Library.pdb
-D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library\obj\Debug\ResolveAssemblyReference.cache
-D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library\obj\Debug\WebsiteGPS.Library.dll
-D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library\obj\Debug\WebsiteGPS.Library.pdb
