@@ -9,7 +9,7 @@ namespace WebsiteGPS.Library
     { 
         private string _strUsername;
         private string _strPassword;
-        private string _errorCode;
+        private int _errorCode;
         //set get Username and password
         public void setUsername(string strUsername) {
             _strUsername = strUsername;
@@ -30,9 +30,10 @@ namespace WebsiteGPS.Library
             Validate validate = new Validate();
             string[] strArrayData = new string[] { username, password };
             if (validate.NullData(strArrayData) == true) {
-                _errorCode = "vui long dien day du 'ten tai khoan' va 'mat khau'";
+                _errorCode = 401;
             }else{
-                _errorCode="";
+                _errorCode=0;
+                //check UsernamePassword
             }
 
         }

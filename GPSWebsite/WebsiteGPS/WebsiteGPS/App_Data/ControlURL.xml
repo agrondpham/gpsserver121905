@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages>
+  <Page>
+    <NameUC>login.html</NameUC>
+    <URL>Controls/customerslogin.ascx</URL>
+  </Page>
+  <Page>
+    <NameUC>googlemap.html</NameUC>
+    <URL>Controls/Maps/googlemaps.ascx</URL>
+  </Page>
+</Pages>

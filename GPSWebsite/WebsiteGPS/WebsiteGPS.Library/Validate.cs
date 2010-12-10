@@ -8,9 +8,9 @@ namespace WebsiteGPS.Library
     class Validate
     {
         //check null
-        public Boolean NullData(string value)
+        public Boolean NullData(string strValue)
         {
-            if (value == "" || value == null)
+            if (strValue == "" || strValue == null)
             {
                 return true;
             }
@@ -20,11 +20,11 @@ namespace WebsiteGPS.Library
             }
         }
         //check null
-        public Boolean NullData(string[] value)
+        public Boolean NullData(string[] strValues)
         {
-            for (int i = 0; i <= value.Length; i++)
+            for (int i = 0; i <= strValues.Length; i++)
             {
-                if (value[i] == "" || value[i] == null)
+                if (strValues[i] == "" || strValues[i] == null)
                 {
                     return true;
                 }

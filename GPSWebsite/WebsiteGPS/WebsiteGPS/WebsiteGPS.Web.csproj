@@ -50,6 +50,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ControlURL.xml" />
+    <Content Include="App_Data\ErrorCode.xml" />
     <Content Include="Controls\Controler\historictracking.ascx" />
     <Content Include="Controls\Controler\trackingonline.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
@@ -109,9 +111,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_Data\" />
     <Folder Include="App_GlobalResources\Images\Marker\" />
     <Folder Include="Themes\_default\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteGPS.Library\WebsiteGPS.Library.csproj">
+      <Project>{1EB546DB-F851-42C0-A857-082E23A94806}</Project>
+      <Name>WebsiteGPS.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
