@@ -23,7 +23,7 @@ namespace ListeningSocketGPS
         public void CreateSocket(){
             try
             {
-                GPSListener = new TcpListener(IPAddress.Any, getPort());//Create Listener with IPAddress and Port
+                GPSListener = new TcpListener(IPAddress.Any, _intPort);//Create Listener with IPAddress and Port
                 GPSListener.Start();
                 while (true)
                 {
@@ -43,13 +43,14 @@ namespace ListeningSocketGPS
             {
                 TcpClient tcpClient = (TcpClient)client;
                 NetworkStream networkStream = tcpClient.GetStream();//Create networkSteam to hold data in byecode
-
+                //NetworkStream networkStream = client.GetStream();
                 //need to replace by getout the string to insert to database
                 System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
                 Byte[] message = new byte[4096];
                 int bytesRead;
                 bytesRead = networkStream.Read(message, 0, 4096);
-                System.Console.WriteLine(encoding.GetString(message, 0, bytesRead));//convert byecode message and write on console
+                string strGPSData = encoding.GetString(message, 0, bytesRead);
+                System.Console.WriteLine(strGPSData);//convert byecode message and write on console
                 tcpClient.Close();
             }
             catch (Exception ex)
