@@ -43,7 +43,7 @@ namespace ListeningSocketGPS
             {
                 TcpClient tcpClient = (TcpClient)client;
                 NetworkStream networkStream = tcpClient.GetStream();//Create networkSteam to hold data in byecode
-                //NetworkStream networkStream = client.GetStream();
+                
                 //need to replace by getout the string to insert to database
                 System.Text.ASCIIEncoding encoding = new System.Text.ASCIIEncoding();
                 Byte[] message = new byte[4096];
