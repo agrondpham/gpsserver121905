@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Pages>
   <Page>
+    <NameUC>index.html</NameUC>
+    <URL>Controls/customerslogin.ascx</URL>
+    <Title>GPS Website</Title>
+  </Page>
+  <Page>
     <NameUC>login.html</NameUC>
     <URL>Controls/customerslogin.ascx</URL>
+    <Title>Login Page</Title>
   </Page>
   <Page>
     <NameUC>googlemap.html</NameUC>
     <URL>Controls/Maps/googlemaps.ascx</URL>
+    <Title>Google Map</Title>
   </Page>
 </Pages>

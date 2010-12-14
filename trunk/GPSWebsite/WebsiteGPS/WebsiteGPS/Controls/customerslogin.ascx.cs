@@ -11,7 +11,13 @@ namespace WebsiteGPS.Controls
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string[] aaaa;
+            //Default defaultPage = new Default();
+            Default mainPage =(Default) this.Page;      //get Page Content UC Control
+            aaaa = mainPage.getThemeConfig();           //get variable from main Page
+        }
+        public void test() { 
+        
         }
     }
 }

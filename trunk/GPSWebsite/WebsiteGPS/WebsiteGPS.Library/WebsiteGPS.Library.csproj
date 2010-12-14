@@ -41,10 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckCustomer.cs" />
-    <Compile Include="LoadUControl.cs" />
+    <Compile Include="GetTheme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadXML.cs" />
-    <Compile Include="RewriteURL.cs" />
     <Compile Include="Validate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

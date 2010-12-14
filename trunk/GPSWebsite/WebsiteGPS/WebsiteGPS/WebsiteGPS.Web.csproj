@@ -52,13 +52,17 @@
   <ItemGroup>
     <Content Include="App_Data\ControlURL.xml" />
     <Content Include="App_Data\ErrorCode.xml" />
-    <Content Include="Controls\Controler\historictracking.ascx" />
-    <Content Include="Controls\Controler\trackingonline.ascx" />
+    <Content Include="App_Data\WebConfig.xml" />
+    <Content Include="Controls\Errors\errors.ascx" />
+    <Content Include="Controls\MapControler\historictracking.ascx" />
+    <Content Include="Controls\MapControler\trackingonline.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
     <Content Include="Controls\Maps\googlemaps.ascx" />
     <Content Include="Default.aspx" />
-    <None Include="Themes\_default\Default Website.template" />
+    <None Include="Themes\_default\_default.template" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
     <Content Include="Themes\_default\Styles\googlemap.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -69,18 +73,25 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Controler\historictracking.ascx.cs">
+    <Compile Include="Controls\Errors\errors.ascx.cs">
+      <DependentUpon>errors.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Errors\errors.ascx.designer.cs">
+      <DependentUpon>errors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapControler\historictracking.ascx.cs">
       <DependentUpon>historictracking.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Controler\historictracking.ascx.designer.cs">
+    <Compile Include="Controls\MapControler\historictracking.ascx.designer.cs">
       <DependentUpon>historictracking.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Controler\trackingonline.ascx.cs">
+    <Compile Include="Controls\MapControler\trackingonline.ascx.cs">
       <DependentUpon>trackingonline.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Controler\trackingonline.ascx.designer.cs">
+    <Compile Include="Controls\MapControler\trackingonline.ascx.designer.cs">
       <DependentUpon>trackingonline.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\customerslogin.ascx.cs">
@@ -107,6 +118,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LoadLanguage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

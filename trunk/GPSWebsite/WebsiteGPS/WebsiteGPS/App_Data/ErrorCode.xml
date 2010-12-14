@@ -2,9 +2,7 @@
 <ErrorCode>
   <Error>
     <Code>401</Code>
-    <description>
-      <en-US>Unauthorized!User failed to provide a valid user name / password required for access to file / directory.</en-US>
-      <vn-VN>Đăng nhập bị lỗi! Vui lòng nhập chính xác "Tên tài khoản" và "Mật Khẩu"</vn-VN>
-    </description>
+    <en-US>Unauthorized!User failed to provide a valid user name / password required for access to file / directory.</en-US>
+    <vn-VN>Đăng nhập bị lỗi! Vui lòng nhập chính xác "Tên tài khoản" và "Mật Khẩu"</vn-VN>
   </Error>
 </ErrorCode>

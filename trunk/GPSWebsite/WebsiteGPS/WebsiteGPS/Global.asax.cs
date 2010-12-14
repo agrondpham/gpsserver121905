@@ -51,12 +51,12 @@ namespace WebsiteGPS
             //ignore
             routes.Ignore("{resource}.xml");
             //root page
-            routes.MapPageRoute("Default", "", "~/Default.aspx");
+            //routes.MapPageRoute("Default", "Pages/index.html", "~/Default.aspx",true);
             //
             //Routes Pages
-            routes.MapPageRoute("Login Page", "Pages/{pages}", "~/Default.aspx",true);
+            routes.MapPageRoute("Login_Page", "Pages/{pages}", "~/Default.aspx",true);
             //routes googlemaps page with action
-            routes.MapPageRoute("Google Maps", "Pages/GoogleMap/{action}", "~/Default.aspx",true);
+            routes.MapPageRoute("Google_Maps", "Pages/GoogleMap/{action}", "~/Default.aspx",true);
         }
     }
 }
