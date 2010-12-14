@@ -1,0 +1,7 @@
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\bin\Debug\WebsiteGPS.Library.UTest.dll
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\bin\Debug\WebsiteGPS.Library.UTest.pdb
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\bin\Debug\WebsiteGPS.Library.dll
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\bin\Debug\WebsiteGPS.Library.pdb
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\obj\Debug\WebsiteGPS.Library.UTest.dll
+D:\Projects\GPSServer\GPSWebsite\WebsiteGPS\WebsiteGPS.Library.UTest\obj\Debug\WebsiteGPS.Library.UTest.pdb
