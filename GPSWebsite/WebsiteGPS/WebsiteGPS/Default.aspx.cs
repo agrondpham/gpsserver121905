@@ -77,19 +77,12 @@ namespace WebsiteGPS
             setThemeConfig(getTheme.GetThemeConfig(Path.Combine(
                             Request.PhysicalApplicationPath,
                             "App_Data\\WebConfig.xml"), "Website.config / Config","Theme","name"));     
-        }
-        
+        }     
         public void LoadLanguage()
         {
             //Code ben no ben do xu ly.
             //Thay doi ngon ngu ben UC thi code UC xu ly
             //Thay doi ngon ngu ben Default page thi code default page xu ly
-            //ReadXML readXML = new ReadXML();
-            //ArrayList strContent = readXML.SelectNode(
-            //            Path.Combine(
-            //                Request.PhysicalApplicationPath,
-            //                "Themes\\_default\\_default.template"),
-            //                "website.config/Compoment", "lblWebTitle");
             GetTheme getTheme = new GetTheme();
             DataSet ds=getTheme.LoadTheme("Default",Path.Combine(
                             Request.PhysicalApplicationPath,
