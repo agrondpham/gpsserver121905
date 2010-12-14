@@ -6,7 +6,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace Connection.Library
+namespace Agrond.Library.Conection
 {
     class Connection
     {

@@ -5,9 +5,15 @@ using System.Text;
 
 namespace WebsiteGPS.Library
 {
-    class Validate
+    public class Validate
     {
-        //check null
+        /// <summary>
+        /// Check value null of simple data.
+        /// </summary>
+        /// <param name="strValue">Simple data in String type.</param>
+        /// <returns>Return True if data is null or none
+        /// and return False in other case.
+        /// </returns>
         public Boolean NullData(string strValue)
         {
             if (strValue == "" || strValue == null)
@@ -19,7 +25,13 @@ namespace WebsiteGPS.Library
                 return false;
             }
         }
-        //check null
+        /// <summary>
+        /// Check value null of array data.
+        /// </summary>
+        /// <param name="strValues">Array data</param>
+        /// <returns>Return True if data is null or none
+        /// and return False in other case.
+        /// </returns>
         public Boolean NullData(string[] strValues)
         {
             for (int i = 0; i <= strValues.Length; i++)
