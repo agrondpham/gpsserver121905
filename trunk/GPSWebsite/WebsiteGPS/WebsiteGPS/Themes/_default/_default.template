@@ -1,12 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Theme>
-  <Page page="Default">
+  <Page>
+    <PageName>Default</PageName>
     <Compoment>
       <idCompoment>lblWebTitle</idCompoment>
       <Content>Website GPS System</Content>
     </Compoment>
+    <Compoment>
+      <idCompoment>lblWebTitle2</idCompoment>
+      <Content>Website GPS System2</Content>
+    </Compoment>
   </Page>
-  <Page page="customerslogin">
+  <Page>
+    <PageName>customerslogin</PageName>
     <Compoment>
       <idCompoment>lblWebTitle</idCompoment>
       <Content>Website GPS System</Content>

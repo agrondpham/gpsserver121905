@@ -57,9 +57,8 @@ namespace WebsiteGPS
                             "URL", strParameterURL)
                             );*/
                 BodyHolder.Controls.Add(ctrMain);
-                //LoadLanguage();
                 ThemeConfig();
-                Theme();
+                LoadLanguage();
             }
             
         }
@@ -79,28 +78,26 @@ namespace WebsiteGPS
                             Request.PhysicalApplicationPath,
                             "App_Data\\WebConfig.xml"), "Website.config / Config","Theme","name"));     
         }
-        //public void LoadLanguage()
-        //{
-        //    //Code ben no ben do xu ly.
-        //    //Thay doi ngon ngu ben UC thi code UC xu ly
-        //    //Thay doi ngon ngu ben Default page thi code default page xu ly
-        //    ReadXML readXML = new ReadXML();
-        //    ArrayList strContent = readXML.SelectNode(
-        //                Path.Combine(
-        //                    Request.PhysicalApplicationPath,
-        //                    "Themes\\_default\\_default.template"),
-        //                    "website.config/Compoment", "lblWebTitle");
-        //    Label control= (Label)Page.FindControl(strContent[0].ToString());
-        //    control.Text = strContent[1].ToString();
-        //}
-        private void Theme() {
-            ReadXML readXML = new ReadXML();
-            DataSet ds = readXML.XMLToDataSet(Path.Combine(
+        
+        public void LoadLanguage()
+        {
+            //Code ben no ben do xu ly.
+            //Thay doi ngon ngu ben UC thi code UC xu ly
+            //Thay doi ngon ngu ben Default page thi code default page xu ly
+            //ReadXML readXML = new ReadXML();
+            //ArrayList strContent = readXML.SelectNode(
+            //            Path.Combine(
+            //                Request.PhysicalApplicationPath,
+            //                "Themes\\_default\\_default.template"),
+            //                "website.config/Compoment", "lblWebTitle");
+            GetTheme getTheme = new GetTheme();
+            DataSet ds=getTheme.LoadTheme("Default",Path.Combine(
                             Request.PhysicalApplicationPath,
-                            "Themes\\_default\\_default.template"));
-            GridView1.DataMember = "Compoment";//get ta from member
-            GridView1.DataSource = ds;
-            GridView1.DataBind();
+                            "Themes\\_default\\_default.template"));           
+            foreach(DataRow drow in ds.Tables[1].Rows){
+                Label control = (Label)Page.FindControl(drow["idCompoment"].ToString());
+                control.Text = drow["Content"].ToString();
+            }
         }
     }
 }
