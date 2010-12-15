@@ -63,7 +63,10 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.4.js" />
     <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Themes\_default\Images\notifi16px.png" />
     <Content Include="Themes\_default\Styles\googlemap.css" />
+    <Content Include="Themes\_default\Styles\login.css" />
+    <Content Include="Themes\_default\Styles\Style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -123,7 +126,6 @@
   <ItemGroup>
     <Folder Include="App_Code\" />
     <Folder Include="App_GlobalResources\Images\Marker\" />
-    <Folder Include="Themes\_default\Images\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebsiteGPS.Library\WebsiteGPS.Library.csproj">

@@ -9,7 +9,8 @@ using WebsiteGPS.Library;
 using System.IO;
 using System.Collections;
 using System.Data;
-using System.Data.SqlClient;
+
+using System.Xml;
 
 namespace WebsiteGPS
 {
@@ -58,7 +59,7 @@ namespace WebsiteGPS
                             );*/
                 BodyHolder.Controls.Add(ctrMain);
                 ThemeConfig();
-                LoadLanguage();
+                //LoadLanguage();
             }
             
         }
@@ -78,19 +79,20 @@ namespace WebsiteGPS
                             Request.PhysicalApplicationPath,
                             "App_Data\\WebConfig.xml"), "Website.config / Config","Theme","name"));     
         }     
-        public void LoadLanguage()
-        {
-            //Code ben no ben do xu ly.
-            //Thay doi ngon ngu ben UC thi code UC xu ly
-            //Thay doi ngon ngu ben Default page thi code default page xu ly
-            GetTheme getTheme = new GetTheme();
-            DataSet ds=getTheme.LoadTheme("Default",Path.Combine(
-                            Request.PhysicalApplicationPath,
-                            "Themes\\_default\\_default.template"));           
-            foreach(DataRow drow in ds.Tables[1].Rows){
-                Label control = (Label)Page.FindControl(drow["idCompoment"].ToString());
-                control.Text = drow["Content"].ToString();
-            }
-        }
+        //public void LoadLanguage()
+        //{
+        //    //Code ben no ben do xu ly.
+        //    //Thay doi ngon ngu ben UC thi code UC xu ly
+        //    //Thay doi ngon ngu ben Default page thi code default page xu ly
+        //    GetTheme getTheme = new GetTheme();
+        //    DataSet ds=getTheme.LoadTheme("Default",Path.Combine(
+        //                    Request.PhysicalApplicationPath,
+        //                    "Themes\\_default\\_default.template"));           
+        //    foreach(DataRow drow in ds.Tables[1].Rows){
+        //        Label control = (Label)Page.FindControl(drow["idCompoment"].ToString());
+        //        control.Text = drow["Content"].ToString();
+        //    }
+        //}
+        
     }
 }

@@ -98,5 +98,31 @@ namespace WebsiteGPS.Library
             ds.ReadXml(pXMLURL);
             return ds;
         }
+        public ArrayList ReadXMLTemplate(string pXMLURL, string pNode, string pModuleName)
+        {
+            XmlDocument xml = new XmlDocument();
+            xml.Load(pXMLURL);
+
+            ArrayList strValue = new ArrayList();
+            XmlNodeList xnList = xml.SelectNodes(pNode);//"/Pages/Page");
+            //search Node 
+            foreach (XmlNode xn in xnList)
+            {
+                if (pModuleName == xn.FirstChild.InnerText)
+                {
+
+                    for (int i = 0; i < xn.ChildNodes.Count; i++)//More element need to increase size of string array
+                    {
+                        for(int x=0;x<xn.ChildNodes[i].ChildNodes.Count;x++){
+                            strValue.Add(xn.ChildNodes[i].ChildNodes[x].InnerText);//add data to ArrayList
+                        }
+                    }
+                    break;
+                }
+
+            }
+            return strValue;
+        
+        }
     }
 }
