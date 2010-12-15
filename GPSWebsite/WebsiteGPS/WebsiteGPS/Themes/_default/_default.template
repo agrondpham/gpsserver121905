@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Theme>
-  <Page>
+  <Module>
     <PageName>Default</PageName>
     <Compoment>
       <idCompoment>lblWebTitle</idCompoment>
@@ -10,12 +10,28 @@
       <idCompoment>lblWebTitle2</idCompoment>
       <Content>Website GPS System2</Content>
     </Compoment>
-  </Page>
-  <Page>
+  </Module>
+  <Module>
     <PageName>customerslogin</PageName>
     <Compoment>
-      <idCompoment>lblWebTitle</idCompoment>
-      <Content>Website GPS System</Content>
+      <type>label</type>
+      <idCompoment>lblUsername</idCompoment>
+      <Content>UserName</Content>
     </Compoment>
-  </Page>
+    <Compoment>
+      <type>label</type>
+      <idCompoment>lblPassword</idCompoment>
+      <Content>Password</Content>
+    </Compoment>
+    <Compoment>
+      <type>button</type>
+      <idCompoment>btnLogin</idCompoment>
+      <Content>Login</Content>
+    </Compoment>
+    <Compoment>
+      <type>hyberlink</type>
+      <idCompoment>hypForgot</idCompoment>
+      <Content>Forgot Username or Password</Content>
+    </Compoment>
+  </Module>
 </Theme>
