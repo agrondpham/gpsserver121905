@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebsiteGPS.Default" %>
 
-<%--<%@ Register src="Controls/Maps/googlemaps.ascx" tagname="googlemaps" tagprefix="uc1" %>--%>
+<%@ Register src="Controls/MapControler/historictracking.ascx" tagname="historictracking" tagprefix="uc1" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -9,16 +10,15 @@
     <title></title>
 
 </head>
-<body onload="initialize()">
+<body>
     <form id="form1" runat="server">
     <asp:PlaceHolder ID="BodyHolder" runat="server" />
     <asp:Label ID="lblWebTitle" runat="server" Text="[GPSSystemTitle]"></asp:Label>
     <asp:Label ID="lblWebTitle2" runat="server" Text="[GPSSystemTitle]"></asp:Label>
    <%-- <uc1:googlemaps ID="googlemaps" runat="server" />--%>
-
         <asp:GridView runat="server" ID="GridView1">
         </asp:GridView>
+    <uc1:historictracking ID="historictracking1" runat="server" />
     </form>
-
 </body>
 </html>

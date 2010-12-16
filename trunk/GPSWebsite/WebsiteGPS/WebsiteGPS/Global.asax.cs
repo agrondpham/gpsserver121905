@@ -50,11 +50,13 @@ namespace WebsiteGPS
         protected void RegisterRoutes(RouteCollection routes) {
             //ignore
             routes.Ignore("{resource}.xml");
+            routes.Ignore("{resource}.js");
             //root page
             //routes.MapPageRoute("Default", "Pages/index.html", "~/Default.aspx",true);
             //
             //Routes Pages
             routes.MapPageRoute("Login_Page", "Pages/{pages}", "~/Default.aspx",true);
+            routes.MapPageRoute("TestJQuery", "Jquery.html", "~/Test.aspx", true);
             //routes googlemaps page with action
             routes.MapPageRoute("Google_Maps", "Pages/GoogleMap/{action}", "~/Default.aspx",true);
         }
