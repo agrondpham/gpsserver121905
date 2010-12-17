@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Json Example</title>
+<script type="text/javascript">
+	//cách loai data cua json 
+	var object={"Employer":"The Long"};
+	var array={["Programmmer","Software design",]};
+	var dataString={
+					"marker1":[{
+								"latitude":"10.8292","longitude":"106.63903333333333",},
+							  {
+								"latitude":"chang ra sao","longitude":"106.63903333333333",}],
+					"marker2":{
+								"latitude":"abc","longitude":"106.63903333333333",}
+			};
+	
+	//Phải khai báo ở ngoài cùng
+	var mailingAddress = { 
+     "Address"    :   "123 Anywhere St.", 
+     "City"       :   "Springfield", 
+     "PostalCode" :   99999
+};
+	function loadJSon(){    
+//		alert(myJson.marker1.latitude);
+alert("The package will be shipped to postal code " +
+ dataString.marker1[1].latitude +
+dataString.marker2.latitude);
+
+	}
+ 
+</script>
+</head>
+
+<body>
+<div onclick="loadJSon()">Click here</div>
+
+</body>
+
+</html>
