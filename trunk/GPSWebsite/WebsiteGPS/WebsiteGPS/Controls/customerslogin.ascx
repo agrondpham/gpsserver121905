@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="customerslogin.ascx.cs" Inherits="WebsiteGPS.Controls.CustomersLogin" %>
 <link href="../Themes/_default/Styles/login.css" rel="stylesheet" type="text/css" />
+<form id="form1" runat="server">
 <div>
 	<div class="logiMain">
 		<div class="rw notification" style="height:50px"><asp:Label runat="server" Text="[Notification]" id="lblNotification"></asp:Label></div>
@@ -21,3 +22,4 @@
 </div>
 <asp:GridView ID="GridView1" runat="server">
 </asp:GridView>
+</form>

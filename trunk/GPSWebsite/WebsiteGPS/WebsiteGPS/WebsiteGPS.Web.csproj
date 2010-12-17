@@ -55,8 +55,6 @@
     <Content Include="App_Data\WebConfig.xml" />
     <Content Include="Controls\Errors\errors.ascx" />
     <Content Include="Controls\MapControler\historictracking.ascx" />
-    <Content Include="Controls\MapControler\loadHistoryTracking.js" />
-    <Content Include="Controls\MapControler\trackingonline.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
     <Content Include="Controls\Maps\googlemaps.ascx" />
     <Content Include="Default.aspx" />
@@ -91,8 +89,13 @@
     <Content Include="Scripts\librarys\jquery.ui.widget.js" />
     <Content Include="Test.aspx" />
     <Content Include="TestJquery.htm" />
-    <Content Include="Themes\_default\Images\ffffff_40x100_textures_01_flat_75.png" />
+    <Content Include="Themes\_default\Images\historytracking_icon.png" />
+    <Content Include="Themes\_default\Images\control_bg.jpg" />
+    <Content Include="Themes\_default\Images\panel_bg.gif" />
+    <Content Include="Themes\_default\Images\calendar_icon.png" />
+    <Content Include="Themes\_default\Images\delete_icon.png" />
     <Content Include="Themes\_default\Images\notifi16px.png" />
+    <Content Include="Themes\_default\Styles\Controller.css" />
     <Content Include="Themes\_default\Styles\googlemap.css" />
     <Content Include="Themes\_default\Styles\login.css" />
     <Content Include="Themes\_default\Styles\Style.css" />
@@ -118,13 +121,6 @@
     </Compile>
     <Compile Include="Controls\MapControler\historictracking.ascx.designer.cs">
       <DependentUpon>historictracking.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\MapControler\trackingonline.ascx.cs">
-      <DependentUpon>trackingonline.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\MapControler\trackingonline.ascx.designer.cs">
-      <DependentUpon>trackingonline.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\customerslogin.ascx.cs">
       <DependentUpon>customerslogin.ascx</DependentUpon>
