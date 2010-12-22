@@ -11,35 +11,186 @@
     src="http://maps.google.com/maps/api/js?sensor=true">
 </script>
 <script type="text/javascript">
-    /*var data= {"marker1":{[
-    	"latitude":"10.8292",
-		"longitude":"106.63903333333333",    
-    ]}
-    }*/
+
+
+
+    var data= {"marker1":{"latitude":"10.8292","longitude":"106.63903333333333",},
+				"marker2":{"longitude":"106.684866666667","latitude":"10.8284666666667",},
+				"marker3":{"longitude":"106.6843","latitude":"10.82865",},
+				"marker4":{"longitude":"106.683733333333","latitude":"10.8288333333333",},
+				"marker5":{"longitude":"106.681716666667","latitude":"10.8295166666667",}, 
+				"marker6":{"longitude":"106.677833333333","latitude":"10.8307833333333",} ,
+				"marker7":{"longitude":"106.675","latitude":"10.8318",},
+				"marker8":{"longitude":"106.670383333333","latitude":"10.8334333333333",}, 
+				"marker9":{"longitude":"106.6664","latitude":"10.83485",},
+				"marker10":{"longitude":"106.665766666667","latitude":"10.8350833333333",}, 
+				"marker11":{"longitude":"106.663","latitude":"10.8352",},
+				"marker12":{"longitude":"106.6595","latitude":"10.8361166666667",},
+				"marker13":{"longitude":"106.656116666667","latitude":"10.83705",},
+				"marker14":{"longitude":"106.6522","latitude":"10.838",},
+				"marker15":{"longitude":"106.647766666667","latitude":"10.83915",},
+				"marker16":{"longitude":"106.64445","latitude":"10.8413833333333",},
+				"marker17":{"longitude":"106.640383333333","latitude":"10.84415",},
+				"marker18":{"longitude":"106.638533333333","latitude":"10.8417666666667",}, 
+				"marker19":{"longitude":"106.636483333333","latitude":"10.83775",},
+				"marker20":{"longitude":"106.634966666667","latitude":"10.8345",},
+				"marker21":{"longitude":"106.634133333333","latitude":"10.8323",},
+				"marker22":{"longitude":"106.639166666667","latitude":"10.8292833333333",},
+    			"marker23":{"longitude":"10.812233333333333","latitude":"106.69376666666666",}
+    };
+ 	var map;
     function initialize() {
-        var latlng = new google.maps.LatLng(10.8292, 106.63903333333333);
+        //var latlng = new google.maps.LatLng(10.8292, 106.63903333333333);
+        var latlng1 = new google.maps.LatLng(10.812233333333333, 106.69376666666666);   
         var myOptions = {
             zoom: 15, //edit zoom to point
             mapTypeControl: false, //invisible Map control
-            center: latlng, //put center of map
+            center: latlng1, //put center of map
             mapTypeId: google.maps.MapTypeId.ROADMAP//choice type of map
         };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
+        map = google.maps.Map(document.getElementById("map_canvas"),myOptions);
         var marker = new google.maps.Marker({
             map: map,
-            position: latlng,
+            position: latlng1,
             title: "Hello World"
         });
-    	//setMap(map)
+    	//setMap(map);
     }
     function setMap(map) {
-        var latlng2 = new google.maps.LatLng(10.8293, 106.63905333333333);
+        var latlng2 = new google.maps.LatLng(data.marker2.latitude, data.marker2.longitude);
+        var latlng3 = new google.maps.LatLng(data.marker3.latitude, data.marker3.longitude);
+        var latlng4 = new google.maps.LatLng(data.marker4.latitude, data.marker4.longitude);
+        var latlng5 = new google.maps.LatLng(data.marker5.latitude, data.marker5.longitude);
+        var latlng6 = new google.maps.LatLng(data.marker6.latitude, data.marker6.longitude);
+        var latlng7 = new google.maps.LatLng(data.marker7.latitude, data.marker7.longitude);
+        var latlng8 = new google.maps.LatLng(data.marker8.latitude, data.marker8.longitude);
+        var latlng9 = new google.maps.LatLng(data.marker9.latitude, data.marker9.longitude);
+        var latlng10 = new google.maps.LatLng(data.marker10.latitude, data.marker10.longitude);
+        var latlng11 = new google.maps.LatLng(data.marker11.latitude, data.marker11.longitude);
+        var latlng12 = new google.maps.LatLng(data.marker12.latitude, data.marker12.longitude);
+        var latlng13 = new google.maps.LatLng(data.marker13.latitude, data.marker13.longitude);
+        var latlng14 = new google.maps.LatLng(data.marker14.latitude, data.marker14.longitude);
+        var latlng15 = new google.maps.LatLng(data.marker15.latitude, data.marker15.longitude);
+        var latlng16 = new google.maps.LatLng(data.marker16.latitude, data.marker16.longitude);
+        var latlng17 = new google.maps.LatLng(data.marker17.latitude, data.marker17.longitude);
+        var latlng18 = new google.maps.LatLng(data.marker18.latitude, data.marker18.longitude);
+        var latlng19 = new google.maps.LatLng(data.marker19.latitude, data.marker19.longitude);
+        var latlng20 = new google.maps.LatLng(data.marker20.latitude, data.marker20.longitude);
+        var latlng21 = new google.maps.LatLng(data.marker21.latitude, data.marker21.longitude);
+        var latlng22 = new google.maps.LatLng(data.marker22.latitude, data.marker22.longitude);
+        var latlng23 = new google.maps.LatLng(data.marker23.latitude, data.marker23.longitude);
+        
         var marker2 = new google.maps.Marker({
                 map: map,
                 position: latlng2,
-                title: "Hello World"
+                title: "Marker2"
             }); 
+       var marker3 = new google.maps.Marker({
+                map: map,
+                position: latlng3,
+                title: "Marker3"
+            }); 
+        var marker4 = new google.maps.Marker({
+                map: map,
+                position: latlng4,
+                title: "Marker4"
+            }); 
+        var marker5 = new google.maps.Marker({
+                map: map,
+                position: latlng5,
+                title: "Marker5"
+            }); 
+        var marker6 = new google.maps.Marker({
+                map: map,
+                position: latlng6,
+                title: "Marker6"
+            }); 
+        var marker7 = new google.maps.Marker({
+                map: map,
+                position: latlng7,
+                title: "Marker7"
+            }); 
+        var marker8 = new google.maps.Marker({
+                map: map,
+                position: latlng8,
+                title: "Marker8"
+            }); 
+        var marker9 = new google.maps.Marker({
+                map: map,
+                position: latlng9,
+                title: "Marker9"
+            }); 
+        var marker10 = new google.maps.Marker({
+                map: map,
+                position: latlng10,
+                title: "Marker10"
+            }); 
+        var marker11 = new google.maps.Marker({
+                map: map,
+                position: latlng11,
+                title: "Marker11"
+            }); 
+        var marker12 = new google.maps.Marker({
+                map: map,
+                position: latlng12,
+                title: "Marker12"
+            }); 
+        var marker13 = new google.maps.Marker({
+                map: map,
+                position: latlng13,
+                title: "Marker13"
+            }); 
+        var marker14 = new google.maps.Marker({
+                map: map,
+                position: latlng14,
+                title: "Marker14"
+            }); 
+        var marker15 = new google.maps.Marker({
+                map: map,
+                position: latlng15,
+                title: "Marker15"
+            }); 
+        var marker16 = new google.maps.Marker({
+                map: map,
+                position: latlng16,
+                title: "Marker16"
+            }); 
+        var marker17 = new google.maps.Marker({
+                map: map,
+                position: latlng17,
+                title: "Marker17"
+            }); 
+        var marker18 = new google.maps.Marker({
+                map: map,
+                position: latlng18,
+                title: "Marker18"
+            }); 
+        var marker19 = new google.maps.Marker({
+                map: map,
+                position: latlng19,
+                title: "Marker19"
+            }); 
+        var marker20 = new google.maps.Marker({
+                map: map,
+                position: latlng20,
+                title: "Marker20"
+            }); 
+        var marker21 = new google.maps.Marker({
+                map: map,
+                position: latlng21,
+                title: "Marker21"
+            }); 
+        var marker22 = new google.maps.Marker({
+                map: map,
+                position: latlng22,
+                title: "Marker22"
+            }); 
+        var marker23 = new google.maps.Marker({
+                map: map,
+                position: latlng23,
+                title: "Nha Duong"
+            }); 
+
 
     }
 </script>
@@ -49,7 +200,8 @@
 
 
 <body onload="initialize()">
-  <div id="map_canvas" style="width:100%; height:100%"></div>
+  <div id="map_canvas" style="width:100%; height:90%;"></div>
+  <div><a onclick="setMap(map)" >click here</a></div>
 </body>
 
 </html>
