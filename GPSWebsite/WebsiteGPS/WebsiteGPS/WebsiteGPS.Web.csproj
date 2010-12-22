@@ -53,7 +53,10 @@
     <Content Include="App_Data\ControlURL.xml" />
     <Content Include="App_Data\ErrorCode.xml" />
     <Content Include="App_Data\WebConfig.xml" />
+    <Content Include="Controls\Accounts\profile.ascx" />
     <Content Include="Controls\Errors\errors.ascx" />
+    <Content Include="Controls\Managers\accountmanager.ascx" />
+    <Content Include="Controls\Managers\devicesmanager.ascx" />
     <Content Include="Controls\MapControler\historictracking.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
     <Content Include="Controls\Maps\googlemaps.ascx" />
@@ -89,15 +92,20 @@
     <Content Include="Scripts\librarys\jquery.ui.widget.js" />
     <Content Include="Test.aspx" />
     <Content Include="TestJquery.htm" />
+    <Content Include="Themes\_default\Images\account_icon.png" />
     <Content Include="Themes\_default\Images\historytracking_icon.png" />
     <Content Include="Themes\_default\Images\control_bg.jpg" />
     <Content Include="Themes\_default\Images\panel_bg.gif" />
     <Content Include="Themes\_default\Images\calendar_icon.png" />
     <Content Include="Themes\_default\Images\delete_icon.png" />
     <Content Include="Themes\_default\Images\notifi16px.png" />
+    <Content Include="Themes\_default\Images\trash_icon.png" />
+    <Content Include="Themes\_default\Images\user_add.png" />
+    <Content Include="Themes\_default\Styles\accountsmanager.css" />
     <Content Include="Themes\_default\Styles\Controller.css" />
     <Content Include="Themes\_default\Styles\googlemap.css" />
     <Content Include="Themes\_default\Styles\login.css" />
+    <Content Include="Themes\_default\Styles\profile.css" />
     <Content Include="Themes\_default\Styles\Style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -108,12 +116,33 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Accounts\profile.ascx.cs">
+      <DependentUpon>profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounts\profile.ascx.designer.cs">
+      <DependentUpon>profile.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Errors\errors.ascx.cs">
       <DependentUpon>errors.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\Errors\errors.ascx.designer.cs">
       <DependentUpon>errors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Managers\accountmanager.ascx.cs">
+      <DependentUpon>accountmanager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Managers\accountmanager.ascx.designer.cs">
+      <DependentUpon>accountmanager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Managers\devicesmanager.ascx.cs">
+      <DependentUpon>devicesmanager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Managers\devicesmanager.ascx.designer.cs">
+      <DependentUpon>devicesmanager.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\MapControler\historictracking.ascx.cs">
       <DependentUpon>historictracking.ascx</DependentUpon>
