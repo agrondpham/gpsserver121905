@@ -1,0 +1,57 @@
+﻿/*common*/
+.cm-a
+{
+    cursor:pointer;
+    }
+.cm-table
+{
+    width:700px;
+    font-size:1em;
+    margin:0 0 0 10%;
+    }
+.cm-table-cl
+{
+    float:left;
+    height:30px;
+    text-align:center;
+    }
+.cm-table-ncl
+{
+    border-left:2px solid #AAAAAA;
+    }
+.cm-table-rw
+{
+    border: 1px solid #AAAAAA;
+    height:29px;
+}
+/*header*/
+.cm-tool-header    
+{
+    min-width:800px;
+    margin: 50px 0 10px;
+    padding: 0 20% 0 10%;
+    }
+/*dialog*/
+.cm-dialog-config
+{
+    font-size:0.8em;
+    }
+/*search*/
+.cm-button-search
+{
+    float: right;
+    font-size: 0.8em;
+    height: 1.95em;
+    width: 6em;
+    }
+.cm-textbox-search
+{
+    float: right;
+    font-size: 0.8em;
+    height: 1.5em;
+    padding:3px;
+    }
+.clear
+{
+    clear:both;
+    }
