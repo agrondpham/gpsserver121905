@@ -15,4 +15,9 @@
     <URL>Controls/Maps/googlemaps.ascx</URL>
     <Title>Google Map</Title>
   </Page>
+  <Page>
+    <NameUC>accountmanager.html</NameUC>
+    <URL>Controls/Managers/accountmanager.ascx</URL>
+    <Title>Admin Page</Title>
+  </Page>
 </Pages>

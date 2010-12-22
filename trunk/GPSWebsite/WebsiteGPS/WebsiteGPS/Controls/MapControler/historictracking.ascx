@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="historictracking.ascx.cs" Inherits="WebsiteGPS.Controls.Controler.HistoricTracking" %>
+<%@ Register src="../Accounts/profile.ascx" tagname="profile" tagprefix="uc1" %>
 <%--StyleSheet inport--%>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css"/>
 <link rel="stylesheet" href="../Themes/_default/Styles/Controller.css"/>
@@ -202,13 +203,31 @@
 	    $("#WidgetControler").tabs();
 	});
 </script>
-
+<%-- Dialog --%>
+<script type="text/javascript">
+    $(function () {
+        $("#ProfileDialog").dialog({
+            autoOpen: false,
+            height: 500,
+            width: 450,
+            modal: true,
+            close: function () {
+                allFields.val("").removeClass("ui-state-error");
+            }
+        });
+        $("#hypProfile")
+			.click(function () {
+			    $("#ProfileDialog").dialog("open");
+			});
+    });
+</script>
 <div id="WidgetControler" class="ui-controller ui-corner-all">
     <ul>
 		<li><a href="#HistoryTracking">[History Tracking]</a></li>
-		<li><a href="#TrackingOnline">[Tracking Online]</a></li>
+		<li><a href="#TrackingOnline">[Tracking Online]</a></li>     
+	    <li><a id="hypProfile"><img alt="" src="../../Themes/_default/Images/account_icon.png" /></a></li>
         <li><a id="hypHide"><img alt="" src="../../Themes/_default/Images/delete_icon.png" /></a></li>
-	</ul>
+    </ul>
     <div id="HistoryTracking" class="ui-controller-maincontent">
         <div class="ui-controller-line">
             <div class="ui-controller-label">[Choice Device]</div>
@@ -250,6 +269,8 @@
         </div>
     </div>
 </div>
+<div id="ProfileDialog" title="[View Profile]"><uc1:profile ID="profile1" runat="server" /></div>
 <div class="ui-controller-showPanel">
     <a href="#" id="hypShow" class="ui-state-default ui-corner-all">Show Controler</a>
 </div>
+
