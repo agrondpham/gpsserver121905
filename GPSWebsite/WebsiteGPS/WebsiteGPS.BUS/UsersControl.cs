@@ -9,7 +9,7 @@ using System.Data;
 namespace WebsiteGPS.BUS
 {
 	/// <summary> 
-	///Author: nnamthach@gmail.com 
+	///Author: daiduong19051986@gmail.com 
 	/// <summary>
     public class UsersControl
     {
