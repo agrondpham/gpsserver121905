@@ -6,7 +6,7 @@ using System.Data;
 namespace WebsiteGPS.DTO
 {
 	/// <summary> 
-	///Author: nnamthach@gmail.com 
+	///Author: daiduong19051986@gmail.com 
 	/// <summary>
 	
     public class GPS_DataInfo
