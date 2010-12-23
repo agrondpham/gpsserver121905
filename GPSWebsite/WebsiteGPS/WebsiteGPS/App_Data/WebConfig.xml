@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Website.config>
   <Config>
-    <Theme name="_default">_default/_default.template</Theme>
+    <ThemeName>_default</ThemeName>
+    <ThemeURL>_default/_default.template</ThemeURL>
     <Language>EN-US</Language>
   </Config>
 </Website.config>
