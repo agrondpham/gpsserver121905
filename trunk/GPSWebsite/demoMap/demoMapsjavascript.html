@@ -11,9 +11,6 @@
     src="http://maps.google.com/maps/api/js?sensor=true">
 </script>
 <script type="text/javascript">
-
-
-
     var data= {"marker1":{"latitude":"10.8292","longitude":"106.63903333333333",},
 				"marker2":{"longitude":"106.684866666667","latitude":"10.8284666666667",},
 				"marker3":{"longitude":"106.6843","latitude":"10.82865",},
@@ -36,25 +33,33 @@
 				"marker20":{"longitude":"106.634966666667","latitude":"10.8345",},
 				"marker21":{"longitude":"106.634133333333","latitude":"10.8323",},
 				"marker22":{"longitude":"106.639166666667","latitude":"10.8292833333333",},
-    			"marker23":{"longitude":"10.812233333333333","latitude":"106.69376666666666",}
+    			"marker23":{"longitude":"106.69376666666666","latitude":"10.812233333333333",}
     };
  	var map;
     function initialize() {
-        //var latlng = new google.maps.LatLng(10.8292, 106.63903333333333);
+       //var latlng = new google.maps.LatLng(10.8292, 106.63903333333333);
         var latlng1 = new google.maps.LatLng(10.812233333333333, 106.69376666666666);   
         var myOptions = {
-            zoom: 15, //edit zoom to point
-            mapTypeControl: false, //invisible Map control
+            zoom: 13, //edit zoom to point
+            //mapTypeControl: false, //invisible Map control
             center: latlng1, //put center of map
             mapTypeId: google.maps.MapTypeId.ROADMAP//choice type of map
         };
-        map = google.maps.Map(document.getElementById("map_canvas"),myOptions);
-        var marker = new google.maps.Marker({
+        map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+        /* var marker = new google.maps.Marker({
             map: map,
             position: latlng1,
             title: "Hello World"
         });
     	//setMap(map);
+		    var haightAshbury = new google.maps.LatLng(10.812233333333333, 106.69376666666666);
+    var mapOptions = {
+      zoom: 14,
+      center: haightAshbury,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+*/
     }
     function setMap(map) {
         var latlng2 = new google.maps.LatLng(data.marker2.latitude, data.marker2.longitude);
