@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeApp_Data>true</ExcludeApp_Data>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -50,7 +52,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ControlURL.xml" />
+    <Content Include="App_Data\ControlURL.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\ErrorCode.xml" />
     <Content Include="App_Data\WebConfig.xml" />
     <Content Include="Controls\Accounts\profile.ascx" />
@@ -180,10 +184,17 @@
     <Folder Include="App_GlobalResources\Images\Marker\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebsiteGPS.BUS\WebsiteGPS.BUS.csproj">
+      <Project>{4B141BA8-5140-445F-A8E8-01F52AB0D22C}</Project>
+      <Name>WebsiteGPS.BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebsiteGPS.Library\WebsiteGPS.Library.csproj">
       <Project>{1EB546DB-F851-42C0-A857-082E23A94806}</Project>
       <Name>WebsiteGPS.Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
