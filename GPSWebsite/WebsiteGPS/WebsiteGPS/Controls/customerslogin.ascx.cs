@@ -108,5 +108,34 @@ namespace WebsiteGPS.Controls
             }
 
         }
+		
+		protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            _UsersControl = new UsersControl();
+            GetDataFrom();
+            UsersInfo info = new UsersInfo();
+            info = _UsersControl.Get(_UsersInfo.Username, ref sErr);
+            if (_UsersInfo.Username == "")
+            {
+                lblErr.Text = "The user does not exist or password do not use !!! ";
+            }
+            else if (_UsersInfo.Password != info.Password)
+            {
+                lblErr.Text = "The user does not exist or password do not use !!!";
+            }
+            else if (_UsersInfo.Password == info.Password)
+            {
+                lblErr.Text = "=====";
+            }
+
+
+        }
+
+        private void GetDataFrom()
+        {
+            _UsersInfo = new UsersInfo();
+            _UsersInfo.Username = tbxUsername.Text.Trim();
+            _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
+        }
     }
 }
