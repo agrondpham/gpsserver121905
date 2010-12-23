@@ -15,7 +15,9 @@
             <div><img class="style1" src="../Themes/_default/Images/notifi16px.png" /></div>
 		</div>
 		<div class="rw">
-			<div class="lfcl"><asp:Button runat="server" Text="[Login]" id="btnLogin"></asp:Button></div>
+            <div><asp:Label runat="server" id="lblErr" ForeColor="Red"></asp:Label></div>
+			<div class="lfcl"><asp:Button runat="server" Text="[Login]" id="btnLogin" 
+                    onclick="btnLogin_Click"></asp:Button></div>
 			<div class="rgcl"><asp:HyperLink runat="server" id="hypForgot">[Forgot username or password]</asp:HyperLink></div>
 		</div>
 	</div>
