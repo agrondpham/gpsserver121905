@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="accountmanager.ascx.cs"
     Inherits="WebsiteGPS.Controls.Manager.accountmanager" %>
+<%@ Register src="../Accounts/createaccount.ascx" tagname="createaccount" tagprefix="uc1" %>
 <%--StyleSheet inport--%>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
 <link href="../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
@@ -30,6 +31,7 @@
                 }
             }
         });
+        $("#delete-confirm").parent().appendTo(jQuery("form:first"));//Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
         //AddUser Dialog
 
         $("#add-user-dialog").dialog({
@@ -41,6 +43,8 @@
                 allFields.val("").removeClass("ui-state-error");
             }
         });
+        $("#add-user-dialog").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua New Account len xu ly dau)
+        //add Listener open dialog new AddUser
         $("#hypAddUser")
 			.click(function () {
 			    $("#add-user-dialog").dialog("open");
@@ -83,9 +87,11 @@
 </script>
 <div>
     <form runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
     <div class="cm-tool-header">
         <a id="hypAddUser" class="cm-a" style="float: left">
-            <img alt="" src="../../Themes/_default/Images/user_add.png" /></a> <a class="ui-button ui-widget ui-state-default cm-button-search ui-corner-right ui-button-icon">
+            <img alt="" src="../../Themes/_default/Images/user_add.png" /></a> <a runat="server" onclick="Button1_Click" class="ui-button ui-widget ui-state-default cm-button-search ui-corner-right ui-button-icon">
                 [Search]</a>
         <input id="search" type="text" class="ui-widget ui-widget-content ui-corner-left cm-textbox-search" />
         <div class="clear">
@@ -120,45 +126,18 @@
             </div>
         </div>
     </div>
+
     <div id="add-user-dialog" title="[Create New User]">
-        <div class="rw">
-            <div class="lfcl">
-                <asp:Label runat="server" Text="[UserName]" ID="lblUsername"></asp:Label></div>
-            <div class="rgcl">
-                <asp:TextBox ID="tbxUserName" runat="server"></asp:TextBox>
-            </div>
-            <div>
-                <img class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
-        </div>
-        <div class="rw">
-            <div class="lfcl">
-                <asp:Label runat="server" Text="[Password]" ID="lblPassword"></asp:Label></div>
-            <div class="rgcl">
-                <asp:TextBox runat="server" ID="tbxPassword"></asp:TextBox></div>
-            <div>
-                <img class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
-        </div>
-        <div class="rw">
-            <div class="lfcl">
-                <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
-            <div class="rgcl">
-                <asp:TextBox runat="server" ID="tbxEmail"></asp:TextBox></div>
-            <div>
-                <img class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
-        </div>
-        <div class="rw">
-            <div class="lfcl">
-                <asp:Button runat="server" Text="[Commit]" ID="btnCommit" OnClick="btnCommit_Click">
-                </asp:Button>
-                <asp:Button runat="server" Text="[Add New]" ID="btnAddNew" 
-                    onclick="btnAddNew_Click">
-                </asp:Button>
-            </div>
-            <div>
-                <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
-            </div>
-        </div>
+<%--    Dua Ajax vao xu ly form--%>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+          <%--      dua ra user control de de edit--%>
+          <%-- xu ly loi button bang cach them dong vao dong code o vi tri Ln46 Col9,Da lam tuong tu voi dong Ln34 col9 --%>
+                <uc1:createaccount ID="createaccount1" runat="server" />
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
+
     <div id="delete-confirm" title="[Delete item?]" class="cm-dialog-config">
         <p>
             [These items will be permanently deleted and cannot be recovered. Are you sure?]</p>
