@@ -8,7 +8,7 @@ namespace WebsiteGPS.BUS
     public class ControlBLL
     {
         #region Local Variable
-        DAO.ControlsDAL controlDAO = new DAO.ControlsDAL();
+        DAO.ControlsDataAccess controlDAO = new DAO.ControlsDataAccess();
         #endregion
 
         #region Method
