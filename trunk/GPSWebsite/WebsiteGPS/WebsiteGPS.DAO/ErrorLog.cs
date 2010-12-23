@@ -10,9 +10,9 @@ namespace WebsiteGPS.DAO
         {
             string result = DateTime.Now.ToString() + ": " + sErr;
             string fileName = "LogErro.log";
-            StreamWriter streamWr = new StreamWriter(fileName);
-            streamWr.NewLine = result;
-            streamWr.Close();
+            //StreamWriter streamWr = new StreamWriter(fileName);
+            //streamWr.NewLine = result;
+            //streamWr.Close();
         }
     }
 }
