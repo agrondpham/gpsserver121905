@@ -18,6 +18,18 @@ namespace WebsiteGPS
     {
         #region localVariable
         BUS.ControlBLL _ControlBLL = new BUS.ControlBLL();
+        BUS.ConfigBLL _ConfigBLL = new BUS.ConfigBLL();
+        private ArrayList _ThemeConfig;
+        public ArrayList getThemeConfig()
+        {
+            return _ThemeConfig;
+        }
+        public void setThemeConfig(ArrayList pThemeConfig)
+        {
+            _ThemeConfig = pThemeConfig;
+        }
+        
+
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -92,20 +104,11 @@ namespace WebsiteGPS
             
         //}
         //private ArrayList Theme;
-        private string[] _ThemeConfig;
-        public string[] getThemeConfig()
-        {
-            return _ThemeConfig;
-        }
-        public void setThemeConfig(string[] pThemeConfig)
-        {
-            _ThemeConfig = pThemeConfig;
-        }
         private void ThemeConfig() {
-            GetTheme getTheme = new GetTheme();
-            setThemeConfig(getTheme.GetThemeConfig(Path.Combine(
+            _ThemeConfig= _ConfigBLL.loadConfigs("_default", Path.Combine(
                             Request.PhysicalApplicationPath,
-                            "App_Data\\WebConfig.xml"), "Website.config / Config","Theme","name"));     
+                            "App_Data\\WebConfig.xml"));
+            //setThemeConfig(getTheme.GetThemeConfig(, "Website.config / Config","Theme","name"));     
         }     
         //public void LoadLanguage()
         //{

@@ -37,6 +37,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigBLL.cs" />
     <Compile Include="ControlBLL.cs" />
     <Compile Include="DevicesControl.cs" />
     <Compile Include="GPS_DataControl.cs" />
