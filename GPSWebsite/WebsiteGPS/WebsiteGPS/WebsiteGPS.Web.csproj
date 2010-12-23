@@ -188,6 +188,10 @@
       <Project>{4B141BA8-5140-445F-A8E8-01F52AB0D22C}</Project>
       <Name>WebsiteGPS.BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebsiteGPS.DTO\WebsiteGPS.DTO.csproj">
+      <Project>{C8D6E6EC-2F48-4D20-B1F8-69116808CDB7}</Project>
+      <Name>WebsiteGPS.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebsiteGPS.Library\WebsiteGPS.Library.csproj">
       <Project>{1EB546DB-F851-42C0-A857-082E23A94806}</Project>
       <Name>WebsiteGPS.Library</Name>

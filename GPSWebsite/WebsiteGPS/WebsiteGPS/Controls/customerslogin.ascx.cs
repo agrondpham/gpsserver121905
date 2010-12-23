@@ -4,18 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 using WebsiteGPS.Library;
 using System.Data;
 using System.IO;
-
 using System.Collections;
 using System.Xml;
+using WebsiteGPS.BUS;
+using WebsiteGPS.DTO;
 
 namespace WebsiteGPS.Controls
 {
     public partial class CustomersLogin : System.Web.UI.UserControl
     {
+        UsersControl _UsersControl;
+        UsersInfo _UsersInfo;
+        string sErr;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArrayList aaaa;
