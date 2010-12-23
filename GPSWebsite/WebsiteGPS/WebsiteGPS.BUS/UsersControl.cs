@@ -4,12 +4,12 @@ using System.Text;
 using WebsiteGPS.DTO;
 using WebsiteGPS.DAO;
 using System.Data;
-
+using System.Security.Cryptography;
 
 namespace WebsiteGPS.BUS
 {
 	/// <summary> 
-	///Author: daiduong19051986@gmail.com 
+	///Author: daiduong19051986@gmail.com  
 	/// <summary>
     public class UsersControl
     {
@@ -24,11 +24,11 @@ namespace WebsiteGPS.BUS
         }
 		
         public UsersInfo Get(
-        Int32 ID_User,
+        String Username,
 		ref string sErr)
         {
             return _objDAO.Get(
-            ID_User,
+            Username,
 			ref sErr);
         }
 		
@@ -50,19 +50,19 @@ namespace WebsiteGPS.BUS
         }
 		
         public string Delete(
-        Int32 ID_User
+        String Username
 		)
         {
             return _objDAO.Delete(
-            ID_User
+            Username
 			);
         }  
         public Boolean IsExist(
-        Int32 ID_User
+        String Username
 		)
         {
             return _objDAO.IsExist(
-            ID_User
+            Username
 			);
         } 
 		      		
@@ -79,7 +79,7 @@ namespace WebsiteGPS.BUS
         {
             string sErr = "";
             if (IsExist(
-            obj.ID_User
+            obj.Username
 			))
             {
                 sErr = Update(obj);
@@ -105,6 +105,27 @@ namespace WebsiteGPS.BUS
             UsersInfo inf = new UsersInfo(row);
             return InsertUpdate(inf);
         }
+
+        /// <summary>
+        /// Ma hoa MD5
+        /// </summary>
+        /// <param name="originalPassword"></param>
+        /// <returns></returns>
+        public string EncodePassword(string originalPassword)
+        {
+            //Declarations
+            Byte[] originalBytes;
+            Byte[] encodedBytes;
+            MD5 md5;
+
+            //Instantiate MD5CryptoServiceProvider, get bytes for original password and compute hash (encoded password)
+            md5 = new MD5CryptoServiceProvider();
+            originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+            encodedBytes = md5.ComputeHash(originalBytes);
+
+            //Convert encoded bytes back to a 'readable' string
+            return BitConverter.ToString(encodedBytes);
+        }   
 		#endregion Method
 
     }

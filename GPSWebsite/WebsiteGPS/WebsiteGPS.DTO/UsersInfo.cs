@@ -6,7 +6,7 @@ using System.Data;
 namespace WebsiteGPS.DTO
 {
 	/// <summary> 
-	///Author: daiduong19051986@gmail.com 
+	///Author: daiduong19051986@gmail.com  
 	/// <summary>
 	
     public class UsersInfo
@@ -14,7 +14,6 @@ namespace WebsiteGPS.DTO
 		#region Local Variable
 		public enum Field
 		{
-			ID_User,
 			Username,
 			Password,
 			Email,
@@ -24,7 +23,6 @@ namespace WebsiteGPS.DTO
 			Cop_Phone,
 			Status
 		}
-		private Int32 _ID_User;
 		private String _Username;
 		private String _Password;
 		private String _Email;
@@ -34,7 +32,6 @@ namespace WebsiteGPS.DTO
 		private Int32 _Cop_Phone;
 		private Int32 _Status;
 		
-		public Int32 ID_User{	get{ return _ID_User;} set{_ID_User = value;} }
 		public String Username{	get{ return _Username;} set{_Username = value;} }
 		public String Password{	get{ return _Password;} set{_Password = value;} }
 		public String Email{	get{ return _Email;} set{_Email = value;} }
@@ -49,7 +46,6 @@ namespace WebsiteGPS.DTO
         #region Constructor
 		public UsersInfo()
 		{
-			_ID_User = 0;
 			_Username = "";
 			_Password = "";
 			_Email = "";
@@ -60,7 +56,6 @@ namespace WebsiteGPS.DTO
 			_Status = 0;
 		}
 		public UsersInfo(
-		Int32 ID_User,
 		String Username,
 		String Password,
 		String Email,
@@ -71,7 +66,6 @@ namespace WebsiteGPS.DTO
 		Int32 Status
 		)
 		{
-			_ID_User = ID_User;
 			_Username = Username;
 			_Password = Password;
 			_Email = Email;
@@ -85,7 +79,6 @@ namespace WebsiteGPS.DTO
 		{
 			if (dr != null)
 			{
-				_ID_User = dr[Field.ID_User.ToString()] == DBNull.Value?0:Convert.ToInt32(dr[Field.ID_User.ToString()]);
 				_Username = dr[Field.Username.ToString()] == DBNull.Value?"":Convert.ToString(dr[Field.Username.ToString()]);
 				_Password = dr[Field.Password.ToString()] == DBNull.Value?"":Convert.ToString(dr[Field.Password.ToString()]);
 				_Email = dr[Field.Email.ToString()] == DBNull.Value?"":Convert.ToString(dr[Field.Email.ToString()]);
@@ -98,7 +91,6 @@ namespace WebsiteGPS.DTO
 		}
 		public UsersInfo(UsersInfo objEntr)
 		{			
-			_ID_User = objEntr.ID_User;			
 			_Username = objEntr.Username;			
 			_Password = objEntr.Password;			
 			_Email = objEntr.Email;			
@@ -115,7 +107,6 @@ namespace WebsiteGPS.DTO
 		{
 			DataTable dt = new DataTable("Users");
 			dt.Columns.AddRange(new DataColumn[] { 
-				new DataColumn(Field.ID_User.ToString(), typeof(Int32)),
 				new DataColumn(Field.Username.ToString(), typeof(String)),
 				new DataColumn(Field.Password.ToString(), typeof(String)),
 				new DataColumn(Field.Email.ToString(), typeof(String)),
@@ -130,7 +121,6 @@ namespace WebsiteGPS.DTO
 		public DataRow ToDataRow(DataTable dt)
 		{
 			DataRow row = dt.NewRow();
-			row[Field.ID_User.ToString()] = _ID_User;
 			row[Field.Username.ToString()] = _Username;
 			row[Field.Password.ToString()] = _Password;
 			row[Field.Email.ToString()] = _Email;

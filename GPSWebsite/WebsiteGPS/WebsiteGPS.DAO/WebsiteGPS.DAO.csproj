@@ -39,6 +39,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationManager.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="ControlsDataAccess.cs" />
     <Compile Include="DevicesDataAccess.cs">

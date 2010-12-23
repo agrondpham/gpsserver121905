@@ -5,13 +5,12 @@ using WebsiteGPS.DTO;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace WebsiteGPS.DAO
 {
 	/// <summary> 
-	///Author: daiduong19051986@gmail.com 
+	///Author: daiduong19051986@gmail.com  
 	/// <summary>
-    public class UsersDataAccess : WebsiteGPS.DAO.Connection
+    public class UsersDataAccess : Connection
     {
 		#region Local Variable
         private string _strSPInsertName = "dbo.[procUsers_add]";
@@ -27,13 +26,13 @@ namespace WebsiteGPS.DAO
 		
 		#region Method
         public UsersInfo Get(
-        Int32 ID_User,
+        String Username,
 		ref string sErr)
         {
 			UsersInfo objEntr = new UsersInfo();
 			connect();
 			InitSPCommand(_strSPGetName);              
-            AddParameter(UsersInfo.Field.ID_User.ToString(), ID_User);
+            AddParameter(UsersInfo.Field.Username.ToString(), Username);
             
             DataTable list = new DataTable();
             try
@@ -56,7 +55,6 @@ namespace WebsiteGPS.DAO
         protected override object GetDataFromDataRow(DataTable dt, int i)
         {
             UsersInfo result = new UsersInfo();
-            result.ID_User = (dt.Rows[i][UsersInfo.Field.ID_User.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][UsersInfo.Field.ID_User.ToString()]));
             result.Username = (dt.Rows[i][UsersInfo.Field.Username.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][UsersInfo.Field.Username.ToString()]));
             result.Password = (dt.Rows[i][UsersInfo.Field.Password.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][UsersInfo.Field.Password.ToString()]));
             result.Email = (dt.Rows[i][UsersInfo.Field.Email.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][UsersInfo.Field.Email.ToString()]));
@@ -132,7 +130,6 @@ namespace WebsiteGPS.DAO
         {
             connect();
             InitSPCommand(_strSPUpdateName);
-            AddParameter(UsersInfo.Field.ID_User.ToString(), objEntr.ID_User);
             AddParameter(UsersInfo.Field.Username.ToString(), objEntr.Username);
             AddParameter(UsersInfo.Field.Password.ToString(), objEntr.Password);
             AddParameter(UsersInfo.Field.Email.ToString(), objEntr.Email);
@@ -157,12 +154,12 @@ namespace WebsiteGPS.DAO
         }
 
         public string Delete(
-        Int32 ID_User
+        String Username
 		)
         {
             connect();
             InitSPCommand(_strSPDeleteName);
-            AddParameter(UsersInfo.Field.ID_User.ToString(), ID_User);
+            AddParameter(UsersInfo.Field.Username.ToString(), Username);
               
             string sErr = "";
             try
@@ -204,12 +201,12 @@ namespace WebsiteGPS.DAO
         }
         
         public Boolean IsExist(
-        Int32 ID_User
+        String Username
 		)
         {
             connect();
             InitSPCommand(_strSPIsExist);
-            AddParameter(UsersInfo.Field.ID_User.ToString(), ID_User);
+            AddParameter(UsersInfo.Field.Username.ToString(), Username);
               
             string sErr = "";
             DataTable list = new DataTable();
