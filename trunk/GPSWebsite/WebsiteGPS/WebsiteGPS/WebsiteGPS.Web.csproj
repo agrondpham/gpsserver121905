@@ -58,6 +58,7 @@
     <Content Include="App_Data\ErrorCode.xml" />
     <Content Include="App_Data\WebConfig.xml" />
     <Content Include="Controls\Accounts\createaccount.ascx" />
+    <Content Include="Controls\Accounts\Forgotpassword.ascx" />
     <Content Include="Controls\Accounts\profile.ascx" />
     <Content Include="Controls\Errors\errors.ascx" />
     <Content Include="Controls\Managers\accountmanager.ascx" />
@@ -125,6 +126,13 @@
     </Compile>
     <Compile Include="Controls\Accounts\createaccount.ascx.designer.cs">
       <DependentUpon>createaccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Accounts\Forgotpassword.ascx.cs">
+      <DependentUpon>Forgotpassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounts\Forgotpassword.ascx.designer.cs">
+      <DependentUpon>Forgotpassword.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Accounts\profile.ascx.cs">
       <DependentUpon>profile.ascx</DependentUpon>
