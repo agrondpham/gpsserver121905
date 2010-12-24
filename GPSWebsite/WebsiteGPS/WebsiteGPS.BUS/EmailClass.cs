@@ -11,7 +11,7 @@ namespace WebsiteGPS.BUS
 {
     public class EmailClass
     {
-        public string Send_Email(string SendFrom,string SendTo, string Subject, string Body) 
+        public bool Send_Email(string SendFrom,string SendTo,string NameTo, string Subject, string Body) 
        {  
            //try 
            //{ 
@@ -31,6 +31,7 @@ namespace WebsiteGPS.BUS
            //        System.Net.Mail.MailMessage msg = new MailMessage(SendFrom,SendTo,Subject,Body); 
            //        msg.IsBodyHtml = true; 
            //        smtp.Host = "smtp.gmail.com";//Sử dụng SMTP của gmail 
+           //        smtp.Port = 587;
            //        smtp.Send(msg); 
            //        return "Email đã được gửi đến: " + SendTo + "."; 
            //    } 
@@ -40,35 +41,22 @@ namespace WebsiteGPS.BUS
            //    return ""; 
            //} 
            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-
            client.EnableSsl = true;
-
            MailAddress from = new MailAddress(SendFrom, "daiduong");
-
-           MailAddress to = new MailAddress(SendTo, "Your recepient name");
-
+           MailAddress to = new MailAddress(SendTo, NameTo);
            MailMessage message = new MailMessage(from, to);
-
            message.Body = Body;
-
            message.Subject = Subject;
-
            NetworkCredential myCreds = new NetworkCredential(SendFrom, "thuthuy", "");
-
            client.Credentials = myCreds;
-
            try
            {
-
                client.Send(message);
-               return "Send Mail Thành Công";
-
+               return true;
            }
            catch (Exception ex)
            {
-
-               return "Exception is:" + ex.ToString();
-
+               return false;
            }
        }  
        public string Send_Email_With_Attachment(string SendTo, string SendFrom, string Subject, string Body, string AttachmentPath) 
@@ -94,7 +82,8 @@ namespace WebsiteGPS.BUS
                        em.Attachments.Add(attach); 
                        em.Bcc.Add(from);  
                        System.Net.Mail.SmtpClient smtp = new SmtpClient(); 
-                       smtp.Host = "smtp.gmail.com";//Ví dụ xử dụng SMTP của gmail                     
+                       smtp.Host = "smtp.gmail.com";//Ví dụ xử dụng SMTP của gmail   
+                       smtp.Port = 587;
                        smtp.Send(em);  
                        return ""; 
                    } 
