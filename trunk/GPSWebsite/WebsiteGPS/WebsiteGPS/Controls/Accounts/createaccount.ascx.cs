@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebsiteGPS.BUS;
 
 namespace WebsiteGPS.Controls.Accounts
 {
     public partial class createaccount : System.Web.UI.UserControl
     {
-        BUS.UsersControl _UsersControl;
+        UsersControl _UsersControl;
+        EmailClass _Email;
         DTO.UsersInfo _UsersInfo;
         string sErr = "";
 
@@ -23,7 +25,9 @@ namespace WebsiteGPS.Controls.Accounts
             try
             {
                 _UsersControl = new BUS.UsersControl();
-                GetDataFrom();
+                GetDataFrom();                
+                _Email = new EmailClass();
+                _Email.Send_Email("daiduong19051986@gmail.com", _UsersInfo.Email, "Username & Password new", "Password: " + tbxPassword.Text.Trim() + " ; " + "Password: " + _UsersInfo.Password + " ;");
                 _UsersControl.Add(_UsersInfo, ref sErr);
                 lblErr.Text = "successfull";
             }
@@ -33,7 +37,6 @@ namespace WebsiteGPS.Controls.Accounts
 
         private void GetDataFrom()
         {
-
             _UsersInfo = new DTO.UsersInfo();
             _UsersInfo.Username = tbxUserName.Text.Trim();
             _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
@@ -52,6 +55,7 @@ namespace WebsiteGPS.Controls.Accounts
             tbxPassword.Text = "";
             tbxEmail.Text = "";
             tbxFullName.Text = "";
+            lblErr.Text = "";
         }
     }
 }

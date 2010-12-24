@@ -128,8 +128,8 @@ namespace WebsiteGPS.Controls
             }
             else if (_UsersInfo.Password == info.Password)
             {
-                Session["User"] = info.Fullname;
-                Response.Redirect("~/Page/googlemap.html");
+                Session["User"] = info.Fullname;// create Session User
+                Response.Redirect("~/Pages/googlemap.html");
             }
         }
 
