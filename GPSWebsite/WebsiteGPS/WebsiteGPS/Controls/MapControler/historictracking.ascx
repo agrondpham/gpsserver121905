@@ -221,6 +221,8 @@
 			});
     });
 </script>
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
 <div id="WidgetControler" class="ui-controller ui-corner-all">
     <ul>
 		<li><a href="#HistoryTracking">[History Tracking]</a></li>
@@ -229,6 +231,7 @@
         <li><a id="hypHide"><img alt="" src="../../Themes/_default/Images/delete_icon.png" /></a></li>
     </ul>
     <div id="HistoryTracking" class="ui-controller-maincontent">
+
         <div class="ui-controller-line">
             <div class="ui-controller-label">[Choice Device]</div>
             <div class="ui-controller-component">
@@ -252,8 +255,14 @@
             <div style="clear"></div>
         </div>
         <div class="ui-Controller-button">
-            <asp:Button ID="Button1" runat="server" Text="[Show Data]" />
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <asp:Button ID="btnShowMarkers" runat="server" Text="[Show Data]" 
+                onclick="btnShowMarkers_Click" />
+        </ContentTemplate>
+        </asp:UpdatePanel>
         </div>
+
     </div>
     <div id="TrackingOnline" class="ui-controller-maincontent">
         <div class="ui-controller-line">
@@ -273,4 +282,5 @@
 <div class="ui-controller-showPanel">
     <a href="#" id="hypShow" class="ui-state-default ui-corner-all">Show Controler</a>
 </div>
+
 
