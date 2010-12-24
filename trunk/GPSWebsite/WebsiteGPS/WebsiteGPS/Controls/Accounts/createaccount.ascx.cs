@@ -27,9 +27,15 @@ namespace WebsiteGPS.Controls.Accounts
                 _UsersControl = new BUS.UsersControl();
                 GetDataFrom();                
                 _Email = new EmailClass();
-                _Email.Send_Email("daiduong19051986@gmail.com", _UsersInfo.Email, "Username & Password new", "Password: " + tbxPassword.Text.Trim() + " ; " + "Password: " + _UsersInfo.Password + " ;");
-                _UsersControl.Add(_UsersInfo, ref sErr);
-                lblErr.Text = "successfull";
+                if (_Email.Send_Email("daiduong19051986@gmail.com", _UsersInfo.Email, _UsersInfo.Fullname, "Username & Password new", "Password: " + tbxPassword.Text.Trim() + " ; " + "Password: " + _UsersInfo.Password + " ;")==true)
+                {
+                    _UsersControl.Add(_UsersInfo, ref sErr);
+                    lblErr.Text = "successfull";
+                }
+                else
+                {
+                    lblErr.Text = "error";
+                }
             }
             catch (Exception ex)
             { lblErr.Text = "error" + ex.ToString(); }
