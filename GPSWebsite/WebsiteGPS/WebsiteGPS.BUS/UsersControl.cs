@@ -5,6 +5,7 @@ using WebsiteGPS.DTO;
 using WebsiteGPS.DAO;
 using System.Data;
 using System.Security.Cryptography;
+using System.Net.Mail;
 
 namespace WebsiteGPS.BUS
 {
