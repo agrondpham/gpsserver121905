@@ -38,13 +38,20 @@ namespace WebsiteGPS.Controls.Accounts
             _UsersInfo.Username = tbxUserName.Text.Trim();
             _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
             _UsersInfo.Email = tbxEmail.Text.Trim();
+            _UsersInfo.Fullname = tbxFullName.Text.Trim();
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
         {
+            Reset();
+        }
+
+        private void Reset()
+        {
             tbxUserName.Text = "";
             tbxPassword.Text = "";
             tbxEmail.Text = "";
+            tbxFullName.Text = "";
         }
     }
 }
