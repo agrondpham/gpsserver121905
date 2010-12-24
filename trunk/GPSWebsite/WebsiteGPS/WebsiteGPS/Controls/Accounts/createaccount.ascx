@@ -24,6 +24,14 @@
             <div>
                 <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
         </div>
+                <div class="rw">
+            <div class="lfcl">
+                <asp:Label runat="server" Text="[Full Name]" ID="lblFullName"></asp:Label></div>
+            <div class="rgcl">
+                <asp:TextBox runat="server" ID="tbxFullName"></asp:TextBox></div>
+            <div>
+                <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
+        </div>
         <div class="rw">
             <div class="lfcl">
 

@@ -67,6 +67,24 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.TextBox tbxEmail;
         
         /// <summary>
+        /// lblFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFullName;
+        
+        /// <summary>
+        /// tbxFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbxFullName;
+        
+        /// <summary>
         /// btnCommit control.
         /// </summary>
         /// <remarks>

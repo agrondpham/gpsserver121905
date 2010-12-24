@@ -128,10 +128,9 @@ namespace WebsiteGPS.Controls
             }
             else if (_UsersInfo.Password == info.Password)
             {
-                lblErr.Text = "=====";
+                Session["User"] = info.Fullname;
+                Response.Redirect("~/Page/googlemap.html");
             }
-
-
         }
 
         private void GetDataFrom()
