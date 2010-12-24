@@ -29,8 +29,8 @@ namespace WebsiteGPS.Controls.Accounts
                 _Email = new EmailClass();
                 if (_Email.Send_Email("daiduong19051986@gmail.com", _UsersInfo.Email, _UsersInfo.Fullname, "Username & Password new", "Password: " + tbxPassword.Text.Trim() + " ; " + "Password: " + _UsersInfo.Password + " ;")==true)
                 {
-                    _UsersControl.Add(_UsersInfo, ref sErr);
-                    lblErr.Text = "successfull";
+                    _UsersControl.Add(_UsersInfo, ref sErr);                    
+                    Reset();lblErr.Text = "successfull";
                 }
                 else
                 {
