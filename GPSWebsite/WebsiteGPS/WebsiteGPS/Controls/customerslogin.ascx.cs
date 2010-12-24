@@ -138,6 +138,6 @@ namespace WebsiteGPS.Controls
             _UsersInfo = new UsersInfo();
             _UsersInfo.Username = tbxUsername.Text.Trim();
             _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
-        }
+        }        
     }
 }
