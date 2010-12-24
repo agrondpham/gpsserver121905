@@ -49,6 +49,7 @@
     <Compile Include="GPS_DataDataAccess.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LanguageDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ConfigDataAccess.cs" />
     <Compile Include="UsersDataAccess.cs">
