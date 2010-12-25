@@ -28,10 +28,10 @@
       <idCompoment>btnLogin</idCompoment>
       <Content>Login</Content>
     </Compoment>
-    <!--<Compoment>
+    <Compoment>
       <type>hyberlink</type>
       <idCompoment>hypForgot</idCompoment>
       <Content>Forgot Username or Password</Content>
-    </Compoment>-->
+    </Compoment>
   </Module>
 </Theme>

@@ -18,10 +18,9 @@
             <div><asp:Label runat="server" id="lblErr" ForeColor="Red"></asp:Label></div>
 			<div class="lfcl"><asp:Button runat="server" Text="[Login]" id="btnLogin" 
                     onclick="btnLogin_Click"></asp:Button></div>
-			<div class="rgcl"><a href="~/Pages/Forgotpassword.html">[Forgot username or password]</a></div>
+			<div class="rgcl">
+                <asp:HyperLink ID="hypForgot" runat="server" NavigateUrl="../Pages/forgotpassword.html">[Forgot username or password]</asp:HyperLink></div>
 		</div>
 	</div>
 </div>
-<asp:GridView ID="GridView1" runat="server">
-</asp:GridView>
 </form>

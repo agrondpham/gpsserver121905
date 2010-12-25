@@ -21,7 +21,7 @@
     <Title>Admin Page</Title>
   </Page>
   <Page>
-    <NameUC>Forgotpassword.html</NameUC>
+    <NameUC>forgotpassword.html</NameUC> <!--request lower word(Yeu cau viet chu thuong vi ben trong co convert)-->
     <URL>Controls/Accounts/Forgotpassword.ascx</URL>
     <Title>Admin Page</Title>
   </Page>
