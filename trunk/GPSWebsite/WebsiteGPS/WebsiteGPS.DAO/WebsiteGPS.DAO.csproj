@@ -46,6 +46,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ErrorLog.cs" />
+    <Compile Include="ErrorsDataAccess.cs" />
     <Compile Include="GPS_DataDataAccess.cs">
       <SubType>Code</SubType>
     </Compile>
