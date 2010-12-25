@@ -18,7 +18,7 @@
             <div><asp:Label runat="server" id="lblErr" ForeColor="Red"></asp:Label></div>
 			<div class="lfcl"><asp:Button runat="server" Text="[Login]" id="btnLogin" 
                     onclick="btnLogin_Click"></asp:Button></div>
-			<div class="rgcl"><asp:HyperLink runat="server" id="hypForgot">[Forgot username or password]</asp:HyperLink></div>
+			<div class="rgcl"><a href="~/Pages/Forgotpassword.html">[Forgot username or password]</a></div>
 		</div>
 	</div>
 </div>

@@ -38,6 +38,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoPassword.cs" />
     <Compile Include="ConfigBLL.cs" />
     <Compile Include="ControlBLL.cs" />
     <Compile Include="DevicesControl.cs" />
