@@ -43,6 +43,7 @@
     <Compile Include="ControlBLL.cs" />
     <Compile Include="DevicesControl.cs" />
     <Compile Include="EmailClass.cs" />
+    <Compile Include="ErrorsBLL.cs" />
     <Compile Include="GPS_DataControl.cs" />
     <Compile Include="LanguageBLL.cs" />
     <Compile Include="MapBLL.cs" />
