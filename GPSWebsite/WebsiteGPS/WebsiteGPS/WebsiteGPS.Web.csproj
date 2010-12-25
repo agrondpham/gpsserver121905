@@ -104,6 +104,7 @@
     <Content Include="Themes\_default\Images\delete_icon.png" />
     <Content Include="Themes\_default\Images\notifi16px.png" />
     <Content Include="Themes\_default\Images\trash_icon.png" />
+    <Content Include="Themes\_default\Images\map_icon.png" />
     <Content Include="Themes\_default\Images\user_add.png" />
     <Content Include="Themes\_default\Styles\accountsmanager.css" />
     <Content Include="Themes\_default\Styles\Controller.css" />

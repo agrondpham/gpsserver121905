@@ -71,13 +71,17 @@
         // set effect from select menu value
         $("#hypShow").click(function () {
             runEffect("show");
+            $("#hypShow").hide("fast");
             return false;
         });
         // set effect from select menu value
         $("#hypHide").click(function () {
             runEffect("hide");
+            $("#hypShow").show("fast");
             return false;
         });
+        //set hide default of "Show Control"
+        $("#hypShow").hide("fast");
     });
 
 </script>
@@ -280,7 +284,9 @@
 </div>
 <div id="ProfileDialog" title="[View Profile]"><uc1:profile ID="profile1" runat="server" /></div>
 <div class="ui-controller-showPanel">
-    <a href="#" id="hypShow" class="ui-state-default ui-corner-all">Show Controler</a>
+    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor:pointer">
+        <img alt="" src="../../Themes/_default/Images/map_icon.png" />
+    </a>
 </div>
 
 

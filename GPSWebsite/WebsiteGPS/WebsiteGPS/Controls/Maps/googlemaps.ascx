@@ -10,9 +10,14 @@
         var Duong = new google.maps.LatLng(10.812233333333333, 106.69376666666666);
         var myOptions = {
             zoom: 13, //edit zoom to point
-            mapTypeControl: false, //invisible Map control
+            mapTypeControl: false, //invisible Map Type control
             center: Duong, //put center of map
-            mapTypeId: google.maps.MapTypeId.ROADMAP//choice type of map
+            mapTypeId: google.maps.MapTypeId.ROADMAP,//choice type of map
+            navigationControl: true, //visible Map Zoom control
+            navigationControlOptions: {
+                style: google.maps.NavigationControlStyle.ZOOM_PAN,
+                position: google.maps.ControlPosition.TOP_RIGHT
+            }
         };
         map = new google.maps.Map(document.getElementById("map_canvas"),
         myOptions);
