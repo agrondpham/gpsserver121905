@@ -36,8 +36,9 @@
 
         $("#add-user-dialog").dialog({
             autoOpen: false,
-            height: 300,
-            width: 350,
+            resizable: false,
+            height: 500,
+            width: 650,
             modal: true,
             close: function () {
                 allFields.val("").removeClass("ui-state-error");

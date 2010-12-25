@@ -24,6 +24,12 @@
     border: 1px solid #AAAAAA;
     height:29px;
 }
+.button:hover /*add hover to button*/
+{
+    border: 1px solid #999999;
+    color: #212121;
+    font-weight: normal;
+    }
 /*header*/
 .cm-tool-header    
 {
@@ -54,4 +60,28 @@
 .clear
 {
     clear:both;
+    }
+/*New Account*/
+.rw{
+	width:400px;
+	height:40px;
+	margin:20px 10% 0px 10%;
+	font-family:Verdana,Arial,sans-serif;
+	font-size:0.8em;
+}
+.lfcl{
+	width:150px;
+	float:left
+}
+.rgcl{
+	width:200px;
+	float:left
+}
+.rw-control
+{
+    width:400px;
+	height:40px;
+	margin:30px 10% 10px 10%;
+    font-family:Verdana,Arial,sans-serif;
+	font-size:0.8em;
     }
