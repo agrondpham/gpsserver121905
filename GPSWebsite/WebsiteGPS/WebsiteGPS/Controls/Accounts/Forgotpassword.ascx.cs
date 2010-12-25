@@ -29,16 +29,16 @@ namespace WebsiteGPS.Controls.Accounts
             _AutoPassword = new AutoPassword();
             _UsersInfo = new UsersInfo();
             DataTable dt = new DataTable();
-            dt = _UsersControl.Search("Email", tbxEmail.Text.Trim(), "=", ref sErr);
+            dt = _UsersControl.Search("Email", "'" + tbxEmail.Text.Trim() + "'" , "=", ref sErr);
             if (dt.Rows.Count == 1)
             {
                 try
                 {
                     Password = _AutoPassword.Generate(8, 10);
                     _UsersInfo.Password = _UsersControl.EncodePassword(Password.Trim());
-                    _UsersInfo.Username = dt.Rows[1]["Username"].ToString();
-                    _UsersInfo.Email = dt.Rows[1]["Email"].ToString();
-                    _UsersInfo.Fullname = dt.Rows[1]["Fullname"].ToString();
+                    _UsersInfo.Username = dt.Rows[0]["Username"].ToString();
+                    _UsersInfo.Email = dt.Rows[0]["Email"].ToString();
+                    _UsersInfo.Fullname = dt.Rows[0]["Fullname"].ToString();
                     _EmailClass = new EmailClass();
                     if (_EmailClass.Send_Email("daiduong19051986@gmail.com", _UsersInfo.Email, _UsersInfo.Fullname, "Username & Password new", "Username: " + _UsersInfo.Username + " ; " + "Password: " + Password + " ;") == true)
                     {
