@@ -20,4 +20,9 @@
     <URL>Controls/Managers/accountmanager.ascx</URL>
     <Title>Admin Page</Title>
   </Page>
+  <Page>
+    <NameUC>Forgotpassword.html</NameUC>
+    <URL>Controls/Accounts/Forgotpassword.ascx</URL>
+    <Title>Admin Page</Title>
+  </Page>
 </Pages>

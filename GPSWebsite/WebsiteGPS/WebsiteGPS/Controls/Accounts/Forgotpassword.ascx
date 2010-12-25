@@ -10,7 +10,8 @@
         </div>		
 		<div class="rw">
             <div><asp:Label runat="server" id="lblErr" ForeColor="Red"></asp:Label></div>
-			<div class="lfcl"><asp:Button runat="server" Text="[Summit]" id="btnSummit"></asp:Button></div>
+			<div class="lfcl"><asp:Button runat="server" Text="[Summit]" id="btnSummit" 
+                    onclick="btnSummit_Click"></asp:Button></div>
 			
 		</div>
 	</div>
