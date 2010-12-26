@@ -5,4 +5,11 @@
     <ThemeURL>_default/_default.template</ThemeURL>
     <Language>EN-US</Language>
   </Config>
+  <Email>
+    <SMTP>smtp.gmail.com</SMTP>
+    <PortSMTP>587</PortSMTP>
+    <EmailAddress>daiduong19051986@gmail.com</EmailAddress>
+    <EmailName>Administrator Tran Van Dai Duong</EmailName>
+    <Password>thuthuy</Password>
+  </Email>
 </Website.config>
