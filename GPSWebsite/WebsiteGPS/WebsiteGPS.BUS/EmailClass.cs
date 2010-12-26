@@ -7,12 +7,17 @@ using System.Web;
 using System.Net;
 
 
+using System.Xml.Linq;
 namespace WebsiteGPS.BUS
 {
     public class EmailClass
     {
-        public bool Send_Email(string SendFrom,string SendTo,string NameTo, string Subject, string Body) 
-       {  
+        #region LocalVariable
+        DAO.ConfigDataAccess _ConfigDAO = new DAO.ConfigDataAccess();
+        #endregion
+        public bool Send_Email(string SendTo,string NameTo, string Subject, string Body, string pFileURL) 
+        {
+            string[] EmailConfig = _ConfigDAO.LoadEmailConfig(pFileURL);
            //try 
            //{ 
            //    System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
@@ -40,14 +45,14 @@ namespace WebsiteGPS.BUS
            //{ 
            //    return ""; 
            //} 
-           SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            SmtpClient client = new SmtpClient(EmailConfig[0],Int32.Parse(EmailConfig[1]));//("smtp.gmail.com", 587);
            client.EnableSsl = true;
-           MailAddress from = new MailAddress(SendFrom, "daiduong");
+           MailAddress from = new MailAddress(EmailConfig[2],EmailConfig[3]);//SendFrom, "daiduong");
            MailAddress to = new MailAddress(SendTo, NameTo);
            MailMessage message = new MailMessage(from, to);
            message.Body = Body;
            message.Subject = Subject;
-           NetworkCredential myCreds = new NetworkCredential(SendFrom, "thuthuy", "");
+           NetworkCredential myCreds = new NetworkCredential(EmailConfig[2],EmailConfig[4],"");//SendFrom,"thuthuy", "");
            client.Credentials = myCreds;
            try
            {
