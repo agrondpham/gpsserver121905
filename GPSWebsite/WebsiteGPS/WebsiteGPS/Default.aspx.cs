@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using WebsiteGPS.Library;
+//using WebsiteGPS.Library;
 using System.IO;
 using System.Collections;
 using System.Data;
@@ -40,7 +40,7 @@ namespace WebsiteGPS
             //Issue
             //strParameterURL can be null if load with nomal direct
             //if XML do not contain data ctrMain canbe get error
-            Library.Validate validate = new Validate();
+
             if (RouteData.Route == null)
             {
                 Response.RedirectToRoute("Login_Page", new { pages = "index.html" });
