@@ -1,0 +1,9 @@
+﻿Host=smtp.gmail.com
+Port=587
+SendFrom=daiduong19051986@gmail.com
+NameSend=Ðai Duong
+PassSend=thuthuy
+Subject=Ðang Ký Thành Công
+BodyCreate=ssss
+BodyForgot=ssss
+BodyChangePass=ssss
