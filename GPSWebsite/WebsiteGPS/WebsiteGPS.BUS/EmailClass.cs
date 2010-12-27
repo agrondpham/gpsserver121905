@@ -1,58 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Net.Mail;
-using System.Web;
 using System.Net;
+using System.Net.Mail;
 
 
-using System.Xml.Linq;
 namespace WebsiteGPS.BUS
 {
     public class EmailClass
     {
-        #region LocalVariable
-        DAO.ConfigDataAccess _ConfigDAO = new DAO.ConfigDataAccess();
-        #endregion
-        public bool Send_Email(string SendTo,string NameTo, string Subject, string Body, string pFileURL) 
-        {
-            string[] EmailConfig = _ConfigDAO.LoadEmailConfig(pFileURL);
-           //try 
-           //{ 
-           //    System.Text.RegularExpressions.Regex regex = new System.Text.RegularExpressions.Regex(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
-           //    string from = SendFrom;
-           //    string to = SendTo;
-           //    string subject = Subject;
-           //    string body = Body;
-           //    bool result = regex.IsMatch(to); 
-           //    if (result == false) 
-           //    { 
-           //        return "Địa chỉ email không hợp lệ."; 
-           //    } 
-           //    else 
-           //    { 
-           //        System.Net.Mail.SmtpClient smtp = new SmtpClient(); 
-           //        System.Net.Mail.MailMessage msg = new MailMessage(SendFrom,SendTo,Subject,Body); 
-           //        msg.IsBodyHtml = true; 
-           //        smtp.Host = "smtp.gmail.com";//Sử dụng SMTP của gmail 
-           //        smtp.Port = 587;
-           //        smtp.Send(msg); 
-           //        return "Email đã được gửi đến: " + SendTo + "."; 
-           //    } 
-           //} 
-           //catch 
-           //{ 
-           //    return ""; 
-           //} 
-            SmtpClient client = new SmtpClient(EmailConfig[0],Int32.Parse(EmailConfig[1]));//("smtp.gmail.com", 587);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="info">thong tin gui mail co 3 thuoc tinh: BodyCreate | BodyForgot | BodyChangePass</param>
+        /// <param name="strPath"></param>
+        /// <param name="SendTo"></param>
+        /// <param name="NameTo"></param>
+        /// <param name="Body"></param>
+        /// <returns></returns>
+        public bool Send_Email(string info,string strPath, string SendTo, string NameTo, string Body) 
+       {
+           TXTdll _txtdll = new TXTdll();
+           _txtdll.LineArgs = _txtdll.LoadFileToArray(strPath);
+           SmtpClient client = new SmtpClient(_txtdll.LineArgs[0],int.Parse(_txtdll.LineArgs[1]));
            client.EnableSsl = true;
-           MailAddress from = new MailAddress(EmailConfig[2],EmailConfig[3]);//SendFrom, "daiduong");
+           MailAddress from = new MailAddress(_txtdll.LineArgs[2], _txtdll.LineArgs[3]);
            MailAddress to = new MailAddress(SendTo, NameTo);
            MailMessage message = new MailMessage(from, to);
-           message.Body = Body;
-           message.Subject = Subject;
-           NetworkCredential myCreds = new NetworkCredential(EmailConfig[2],EmailConfig[4],"");//SendFrom,"thuthuy", "");
+           if (info == "BodyCreate")
+                message.Body = _txtdll.LineArgs[6] + "\n " +Body;
+           if (info == "BodyForgot")
+               message.Body = _txtdll.LineArgs[7] + "\n " + Body;
+           if (info == "BodyChangePass")
+               message.Body = _txtdll.LineArgs[8] + "\n " + Body;
+           message.Subject = _txtdll.LineArgs[5];
+           NetworkCredential myCreds = new NetworkCredential(_txtdll.LineArgs[2], _txtdll.LineArgs[4], "");
            client.Credentials = myCreds;
            try
            {
