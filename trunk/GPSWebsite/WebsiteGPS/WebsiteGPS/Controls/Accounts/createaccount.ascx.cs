@@ -4,9 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-using System.IO;
 using WebsiteGPS.BUS;
+using System.IO;
 
 namespace WebsiteGPS.Controls.Accounts
 {
@@ -29,12 +28,7 @@ namespace WebsiteGPS.Controls.Accounts
                 _UsersControl = new BUS.UsersControl();
                 GetDataFrom();                
                 _Email = new EmailClass();
-                if (_Email.Send_Email(  _UsersInfo.Email,
-                                        _UsersInfo.Fullname,
-                                        "Username & Password new",
-                                        "Username : " + _UsersInfo.Username + " ; " + "Password: " + tbxPassword.Text.Trim() + " ;", 
-                                        Path.Combine(Request.PhysicalApplicationPath,"App_Data\\WebConfig.xml"))
-                                        == true)
+                if (_Email.Send_Email("BodyCreate",Path.Combine(Request.PhysicalApplicationPath, "App_Data\\InfoMailServer"), _UsersInfo.Email, _UsersInfo.Fullname, "Username : " + _UsersInfo.Username + " ; " + "Password: " + tbxPassword.Text.Trim() + " ;") == true)
                 {
                     _UsersControl.Add(_UsersInfo, ref sErr);                    
                     Reset();lblErr.Text = "successfull";
