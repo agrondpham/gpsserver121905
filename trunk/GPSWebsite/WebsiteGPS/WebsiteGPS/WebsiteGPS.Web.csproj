@@ -210,10 +210,6 @@
       <Project>{C8D6E6EC-2F48-4D20-B1F8-69116808CDB7}</Project>
       <Name>WebsiteGPS.DTO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebsiteGPS.Library\WebsiteGPS.Library.csproj">
-      <Project>{1EB546DB-F851-42C0-A857-082E23A94806}</Project>
-      <Name>WebsiteGPS.Library</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
