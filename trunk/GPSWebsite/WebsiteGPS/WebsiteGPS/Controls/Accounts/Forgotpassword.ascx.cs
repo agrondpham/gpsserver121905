@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WebsiteGPS.BUS;
 using WebsiteGPS.DTO;
 using System.Data;
+using System.IO;
 
 namespace WebsiteGPS.Controls.Accounts
 {
@@ -40,7 +41,7 @@ namespace WebsiteGPS.Controls.Accounts
                     _UsersInfo.Email = dt.Rows[0]["Email"].ToString();
                     _UsersInfo.Fullname = dt.Rows[0]["Fullname"].ToString();
                     _EmailClass = new EmailClass();
-                    if (_EmailClass.Send_Email("ggg","dsaiduong19051986@gmail.com", _UsersInfo.Email, _UsersInfo.Fullname, "Username: " + _UsersInfo.Username + " ; " + "Password: " + Password + " ;") == true)
+                    if (_EmailClass.Send_Email("BodyForgot", Path.Combine(Request.PhysicalApplicationPath, "App_Data\\InfoMailServer"), _UsersInfo.Email, _UsersInfo.Fullname, "Username : " + _UsersInfo.Username + " ; " + "Password: " + Password.Trim() + " ;") == true)
                     {
                         _UsersControl.Update(_UsersInfo);
                     }
