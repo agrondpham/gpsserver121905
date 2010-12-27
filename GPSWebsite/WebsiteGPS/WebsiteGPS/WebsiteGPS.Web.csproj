@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\ErrorCode.xml" />
+    <None Include="App_Data\InfoMailServer" />
     <Content Include="App_Data\WebConfig.xml" />
     <Content Include="Controls\Accounts\createaccount.ascx" />
     <Content Include="Controls\Accounts\Forgotpassword.ascx" />
@@ -198,7 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="App_GlobalResources\Images\Marker\" />
+    <Folder Include="Controls\Accounts\App_GlobalResources\Images\Marker\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebsiteGPS.BUS\WebsiteGPS.BUS.csproj">
