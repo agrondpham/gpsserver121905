@@ -5,13 +5,12 @@ using WebsiteGPS.DTO;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace WebsiteGPS.DAO
 {
 	/// <summary> 
-	///Author: daiduong19051986@gmail.com 
+	///Author: nnamthach@gmail.com 
 	/// <summary>
-    public class DevicesDataAccess : WebsiteGPS.DAO.Connection
+    public class DevicesDataAccess : Connection
     {
 		#region Local Variable
         private string _strSPInsertName = "dbo.[procDevices_add]";
@@ -49,7 +48,7 @@ namespace WebsiteGPS.DAO
             if (list.Rows.Count > 0)
                 objEntr = (DevicesInfo)GetDataFromDataRow(list, 0);
             //if (dr != null) list = CBO.FillCollection(dr, ref list);
-            if (sErr != "") WebsiteGPS.DAO.ErrorLog.SetLog(sErr);
+            if (sErr != "") ErrorLog.SetLog(sErr);
             return objEntr;
         }
 
@@ -57,7 +56,7 @@ namespace WebsiteGPS.DAO
         {
             DevicesInfo result = new DevicesInfo();
             result.IMED_Device = (dt.Rows[i][DevicesInfo.Field.IMED_Device.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][DevicesInfo.Field.IMED_Device.ToString()]));
-            result.ID_User = (dt.Rows[i][DevicesInfo.Field.ID_User.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][DevicesInfo.Field.ID_User.ToString()]));
+            result.Username = (dt.Rows[i][DevicesInfo.Field.Username.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][DevicesInfo.Field.Username.ToString()]));
             result.Status = (dt.Rows[i][DevicesInfo.Field.Status.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][DevicesInfo.Field.Status.ToString()]));
            
             return result;
@@ -95,7 +94,7 @@ namespace WebsiteGPS.DAO
             connect();
             InitSPCommand(_strSPInsertName);
             AddParameter(DevicesInfo.Field.IMED_Device.ToString(), objEntr.IMED_Device);
-            AddParameter(DevicesInfo.Field.ID_User.ToString(), objEntr.ID_User);
+            AddParameter(DevicesInfo.Field.Username.ToString(), objEntr.Username);
             AddParameter(DevicesInfo.Field.Status.ToString(), objEntr.Status);
           
             try
@@ -122,7 +121,7 @@ namespace WebsiteGPS.DAO
             connect();
             InitSPCommand(_strSPUpdateName);
             AddParameter(DevicesInfo.Field.IMED_Device.ToString(), objEntr.IMED_Device);
-            AddParameter(DevicesInfo.Field.ID_User.ToString(), objEntr.ID_User);
+            AddParameter(DevicesInfo.Field.Username.ToString(), objEntr.Username);
             AddParameter(DevicesInfo.Field.Status.ToString(), objEntr.Status);
                
             string sErr = "";
