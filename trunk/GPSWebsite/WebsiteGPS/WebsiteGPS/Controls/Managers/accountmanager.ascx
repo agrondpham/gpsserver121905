@@ -100,6 +100,7 @@
         </div>
     </div>
     <div>
+    <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
     </div>
     <div id="users" class="ui-widget ui-widget-content cm-table">
         <%--<div class="ui-widget-header cm-table-rw">
@@ -133,7 +134,8 @@
                     runat="server" AllowPaging="True" AutoGenerateColumns="False" Style="text-align"
                     PagerStyle-Mode="NumericPages" 
                     PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" 
-                    onpageindexchanged="dtgrid_PageIndexChanged">
+                    onpageindexchanged="dtgrid_PageIndexChanged" 
+                    ondeletecommand="dtgrid_DeleteCommand">
                     <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
                     <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center"></PagerStyle>
                     <HeaderStyle CssClass="header" BackColor="#990000" Font-Bold="True" 
@@ -155,13 +157,8 @@
                         <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName"></asp:BoundColumn>
                         <asp:BoundColumn HeaderText="Email" DataField="Email"></asp:BoundColumn>                        
                         <asp:BoundColumn HeaderText="Trang Thái" DataField="Status"></asp:BoundColumn>
-                        <asp:TemplateColumn HeaderText="Chọn">
-                            <HeaderStyle Width="7%"></HeaderStyle>
-                            <ItemStyle HorizontalAlign="Center"></ItemStyle>
-                            <ItemTemplate>
-                                <asp:CheckBox ID="chkSelect" runat="server"></asp:CheckBox>
-                            </ItemTemplate>
-                        </asp:TemplateColumn>
+                        <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete">
+                        </asp:ButtonColumn>
                     </Columns>
                     <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
                 </asp:DataGrid>
