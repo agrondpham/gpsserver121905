@@ -14,7 +14,7 @@ namespace ClientSocket
         {
             TcpClient client = new TcpClient();
 
-            IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2200);
+            IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse("115.75.62.48"), 2200);
 
             client.Connect(serverEndPoint);
 
