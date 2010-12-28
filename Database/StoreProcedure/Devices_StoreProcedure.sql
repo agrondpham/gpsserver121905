@@ -3,22 +3,22 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_add]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_add] (
 @IMED_Device as int,
-@ID_User as int,
+@Username as varchar(100),
 @Status as int
 )
 AS
 BEGIN
 INSERT INTO dbo.[Devices](
 IMED_Device,	
-ID_User,	
+Username,	
 Status	
 )
 VALUES(
 @IMED_Device,
-@ID_User,
+@Username,
 @Status
 	
 	)
@@ -30,17 +30,17 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_update]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_update](
 @IMED_Device as int,
-@ID_User as int,
+@Username as varchar(100),
 @Status as int
 )
 AS
 BEGIN
 UPDATE dbo.[Devices] SET 
-	ID_User = @ID_User,
-	Status = @Status
+	Status = @Status,
+	Username = @Username
 	
 WHERE 	(
 		@IMED_Device = IMED_Device 
@@ -52,7 +52,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_delete]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_delete](
 @IMED_Device as int
 )
@@ -69,7 +69,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_isexist]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_isexist](
 @IMED_Device as int
 )
@@ -89,7 +89,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_get]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_get](
 @IMED_Device as int
 )
@@ -97,7 +97,7 @@ AS
 BEGIN 
 SELECT
 	IMED_Device,
-	ID_User,
+	Username,
 	Status
 	
 FROM  dbo.[Devices]
@@ -112,13 +112,13 @@ drop procedure dbo.[procDevices_getall]
 
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_getall]
 AS
 BEGIN
 SELECT 	
 	IMED_Device,
-	ID_User,
+	Username,
 	Status
 	
 FROM  dbo.[Devices]
@@ -129,7 +129,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procDevices_
 drop procedure dbo.[procDevices_getpaged]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procDevices_getpaged](
 @WhereClause nvarchar (4000)  ,
 @OrderBy varchar (2000)  ,
@@ -171,7 +171,7 @@ End
 exec sp_executesql @SQL
 SELECT 	
 	O.IMED_Device,
-	O.ID_User,
+	O.Username,
 	O.Status
 	
 FROM  dbo.[Devices] AS O, [#PageIndex] AS PageIndex
