@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace WebsiteGPS.DAO
 {
 	/// <summary> 
-	///Author: nnamthach@gmail.com 
+	///Author: daiduong19051986@gmail.com 
 	/// <summary>
     public class DevicesDataAccess : Connection
     {
