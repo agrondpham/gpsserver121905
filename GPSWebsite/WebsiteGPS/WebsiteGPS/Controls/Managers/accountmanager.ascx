@@ -11,29 +11,8 @@
 <script src="../Scripts/librarys/jquery.ui.datepicker-vi.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
 <script type="text/javascript">
-    $(function () {
-        //Delete config
-        $("#hypDelete").click(function () {
-            $("#delete-confirm").dialog("open");
-        });
-        $("#delete-confirm").dialog({
-            autoOpen: false,
-            resizable: false,
-            height: 300,
-            width: 350,
-            modal: true,
-            buttons: {
-                "Delete": function () {
-                    $(this).dialog("close");
-                },
-                Cancel: function () {
-                    $(this).dialog("close");
-                }
-            }
-        });
-        $("#delete-confirm").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
+$(function () {
         //AddUser Dialog
-
         $("#add-user-dialog").dialog({
             autoOpen: false,
             resizable: false,
@@ -130,7 +109,36 @@
         </div>--%>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                <asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" 
+                 <script type="text/javascript">
+                     Sys.Application.add_load(function(){
+                         $("button, input:submit, a", ".demo").button();
+                         $("a", ".cm-table-button").click(function () { $("#delete-confirm").dialog("open"); });   
+                     //Delete config
+//                    $("#hypDelete").click(function () {
+//                        $("#delete-confirm").dialog("open");
+//                    });
+                    $("#delete-confirm").dialog({
+                        autoOpen: false,
+                        resizable: false,
+                        height: 300,
+                        width: 350,
+                        modal: true,
+                        buttons: {
+                            "Delete": function () {
+                                $(this).dialog("close");
+                            },
+                            Cancel: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                    $("#delete-confirm").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
+                     }
+                     
+                     );
+                 </script>
+
+                <%--<asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" 
                     runat="server" AllowPaging="True" AutoGenerateColumns="False" Style="text-align"
                     PagerStyle-Mode="NumericPages" 
                     PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" 
@@ -161,7 +169,56 @@
                         </asp:ButtonColumn>
                     </Columns>
                     <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                </asp:DataGrid>
+                </asp:DataGrid>--%>
+                <div class="ui-widget-header cm-table-rw">
+                    <div class="cm-table-cl" style="width: 100px">
+                        [Name]</div>
+                    <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
+                        [FullName]</div>
+                    <div class="cm-table-cl cm-table-ncl" style="width: 300px;">
+                        [Password]</div>
+                    <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
+                        [Status]</div>
+                    <div class="cm-table-cl cm-table-ncl" style="width: 50px;">
+                        [Delete]</div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <asp:ListView ID="lview_Accounts" runat="server">
+                    <ItemTemplate>
+                        <div class="cm-table-rw">
+                            <div style="width: 100px; float: left">
+                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl=''>
+                                    <%# DataBinder.Eval(Container,"DataItem.Username")%>
+                                </asp:HyperLink>
+                                </div>
+                            <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
+                                <%# DataBinder.Eval(Container,"DataItem.FullName")%></div>
+                            <div class="cm-table-cl cm-table-ncl" style="width: 300px;">
+                                <%# DataBinder.Eval(Container,"DataItem.Email")%></div>
+                            <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
+                                <%# DataBinder.Eval(Container, "DataItem.Status")%></div>
+                            <div class="cm-table-cl cm-table-ncl cm-table-button" style="width: 50px;">
+                                <a id="hypDelete" class="cm-a">
+                                    <img alt="" src="../../Themes/_default/Images/trash_icon.png" /></a></div>
+                            <div class="clear">
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:ListView>
+                <div class="ui-widget-header cm-table-rw">
+                <asp:DataPager ID="DataPager1" runat="server" PagedControlID="lview_Accounts"
+                 PageSize="3" onprerender="DataPager1_PreRender">
+                    <Fields>       
+                        <asp:NumericPagerField ButtonType="Link" ButtonCount="2"  />
+                        <%--<asp:TemplatePagerField>
+                            <PagerTemplate>
+                                <asp:DropDownList ID="ddlPage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPage_SelectedIndexChanged"></asp:DropDownList>       
+                            </PagerTemplate>
+                        </asp:TemplatePagerField>--%>
+                    </Fields>
+                </asp:DataPager>
+                </div>
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>

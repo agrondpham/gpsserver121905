@@ -29,31 +29,69 @@ namespace WebsiteGPS.Controls.Manager
         private void LoadGrid()
         {
 
-            dtgrid.DataSource = _UsersControl.GetAll(ref sErr);
-            dtgrid.DataBind();
+            //dtgrid.DataSource = _UsersControl.GetAll(ref sErr);
+            //dtgrid.DataBind();
+            lview_Accounts.DataSource = _UsersControl.GetAll(ref sErr);
+            lview_Accounts.DataBind();
         }
 
-        protected void dtgrid_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
+        //protected void dtgrid_PageIndexChanged(object source, DataGridPageChangedEventArgs e)
+        //{
+        //    dtgrid.CurrentPageIndex = e.NewPageIndex;
+        //    LoadGrid();
+        //}
+
+        //protected void dtgrid_DeleteCommand(object source, DataGridCommandEventArgs e)
+        //{
+        //    string _user = dtgrid.Items[e.Item.ItemIndex].Cells[0].Text.Trim();
+
+        //    if (Session["Username"] != _user)
+        //    {
+        //        _UsersControl.Delete(_user);
+        //        LoadGrid();
+        //    }
+        //    else
+        //        lblErr.Text = "UserName dag su dung";
+
+        //}
+
+        //Listview
+
+        //protected void lview_Accounts_DeleteCommand(object source, ListViewDeleteEventArgs e)
+        //{
+        //    string _user = lis.Items[e.Item.ItemIndex].Cells[0].Text.Trim();
+
+        //    if (Session["Username"] != _user)
+        //    {
+        //        _UsersControl.Delete(_user);
+        //        LoadGrid();
+        //    }
+        //    else
+        //        lblErr.Text = "UserName dag su dung";
+
+        //}
+        protected void DataPager1_PreRender(object sender, EventArgs e)
         {
-            dtgrid.CurrentPageIndex = e.NewPageIndex;
-            LoadGrid();
-        }
 
-        protected void dtgrid_DeleteCommand(object source, DataGridCommandEventArgs e)
-        {
-            string _user = dtgrid.Items[e.Item.ItemIndex].Cells[0].Text.Trim();
+            lview_Accounts.DataSource = _UsersControl.GetAll(ref sErr);
 
-            if (Session["Username"] != _user)
-            {
-                _UsersControl.Delete(_user);
-                LoadGrid();
-            }
-            else                
-                lblErr.Text = "UserName dag su dung";
+            lview_Accounts.DataBind();
 
         }
+        //Code to choice Page
+        //int CurrentPage = 0;
+        //protected void ddlPage_SelectedIndexChanged(object sender, EventArgs e)
+        //{
 
+        //    DropDownList ddl = sender as DropDownList;
 
+        //    CurrentPage = int.Parse(ddl.SelectedValue);
+
+        //    int PageSize = DataPager1.PageSize;
+
+        //    DataPager1.SetPageProperties(CurrentPage * PageSize, PageSize, true);
+
+        //}
 
     }
 }
