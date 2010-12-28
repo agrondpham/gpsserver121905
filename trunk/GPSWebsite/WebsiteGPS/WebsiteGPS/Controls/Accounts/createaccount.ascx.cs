@@ -49,6 +49,7 @@ namespace WebsiteGPS.Controls.Accounts
             _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
             _UsersInfo.Email = tbxEmail.Text.Trim();
             _UsersInfo.Fullname = tbxFullName.Text.Trim();
+            _UsersInfo.Status = 1;
         }
 
         protected void btnAddNew_Click(object sender, EventArgs e)
