@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="accountmanager.ascx.cs"
     Inherits="WebsiteGPS.Controls.Manager.accountmanager" %>
-<%@ Register src="../Accounts/createaccount.ascx" tagname="createaccount" tagprefix="uc1" %>
+<%@ Register Src="../Accounts/createaccount.ascx" TagName="createaccount" TagPrefix="uc1" %>
 <%--StyleSheet inport--%>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
 <link href="../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
@@ -31,7 +31,7 @@
                 }
             }
         });
-        $("#delete-confirm").parent().appendTo(jQuery("form:first"));//Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
+        $("#delete-confirm").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
         //AddUser Dialog
 
         $("#add-user-dialog").dialog({
@@ -92,7 +92,8 @@
     </asp:ScriptManager>
     <div class="cm-tool-header">
         <a id="hypAddUser" class="cm-a" style="float: left">
-            <img alt="" src="../../Themes/_default/Images/user_add.png" /></a> <a runat="server" onclick="Button1_Click" class="ui-button ui-widget ui-state-default cm-button-search ui-corner-right ui-button-icon">
+            <img alt="" src="../../Themes/_default/Images/user_add.png" /></a> <a runat="server"
+                onclick="Button1_Click" class="ui-button ui-widget ui-state-default cm-button-search ui-corner-right ui-button-icon">
                 [Search]</a>
         <input id="search" type="text" class="ui-widget ui-widget-content ui-corner-left cm-textbox-search" />
         <div class="clear">
@@ -101,7 +102,7 @@
     <div>
     </div>
     <div id="users" class="ui-widget ui-widget-content cm-table">
-        <div class="ui-widget-header cm-table-rw">
+        <%--<div class="ui-widget-header cm-table-rw">
             <div class="cm-table-cl" style="width: 100px">
                 [Name]</div>
             <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
@@ -125,20 +126,58 @@
                     <img alt="" src="../../Themes/_default/Images/trash_icon.png" /></a></div>
             <div class="clear">
             </div>
-        </div>
+        </div>--%>
+        <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+            <ContentTemplate>
+                <asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" 
+                    runat="server" AllowPaging="True" AutoGenerateColumns="False" Style="text-align"
+                    PagerStyle-Mode="NumericPages" 
+                    PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" 
+                    onpageindexchanged="dtgrid_PageIndexChanged">
+                    <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center"></PagerStyle>
+                    <HeaderStyle CssClass="header" BackColor="#990000" Font-Bold="True" 
+                        ForeColor="White" />
+                    <FooterStyle CssClass="footer" BackColor="#990000" Font-Bold="True" 
+                        ForeColor="White" />
+                    <AlternatingItemStyle BackColor="White" />
+                    <Columns>
+                        <asp:BoundColumn Visible="false" DataField="Username"></asp:BoundColumn>
+                        <asp:TemplateColumn HeaderText="Tên Đăng Nhập">
+                            <HeaderStyle Width="30%"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                            <ItemTemplate>
+                                <asp:LinkButton runat="server" ID="btnTitle" CommandName="Edit">
+						    <%# DataBinder.Eval(Container, "DataItem.Username")%>
+                                </asp:LinkButton>
+                            </ItemTemplate>
+                        </asp:TemplateColumn>
+                        <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName"></asp:BoundColumn>
+                        <asp:BoundColumn HeaderText="Email" DataField="Email"></asp:BoundColumn>                        
+                        <asp:BoundColumn HeaderText="Trang Thái" DataField="Status"></asp:BoundColumn>
+                        <asp:TemplateColumn HeaderText="Chọn">
+                            <HeaderStyle Width="7%"></HeaderStyle>
+                            <ItemStyle HorizontalAlign="Center"></ItemStyle>
+                            <ItemTemplate>
+                                <asp:CheckBox ID="chkSelect" runat="server"></asp:CheckBox>
+                            </ItemTemplate>
+                        </asp:TemplateColumn>
+                    </Columns>
+                    <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                </asp:DataGrid>
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
-
     <div id="add-user-dialog" title="[Create New User]">
-<%--    Dua Ajax vao xu ly form--%>
+        <%--    Dua Ajax vao xu ly form--%>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
-          <%--      dua ra user control de de edit--%>
-          <%-- xu ly loi button bang cach them dong vao dong code o vi tri Ln46 Col9,Da lam tuong tu voi dong Ln34 col9 --%>
+                <%--      dua ra user control de de edit--%>
+                <%-- xu ly loi button bang cach them dong vao dong code o vi tri Ln46 Col9,Da lam tuong tu voi dong Ln34 col9 --%>
                 <uc1:createaccount ID="createaccount1" runat="server" />
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
-
     <div id="delete-confirm" title="[Delete item?]" class="cm-dialog-config">
         <p>
             [These items will be permanently deleted and cannot be recovered. Are you sure?]</p>
