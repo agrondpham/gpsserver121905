@@ -7,9 +7,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace ListeningGPS.Library
+namespace AgrondTheOne.Library.SocketThread
 {
-    class SocketGPS
+    public class SocketGPS
     {
 
         private int _intPort=2200;
@@ -50,12 +50,14 @@ namespace ListeningGPS.Library
                 int bytesRead;
                 bytesRead = networkStream.Read(message, 0, 4096);
                 string strGPSData = encoding.GetString(message, 0, bytesRead);
-                System.Console.WriteLine(strGPSData);//convert byecode message and write on console
+                //System.Console.WriteLine(strGPSData);//convert byecode message and write on console
                 tcpClient.Close();
+                //return strGPSData;
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
+                //return "Error when recepting data";
             }
         }
     }
