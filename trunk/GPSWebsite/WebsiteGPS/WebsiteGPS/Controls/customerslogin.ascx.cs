@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-//using WebsiteGPS.Library;
 using System.Data;
 using System.IO;
 using System.Collections;
@@ -154,7 +153,9 @@ namespace WebsiteGPS.Controls
             }
             else if (_UsersInfo.Password == info.Password)
             {
-                Session["User"] = info.Fullname;// create Session User
+                // create Session User
+                Session["FullName"] = info.Fullname;
+                Session["UserName"] = info.Username;
                 Response.Redirect("~/Pages/googlemap.html");
             }
         }
