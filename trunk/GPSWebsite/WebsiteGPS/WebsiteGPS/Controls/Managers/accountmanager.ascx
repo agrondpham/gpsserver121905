@@ -11,7 +11,7 @@
 <script src="../Scripts/librarys/jquery.ui.datepicker-vi.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
 <script type="text/javascript">
-$(function () {
+    $(function () {
         //AddUser Dialog
         $("#add-user-dialog").dialog({
             autoOpen: false,
@@ -79,7 +79,7 @@ $(function () {
         </div>
     </div>
     <div>
-    <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
+        <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
     </div>
     <div id="users" class="ui-widget ui-widget-content cm-table">
         <%--<div class="ui-widget-header cm-table-rw">
@@ -109,67 +109,42 @@ $(function () {
         </div>--%>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
-                 <script type="text/javascript">
-                     Sys.Application.add_load(function(){
-                         $("button, input:submit, a", ".demo").button();
-                         $("a", ".cm-table-button").click(function () { $("#delete-confirm").dialog("open"); });   
-                     //Delete config
-//                    $("#hypDelete").click(function () {
-//                        $("#delete-confirm").dialog("open");
-//                    });
-                    $("#delete-confirm").dialog({
-                        autoOpen: false,
-                        resizable: false,
-                        height: 300,
-                        width: 350,
-                        modal: true,
-                        buttons: {
-                            "Delete": function () {
-                                $(this).dialog("close");
-                            },
-                            Cancel: function () {
-                                $(this).dialog("close");
+                <script type="text/javascript">
+                    Sys.Application.add_load(function () {
+                        $("button, input:submit, a", ".demo").button();
+                        $("input:submit", ".gicungduoc").click(function () { $("#delete-confirm").dialog("open"); });
+                        //Delete config
+                        //                    $("#hypDelete").click(function () {
+                        //                        $("#delete-confirm").dialog("open");
+                        //                    });
+                        $("#delete-confirm").dialog({
+                            autoOpen: false,
+                            resizable: false,
+                            height: 300,
+                            width: 350,
+                            modal: true,
+                            buttons: {
+                                "Delete": function () {
+//                                    $.ajax({
+//                                          type: "POST",
+//                                          url: "Default.aspx/GetDate",
+//                                          data: "{}",
+//                                          contentType: "application/json; charset=utf-8",
+//                                          dataType: "json",
+//                                          success: function(msg) {
+//                                            // Replace the div's content with the page method's return.
+//                                            $("#Result").text(msg.d);
+                                },
+                                Cancel: function () {
+                                    $(this).dialog("close");
+                                }
                             }
-                        }
-                    });
-                    $("#delete-confirm").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
-                     }
-                     
-                     );
-                 </script>
+                        });
+                        $("#delete-confirm").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua delete len xu ly dau)
+                    }
 
-                <%--<asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" 
-                    runat="server" AllowPaging="True" AutoGenerateColumns="False" Style="text-align"
-                    PagerStyle-Mode="NumericPages" 
-                    PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" 
-                    onpageindexchanged="dtgrid_PageIndexChanged" 
-                    ondeletecommand="dtgrid_DeleteCommand">
-                    <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center"></PagerStyle>
-                    <HeaderStyle CssClass="header" BackColor="#990000" Font-Bold="True" 
-                        ForeColor="White" />
-                    <FooterStyle CssClass="footer" BackColor="#990000" Font-Bold="True" 
-                        ForeColor="White" />
-                    <AlternatingItemStyle BackColor="White" />
-                    <Columns>
-                        <asp:BoundColumn Visible="false" DataField="Username"></asp:BoundColumn>
-                        <asp:TemplateColumn HeaderText="Tên Đăng Nhập">
-                            <HeaderStyle Width="30%"></HeaderStyle>
-                            <ItemStyle HorizontalAlign="Left"></ItemStyle>
-                            <ItemTemplate>
-                                <asp:LinkButton runat="server" ID="btnTitle" CommandName="Edit">
-						    <%# DataBinder.Eval(Container, "DataItem.Username")%>
-                                </asp:LinkButton>
-                            </ItemTemplate>
-                        </asp:TemplateColumn>
-                        <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName"></asp:BoundColumn>
-                        <asp:BoundColumn HeaderText="Email" DataField="Email"></asp:BoundColumn>                        
-                        <asp:BoundColumn HeaderText="Trang Thái" DataField="Status"></asp:BoundColumn>
-                        <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete">
-                        </asp:ButtonColumn>
-                    </Columns>
-                    <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                </asp:DataGrid>--%>
+                     );
+                </script>
                 <div class="ui-widget-header cm-table-rw">
                     <div class="cm-table-cl" style="width: 100px">
                         [Name]</div>
@@ -184,7 +159,36 @@ $(function () {
                     <div class="clear">
                     </div>
                 </div>
-                <asp:ListView ID="lview_Accounts" runat="server">
+                <div class="gicungduoc">
+                    <asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" runat="server" AllowPaging="True"
+                        AutoGenerateColumns="False" Style="text-align" PagerStyle-Mode="NumericPages"
+                        PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanged="dtgrid_PageIndexChanged"
+                        OnDeleteCommand="dtgrid_DeleteCommand" ShowHeader="False">
+                        <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                        <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center"></PagerStyle>
+                        <HeaderStyle CssClass="header" BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <FooterStyle CssClass="footer" BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <AlternatingItemStyle BackColor="White" />
+                        <Columns>
+                            <asp:BoundColumn Visible="false" DataField="Username"></asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Tên Đăng Nhập">
+                                <HeaderStyle Width="30%"></HeaderStyle>
+                                <ItemStyle HorizontalAlign="Left"></ItemStyle>
+                                <ItemTemplate>
+                                    <asp:LinkButton runat="server" ID="btnTitle" CommandName="Edit">
+						    <%# DataBinder.Eval(Container, "DataItem.Username")%>
+                                    </asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName"></asp:BoundColumn>
+                            <asp:BoundColumn HeaderText="Email" DataField="Email"></asp:BoundColumn>
+                            <asp:BoundColumn HeaderText="Trang Thái" DataField="Status"></asp:BoundColumn>
+                            <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete"></asp:ButtonColumn>
+                        </Columns>
+                        <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+                    </asp:DataGrid>
+                </div>
+                <%--<asp:ListView ID="lview_Accounts" runat="server">
                     <ItemTemplate>
                         <div class="cm-table-rw">
                             <div style="width: 100px; float: left">
@@ -205,8 +209,8 @@ $(function () {
                             </div>
                         </div>
                     </ItemTemplate>
-                </asp:ListView>
-                <div class="ui-widget-header cm-table-rw">
+                </asp:ListView>--%>
+                <%--<div class="ui-widget-header cm-table-rw">
                 <asp:DataPager ID="DataPager1" runat="server" PagedControlID="lview_Accounts"
                  PageSize="3" onprerender="DataPager1_PreRender">
                     <Fields>       
@@ -215,10 +219,10 @@ $(function () {
                             <PagerTemplate>
                                 <asp:DropDownList ID="ddlPage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPage_SelectedIndexChanged"></asp:DropDownList>       
                             </PagerTemplate>
-                        </asp:TemplatePagerField>--%>
+                        </asp:TemplatePagerField>
                     </Fields>
                 </asp:DataPager>
-                </div>
+                </div>--%>
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
