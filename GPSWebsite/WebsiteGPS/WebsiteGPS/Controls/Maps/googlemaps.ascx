@@ -5,6 +5,14 @@
 <%--code Map--%>
 <script type="text/javascript">
     var map;
+    var poly;
+    //windown info
+    var contentString = 'test';
+    var markersArray = [];
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        size: new google.maps.Size(50, 50)
+    });
     function initialize() {
         var Long = new google.maps.LatLng(10.8292, 106.63903333333333);
         var Duong = new google.maps.LatLng(10.812233333333333, 106.69376666666666);
@@ -21,28 +29,73 @@
         };
         map = new google.maps.Map(document.getElementById("map_canvas"),
         myOptions);
-        var marker = new google.maps.Marker({
+        var markerDuong = new google.maps.Marker({
             map: map,
             position: Duong,
             title: "Duong House"
         });
-        var marker = new google.maps.Marker({
+        var markerLong = new google.maps.Marker({
             map: map,
             position: Long,
             title: "Long House"
         });
-        //loadMarker(); 
+        //loadMarker();
+
+        google.maps.event.addListener(map, 'click', function () {
+            infowindow.close();
+        });
+
+        //polyline
+        var polyOptions = {
+            strokeColor: '#51bff8',
+            strokeOpacity: 1.0,
+            strokeWeight: 3
+        }
+        poly = new google.maps.Polyline(polyOptions); 
     }
     function setMap(map) {
+        //clearOverlays();
+        deleteOverlays();
+        //poly.setMap(null);
+        poly.setMap(map);
+        var path = poly.getPath(); //dung cho ve duong di
         for (i = 0; i < 23; i++) {
+            var image = "../../Themes/_default/Images/gpsPoint_icon24.png"
+            if (i == 0) { image = "../../Themes/_default/Images/gpsStart_icon32.png"; }
+            if (1 == 22) { image = "../../Themes/_default/Images/gpsStop_icon32.png"; }
             var latlng = new google.maps.LatLng(data.marker[i].latitude, data.marker[i].longitude);
             var marker = new google.maps.Marker({
                 map: map,
                 position: latlng,
-                title: "Marker2"
+                title: "Marker2",
+                icon: image
             });
+            path.push(latlng); //dua cac diem len de noi
+            addInforWindow(marker); //bat buoc phai tach ra lam mot ham rieng
+            markersArray.push(marker);
+        }
+
+    }
+    function addInforWindow(marker) {
+        //add info window
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+    }
+    function deleteOverlays() {
+        var path = poly.getPath();
+        if (markersArray) {
+            for (i in markersArray) {
+                markersArray[i].setMap(null);
+            }
+            for (i in path) {
+                path.removeAt(i);
+            }
+            markersArray.length = 0;
+
         }
     }
+
 </script>
 <link href="../../Themes/_default/Styles/googlemap.css" rel="stylesheet" type="text/css" />
 
