@@ -98,12 +98,16 @@
     <Content Include="Scripts\librarys\jquery.ui.datepicker.js" />
     <Content Include="Scripts\librarys\jquery.ui.widget.js" />
     <Content Include="Themes\_default\Images\account_icon.png" />
+    <Content Include="Themes\_default\Images\gpsStart_icon32.png" />
+    <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
+    <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon.png" />
     <Content Include="Themes\_default\Images\control_bg.jpg" />
     <Content Include="Themes\_default\Images\panel_bg.gif" />
     <Content Include="Themes\_default\Images\calendar_icon.png" />
     <Content Include="Themes\_default\Images\delete_icon.png" />
     <Content Include="Themes\_default\Images\notifi16px.png" />
+    <Content Include="Themes\_default\Images\gpsPoint_icon24.png" />
     <Content Include="Themes\_default\Images\trash_icon.png" />
     <Content Include="Themes\_default\Images\map_icon.png" />
     <Content Include="Themes\_default\Images\user_add.png" />
