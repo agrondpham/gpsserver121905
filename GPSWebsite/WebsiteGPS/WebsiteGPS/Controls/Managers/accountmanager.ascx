@@ -82,31 +82,7 @@
         <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
     </div>
     <div id="users" class="ui-widget ui-widget-content cm-table">
-        <%--<div class="ui-widget-header cm-table-rw">
-            <div class="cm-table-cl" style="width: 100px">
-                [Name]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
-                [Email]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
-                [Password]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 50px;">
-                [Delete]</div>
-            <div class="clear">
-            </div>
-        </div>
-        <div class="cm-table-rw">
-            <div style="width: 100px; float: left">
-                [John Doe]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
-                [john.doe@example.com]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
-                [johndoe1]</div>
-            <div class="cm-table-cl cm-table-ncl" style="width: 50px;">
-                <a id="hypDelete" class="cm-a">
-                    <img alt="" src="../../Themes/_default/Images/trash_icon.png" /></a></div>
-            <div class="clear">
-            </div>
-        </div>--%>
+       
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
             <ContentTemplate>
                 <script type="text/javascript">
@@ -145,34 +121,39 @@
 
                      );
                 </script>
-                <div class="ui-widget-header cm-table-rw">
-                    <div class="cm-table-cl" style="width: 100px">
+                <div class="ui-widget-header cm-table-rw" style="width: 925px">
+                    <div class="cm-table-cl" style="width: 150px">
                         [Name]</div>
-                    <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
+                    <div class="cm-table-cl cm-table-ncl" style="width: 250px;">
                         [FullName]</div>
                     <div class="cm-table-cl cm-table-ncl" style="width: 300px;">
-                        [Password]</div>
+                        [Email]</div>
                     <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
                         [Status]</div>
-                    <div class="cm-table-cl cm-table-ncl" style="width: 50px;">
+                    <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
                         [Delete]</div>
-                    <div class="clear">
-                    </div>
                 </div>
                 <div class="gicungduoc">
-                    <asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="100%" runat="server" AllowPaging="True"
-                        AutoGenerateColumns="False" Style="text-align" PagerStyle-Mode="NumericPages"
-                        PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="None" OnPageIndexChanged="dtgrid_PageIndexChanged"
-                        OnDeleteCommand="dtgrid_DeleteCommand" ShowHeader="False">
+                    <asp:DataGrid CssClass="datagrid" ID="dtgrid" Width="925px" runat="server" AllowPaging="True"
+                        AutoGenerateColumns="False" Style="text-align: center" PagerStyle-Mode="NumericPages"
+                        PageSize="5" CellPadding="4" ForeColor="#333333" GridLines="Horizontal" OnPageIndexChanged="dtgrid_PageIndexChanged"
+                        OnDeleteCommand="dtgrid_DeleteCommand" ShowHeader="False" 
+                        BorderColor="White">
                         <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                        <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center"></PagerStyle>
-                        <HeaderStyle CssClass="header" BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                        <FooterStyle CssClass="footer" BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="Silver" ForeColor="#333333" HorizontalAlign="Center" 
+                            Font-Bold="False" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False"></PagerStyle>
+                        <HeaderStyle CssClass="header" BackColor="#999966" Font-Bold="True" 
+                            ForeColor="White" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False" />
+                        <FooterStyle CssClass="footer" BackColor="#999966" Font-Bold="True" 
+                            ForeColor="White" Font-Italic="False" Font-Overline="False" 
+                            Font-Strikeout="False" Font-Underline="False" />
                         <AlternatingItemStyle BackColor="White" />
                         <Columns>
                             <asp:BoundColumn Visible="false" DataField="Username"></asp:BoundColumn>
                             <asp:TemplateColumn HeaderText="Tên Đăng Nhập">
-                                <HeaderStyle Width="30%"></HeaderStyle>
+                                <HeaderStyle Width="150px" ></HeaderStyle>
                                 <ItemStyle HorizontalAlign="Left"></ItemStyle>
                                 <ItemTemplate>
                                     <asp:LinkButton runat="server" ID="btnTitle" CommandName="Edit">
@@ -180,49 +161,22 @@
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateColumn>
-                            <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName"></asp:BoundColumn>
-                            <asp:BoundColumn HeaderText="Email" DataField="Email"></asp:BoundColumn>
-                            <asp:BoundColumn HeaderText="Trang Thái" DataField="Status"></asp:BoundColumn>
-                            <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete"></asp:ButtonColumn>
+                            <asp:BoundColumn HeaderText="Họ Tên" DataField="FullName">
+                                <HeaderStyle Width="250px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn HeaderText="Email" DataField="Email">
+                                <HeaderStyle Width="300px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn HeaderText="Trang Thái" DataField="Status">
+                                <HeaderStyle Width="100px" />
+                            </asp:BoundColumn>
+                            <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete">
+                                <HeaderStyle Width="100px" />
+                            </asp:ButtonColumn>
                         </Columns>
                         <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
                     </asp:DataGrid>
                 </div>
-                <%--<asp:ListView ID="lview_Accounts" runat="server">
-                    <ItemTemplate>
-                        <div class="cm-table-rw">
-                            <div style="width: 100px; float: left">
-                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl=''>
-                                    <%# DataBinder.Eval(Container,"DataItem.Username")%>
-                                </asp:HyperLink>
-                                </div>
-                            <div class="cm-table-cl cm-table-ncl" style="width: 200px;">
-                                <%# DataBinder.Eval(Container,"DataItem.FullName")%></div>
-                            <div class="cm-table-cl cm-table-ncl" style="width: 300px;">
-                                <%# DataBinder.Eval(Container,"DataItem.Email")%></div>
-                            <div class="cm-table-cl cm-table-ncl" style="width: 100px;">
-                                <%# DataBinder.Eval(Container, "DataItem.Status")%></div>
-                            <div class="cm-table-cl cm-table-ncl cm-table-button" style="width: 50px;">
-                                <a id="hypDelete" class="cm-a">
-                                    <img alt="" src="../../Themes/_default/Images/trash_icon.png" /></a></div>
-                            <div class="clear">
-                            </div>
-                        </div>
-                    </ItemTemplate>
-                </asp:ListView>--%>
-                <%--<div class="ui-widget-header cm-table-rw">
-                <asp:DataPager ID="DataPager1" runat="server" PagedControlID="lview_Accounts"
-                 PageSize="3" onprerender="DataPager1_PreRender">
-                    <Fields>       
-                        <asp:NumericPagerField ButtonType="Link" ButtonCount="2"  />
-                        <%--<asp:TemplatePagerField>
-                            <PagerTemplate>
-                                <asp:DropDownList ID="ddlPage" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlPage_SelectedIndexChanged"></asp:DropDownList>       
-                            </PagerTemplate>
-                        </asp:TemplatePagerField>
-                    </Fields>
-                </asp:DataPager>
-                </div>--%>
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
