@@ -91,18 +91,27 @@
     }
     function setMap(map) {
     	var path = poly.getPath();
+					
 
 
     	for(i=0;i<10;i++){alert(data.marker[i].latitude);
 	        var latlng = new google.maps.LatLng(data.marker[i].latitude, data.marker[i].longitude);
-	     /*   var marker = new google.maps.Marker({
+	        var marker = new google.maps.Marker({
 	                map: map,
 	                position: latlng,
 	                title: "Marker2"
-	            });*/
+	            });
 	          // Because path is an MVCArray, we can simply append a new coordinate
 			  // and it will automatically appear
 			  path.push(latlng);
+			  var message = 'test';
+					  var infowindow = new google.maps.InfoWindow(
+			      { content: message,
+			        size: new google.maps.Size(50,50)
+			      });
+			  google.maps.event.addListener(marker, 'click', function() {
+			    infowindow.open(map,marker);
+			  });
 
         } 
     /*    var latlng2 = new google.maps.LatLng(data.marker2.latitude, data.marker2.longitude);
