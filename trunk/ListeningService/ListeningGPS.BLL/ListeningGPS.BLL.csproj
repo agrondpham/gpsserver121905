@@ -44,14 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertGPS.cs" />
     <Compile Include="CutingStringGPS.cs" />
     <Compile Include="GPSDataBLL.cs" />
+    <Compile Include="GPS_DataControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ListeningGPS.DAL\ListeningGPS.DAL.csproj">
       <Project>{938B249B-56EC-4FC1-A2A0-871E6CBAB0CE}</Project>
       <Name>ListeningGPS.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ListeningGPS.DTO\ListeningGPS.DTO.csproj">
+      <Project>{09178ABD-41FA-4EB1-93A5-DC1BD1758457}</Project>
+      <Name>ListeningGPS.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ListeningGPS.DTO;
+using ListeningGPS.DAL;
 
 //using AgrondTheOne.Library.SocketThread;
 using System.Threading;
@@ -19,8 +21,10 @@ namespace ListeningGPS.BLL
         private TcpListener GPSListener;
         //SocketGPS _SocketGPS = new SocketGPS();
         CutingString _CutGPSData = new CutingString();
-        DAL.GPSDataDAO _GPSDataDAO = new DAL.GPSDataDAO();
-
+        //DAL.GPSDataDAO _GPSDataDAO = new DAL.GPSDataDAO();
+        GPS_DataControl _GPS_DataControl = new GPS_DataControl();
+        GPS_DataInfo _GPS_DataInfo = new GPS_DataInfo();
+        string sErr = "";
         //want to set Port in outsite of SocketGps but cannot call.FAIL!!!
         public void setPort(int pPortValue) { _intPort = pPortValue; }
         public int getPort() { return _intPort; }
@@ -71,14 +75,9 @@ namespace ListeningGPS.BLL
                 Byte[] message = new byte[4096];
                 int bytesRead;
                 bytesRead = networkStream.Read(message, 0, 4096);
-                string strGPSData = encoding.GetString(message, 0, bytesRead);                
-                //Need checksum
-                //ConvertData Data
-                ArrayList strArrayGPSData = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
-                if (_GPSDataDAO.InsertData(strArrayGPSData)==false)
-                {
-                    System.Console.WriteLine("Error when inserting data");
-                }
+                string strGPSData = encoding.GetString(message, 0, bytesRead); 
+                _GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
+                _GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
                 tcpClient.Close();
                 //return strGPSData;
             }

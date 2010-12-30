@@ -57,10 +57,10 @@ namespace WebsiteGPS.DAO
         {
             GPS_DataInfo result = new GPS_DataInfo();
             result.ID_Data = (dt.Rows[i][GPS_DataInfo.Field.ID_Data.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][GPS_DataInfo.Field.ID_Data.ToString()]));
-            result.IMED_Device = (dt.Rows[i][GPS_DataInfo.Field.IMED_Device.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][GPS_DataInfo.Field.IMED_Device.ToString()]));
-            result.Longitude = (dt.Rows[i][GPS_DataInfo.Field.Longitude.ToString()] == DBNull.Value ? 0 : Convert.ToDouble(dt.Rows[i][GPS_DataInfo.Field.Longitude.ToString()]));
-            result.Latitude = (dt.Rows[i][GPS_DataInfo.Field.Latitude.ToString()] == DBNull.Value ? 0 : Convert.ToDouble(dt.Rows[i][GPS_DataInfo.Field.Latitude.ToString()]));
-            result.Speed = (dt.Rows[i][GPS_DataInfo.Field.Speed.ToString()] == DBNull.Value ? 0 : Convert.ToDouble(dt.Rows[i][GPS_DataInfo.Field.Speed.ToString()]));
+            result.IMED_Device = (dt.Rows[i][GPS_DataInfo.Field.IMED_Device.ToString()] == DBNull.Value ? "" : dt.Rows[i][GPS_DataInfo.Field.IMED_Device.ToString()].ToString());
+            result.Longitude = (dt.Rows[i][GPS_DataInfo.Field.Longitude.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][GPS_DataInfo.Field.Longitude.ToString()]));
+            result.Latitude = (dt.Rows[i][GPS_DataInfo.Field.Latitude.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][GPS_DataInfo.Field.Latitude.ToString()]));
+            result.Speed = (dt.Rows[i][GPS_DataInfo.Field.Speed.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][GPS_DataInfo.Field.Speed.ToString()]));
             result.Received_Data = (dt.Rows[i][GPS_DataInfo.Field.Received_Data.ToString()] == DBNull.Value ? "" : Convert.ToString(dt.Rows[i][GPS_DataInfo.Field.Received_Data.ToString()]));
             result.Status = (dt.Rows[i][GPS_DataInfo.Field.Status.ToString()] == DBNull.Value ? 0 : Convert.ToInt32(dt.Rows[i][GPS_DataInfo.Field.Status.ToString()]));
            
