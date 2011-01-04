@@ -82,14 +82,16 @@
 	<div class="header">
     <div class="logo"><a href="#"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
     
-    <div class="right_header">Welcome Admin, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout">Logout</a></div>
+    <div class="right_header">
+        <asp:Label ID="lblWelcome" runat="server" Text="[Welcome Admin]"></asp:Label>, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout"><asp:Label ID="lblLogout" runat="server" Text="[Logout]"></asp:Label></a></div>
     <div class="jclock"></div>
     </div>
     
     <div class="main_content">
         <div class="menu">
             <ul>
-                <li><a class="current" href="index.html">Admin Home</a></li>
+                <li><a class="current" href="index.html"><asp:Label ID="lblAdminHome" runat="server"
+                Text="[Admin Home]"></asp:Label></a></li>
             </ul>
         </div>            
     <div class="center_content">  
@@ -98,7 +100,7 @@
         <div class="cm-tool-header">
              <a id="A1" runat="server"
                     onclick="Button1_Click" class="ui-button ui-widget ui-state-default cm-button-search ui-corner-right ui-button-icon">
-                    [Search]</a>
+                    <asp:Label ID="lblSearch" runat="server" Text="[Search]"></asp:Label></a>
             <input id="search" type="text" class="ui-widget ui-widget-content ui-corner-left cm-textbox-search" />
             <div class="clear"></div>
         </div>    
@@ -121,13 +123,14 @@
                             modal: true,
                             buttons: {
                                 "Delete": function () {
-                                        $.ajax({
-                                                type: "POST",
-                                                url: "accountmanager.ascx/dtgrid_DeleteCommand",
-                                                data: "{}",
-                                                contentType: "application/json; charset=utf-8",
-                                                dataType: "json",
-                                                success: function(msg) {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "accountmanager.ascx/dtgrid_DeleteCommand",
+                                        data: "{}",
+                                        contentType: "application/json; charset=utf-8",
+                                        dataType: "json",
+                                        success: function (msg) { }
+                                    });
                                 },
                                 Cancel: function () {
                                     $(this).dialog("close");
@@ -138,32 +141,7 @@
                     }
 
                      );
-                </script>
-    <style type="text/css">
-    .table_username
-    {
-        width:110px;
-        text-align:left;
-        }
-    .table_fullname
-    {
-        width:260px;
-        text-align:left;
-        }
-    .table_email
-    {
-        width:260px;
-        text-align:left;
-        }
-    .table_status
-    {
-        width:25px;
-        text-align:left;
-        }
-    .table_delete
-    {
-        }
-    </style>                    
+                </script>                   
     <div>
         <asp:Label runat="server" ID="lblErr" ForeColor="red"></asp:Label>
     </div>              
@@ -175,7 +153,7 @@
                 <th scope="col" class="rounded" style="width:250px"><asp:Label ID="lblFullName" runat="server" Text="[Fullname]"></asp:Label></th>
                 <th scope="col" class="rounded" style="width:250px"><asp:Label ID="lblEmail" runat="server" Text="[email]"></asp:Label></th>
                 <th scope="col" class="rounded" style="width:50px"><asp:Label ID="lblStatus" runat="server" Text="[status]"></asp:Label></th>
-                <th scope="col" class="rounded-q4">Delete<asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
+                <th scope="col" class="rounded-q4"><asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
             </tr>
         </thead>
     </table>
@@ -222,7 +200,7 @@
 
 	<a id="hypAddUser" href="#" class="bt_green">
         <span class="bt_green_lft"></span>
-            <strong><asp:Label ID="lbl" runat="server" Text="[Add New]"></asp:Label></strong></asp:Label>
+            <strong><asp:Label ID="lblAddnew" runat="server" Text="[Add New]"></asp:Label></strong></asp:Label>
         <span class="bt_green_r"></span></a>
 <%--     <a href="#" class="bt_blue"><span class="bt_blue_lft"></span><strong>View all items from category</strong><span class="bt_blue_r"></span></a>
      <a href="#" class="bt_red"><span class="bt_red_lft"></span><strong>Delete items</strong><span class="bt_red_r"></span></a> 
@@ -245,7 +223,7 @@
     </div>
     <div id="delete-confirm" title="[Delete item?]" class="cm-dialog-config">
         <p>
-            [These items will be permanently deleted and cannot be recovered. Are you sure?]</p>
+            <asp:Label ID="lblDeleteNotification" runat="server" Text="[These items will be permanently deleted and cannot be recovered. Are you sure?]"></asp:Label></p>
     </div>
 
 

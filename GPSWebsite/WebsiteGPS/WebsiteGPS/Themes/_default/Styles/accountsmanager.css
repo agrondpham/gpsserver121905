@@ -1,4 +1,4 @@
-﻿/*common*/
+﻿/*common
 .cm-a
 {
     cursor:pointer;
@@ -23,13 +23,37 @@
 {
     border: 1px solid #AAAAAA;
     height:29px;
-}
+}*/
 .button:hover /*add hover to button*/
 {
     border: 1px solid #999999;
     color: #212121;
     font-weight: normal;
     }
+    /*table hold data*/
+    .table_username
+    {
+        width:110px;
+        text-align:left;
+        }
+    .table_fullname
+    {
+        width:260px;
+        text-align:left;
+        }
+    .table_email
+    {
+        width:260px;
+        text-align:left;
+        }
+    .table_status
+    {
+        width:25px;
+        text-align:left;
+        }
+    .table_delete
+    {
+        }
 /*header*/
 .cm-tool-header    
 {
