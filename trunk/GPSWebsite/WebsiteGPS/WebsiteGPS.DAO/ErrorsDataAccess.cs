@@ -21,7 +21,7 @@ namespace WebsiteGPS.DAO
                 }
                 else
                 {
-                    strError = errorInfor.Element("vn-VN").Value;//ngon ngu tieng viet
+                    strError = errorInfor.Element("vi-VN").Value;//ngon ngu tieng viet
                 }
             }
             return strError;

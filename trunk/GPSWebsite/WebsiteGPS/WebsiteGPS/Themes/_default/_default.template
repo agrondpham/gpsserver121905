@@ -2,36 +2,69 @@
 <Theme>
   <Module>
     <PageName>Default</PageName>
-    <Compoment>
-      <idCompoment>lblWebTitle</idCompoment>
+    <Component>
+      <idComponent>lblWebTitle</idComponent>
       <Content>Website GPS System</Content>
-    </Compoment>
-    <Compoment>
-      <idCompoment>lblWebTitle2</idCompoment>
+    </Component>
+    <Component>
+      <idComponent>lblWebTitle2</idComponent>
       <Content>Website GPS System2</Content>
-    </Compoment>
+    </Component>
   </Module>
   <Module>
     <PageName>customerslogin</PageName>
-    <Compoment>
+    <Component>
       <type>label</type>
-      <idCompoment>lblUsername</idCompoment>
-      <Content>UserName</Content>
-    </Compoment>
-    <Compoment>
+      <idComponent>lblUsername</idComponent>
+      <Content>Tài khoản</Content>
+    </Component>
+    <Component>
       <type>label</type>
-      <idCompoment>lblPassword</idCompoment>
-      <Content>Password</Content>
-    </Compoment>
-    <Compoment>
+      <idComponent>lblPassword</idComponent>
+      <Content>Mật khẩu</Content>
+    </Component>
+    <Component>
       <type>button</type>
-      <idCompoment>btnLogin</idCompoment>
-      <Content>Login</Content>
-    </Compoment>
-    <Compoment>
+      <idComponent>btnLogin</idComponent>
+      <Content>Đăng nhập</Content>
+    </Component>
+    <Component>
       <type>hyberlink</type>
-      <idCompoment>hypForgot</idCompoment>
-      <Content>Forgot Username or Password</Content>
-    </Compoment>
+      <idComponent>hypForgot</idComponent>
+      <Content>Quên tài khản hoặc mật khẩu</Content>
+    </Component>
+  </Module>
+  <Module>
+    <PageName>createaccount</PageName>
+    <Component>
+      <type>label</type>
+      <idComponent>lblUsername</idComponent>
+      <Content>Tên tài khoản</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblPassword</idComponent>
+      <Content>Mật khẩu</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblEmail</idComponent>
+      <Content>Email</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblFullName</idComponent>
+      <Content>Tên đầy đủ</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnCommit</idComponent>
+      <Content>Hoàn thành</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnAddNew</idComponent>
+      <Content>Thêm mới</Content>
+    </Component>
   </Module>
 </Theme>
