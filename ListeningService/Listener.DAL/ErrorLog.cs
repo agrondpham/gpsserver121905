@@ -9,8 +9,8 @@ namespace Listener.DAL
         public static void SetLog(string sErr)
         {
             string result = DateTime.Now.ToString() + ": " + sErr;
-            string fileName = "D://LogErro.log";
-            StreamWriter streamWr = new StreamWriter(fileName);
+            string fileName = @"D:\LogError.txt";
+            TextWriter streamWr = new StreamWriter(fileName);
             streamWr.NewLine = result;
             streamWr.Close();
         }
