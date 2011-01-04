@@ -22,6 +22,7 @@ namespace WebsiteGPS.Controls.Accounts
         UsersInfo _UsersInfo;
         EmailClass _EmailClass;
         BUS.LanguageBLL _LanguageBLL = new BUS.LanguageBLL();
+        BUS.ErrorsBLL _ErrorBLL = new BUS.ErrorsBLL();
         Default _MainPage; 
         #endregion
         string sErr = "";
@@ -33,7 +34,7 @@ namespace WebsiteGPS.Controls.Accounts
         }
         public void LoadLanguage()
         {
-            XElement Modules = _LanguageBLL.loadLanguageForModule("forgotpassword", _MainPage.getStrThemeURL(), "VI-VN");
+            XElement Modules = _LanguageBLL.loadLanguageForModule("forgotpassword", _MainPage.getStrThemeURL(), _MainPage.getStrLanguage());
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components)
             {
@@ -79,21 +80,21 @@ namespace WebsiteGPS.Controls.Accounts
                         }
                         else
                         {
-                            lblErr.Text = "error";
+                            lblErr.Text = _ErrorBLL.loadError("002.1", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
                         }
                     }
                     catch (Exception ex)
                     {
-                        lblErr.Text = "error";
+                        lblErr.Text = _ErrorBLL.loadError("002.2", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
                     }
 
                 }
                 else
                 {
-                    lblErr.Text = "Email not exist. Please contact your administrator user";
+                    lblErr.Text = _ErrorBLL.loadError("002.3", _MainPage.getStrErrorFileURL(),_MainPage.getStrLanguage());
                 }
             }else{
-                lblErr.Text = "wrong captcha";
+                lblErr.Text = _ErrorBLL.loadError("002.4", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
             }
         }
 

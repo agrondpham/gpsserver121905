@@ -80,7 +80,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 	<div class="header">
-    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" title=""/></a></div>
     
     <div class="right_header">
         <asp:Label ID="lblWelcome" runat="server" Text="[Welcome Admin]"></asp:Label>, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout"><asp:Label ID="lblLogout" runat="server" Text="[Logout]"></asp:Label></a></div>
@@ -255,7 +255,7 @@
     <div class="footer">
     
     	<div class="left_footer">IN ADMIN PANEL | Powered by <a href="http://indeziner.com">INDEZINER</a></div>
-    	<div class="right_footer"><a href="http://indeziner.com"><img src="images/indeziner_logo.gif" alt="" title="" border="0" /></a></div>
+    	<div class="right_footer"><a href="http://indeziner.com"><img src="images/indeziner_logo.gif" alt="" title=""/></a></div>
     
     </div>
     </form>

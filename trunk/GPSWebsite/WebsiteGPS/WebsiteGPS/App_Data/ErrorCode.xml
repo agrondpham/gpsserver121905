@@ -5,4 +5,29 @@
     <en-US>Unauthorized!User failed to provide a valid user name / password required for access to file / directory.</en-US>
     <vi-VN>Đăng nhập bị lỗi! Vui lòng nhập chính xác "Tên tài khoản" và "Mật Khẩu"</vi-VN>
   </Error>
+  <Error>
+    <Code>001.1</Code>
+    <en-US>This account is using.Please loging with another account to delete this account.</en-US>
+    <vi-VN>Tài khoản hiện đang được sử dụng.Đăng nhập bằng tài khoản khác nếu bạn muốn xóa tài khoản này</vi-VN>
+  </Error>
+  <Error>
+    <Code>002.1</Code>
+    <en-US>Having the error in updating new password.Please contact administrator for help</en-US>
+    <vi-VN>Lỗi trong quá trình cập nhập password mới.Xin vui lòng liên hệ với người quản trị để được giúp đỡ</vi-VN>
+  </Error>
+  <Error>
+    <Code>002.2</Code>
+    <en-US>Having the error in sending email proccess.Please contact administrator for help</en-US>
+    <vi-VN>Lỗi phát sinh trong quá trình gửi mail.Xin vui lòng liên hệ với người quản trị để được giúp đỡ</vi-VN>
+  </Error>
+  <Error>
+    <Code>002.3</Code>
+    <en-US>The email is not exist.Please contact administrator for help</en-US>
+    <vi-VN>Địa chỉ email không tồn tại.Xin vui lòng nhập chính xác email</vi-VN>
+  </Error>
+  <Error>
+    <Code>002.3</Code>
+    <en-US>Worng captcha.Please typing correct the captcha</en-US>
+    <vi-VN>Mã xác nhận không chính xác vui lòng nhập lại mã xác nhận</vi-VN>
+  </Error>
 </ErrorCode>

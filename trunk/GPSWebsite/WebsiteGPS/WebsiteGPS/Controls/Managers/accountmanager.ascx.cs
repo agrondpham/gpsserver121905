@@ -35,7 +35,7 @@ namespace WebsiteGPS.Controls.Manager
         }
         public void LoadLanguage()
         {
-            XElement Modules = _LanguageBLL.loadLanguageForModule("accountmanager", _MainPage.getStrThemeURL(), "VI-VN");
+            XElement Modules = _LanguageBLL.loadLanguageForModule("accountmanager", _MainPage.getStrThemeURL(), _MainPage.getStrLanguage());
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components)
             {
@@ -81,7 +81,7 @@ namespace WebsiteGPS.Controls.Manager
                 LoadGrid();
             }
             else
-                lblErr.Text = "UserName dag su dung";
+                lblErr.Text = _ErrorBLL.loadError("001.1", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
 
         }
 
