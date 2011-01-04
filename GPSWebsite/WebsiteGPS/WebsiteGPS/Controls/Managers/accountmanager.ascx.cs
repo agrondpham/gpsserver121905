@@ -40,7 +40,7 @@ namespace WebsiteGPS.Controls.Manager
             dtgrid.CurrentPageIndex = e.NewPageIndex;
             LoadGrid();
         }
-        //[WebMethod]
+        [System.Web.Services.WebMethod]
         protected void dtgrid_DeleteCommand(object source, DataGridCommandEventArgs e)
         {
             string _user = dtgrid.Items[e.Item.ItemIndex].Cells[0].Text.Trim();
