@@ -34,8 +34,7 @@ namespace WebsiteGPS.Controls
             LoadLanguage();
         }
         public void LoadLanguage() { 
-            string pTemplateURL = Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template");
-            XElement Modules= _LanguageBLL.loadLanguageForModule("customerslogin", pTemplateURL, "VI-VN");
+            XElement Modules= _LanguageBLL.loadLanguageForModule("customerslogin", _MainPage.getStrThemeURL(), "VI-VN");
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components) {
                 switch (cmpn.Element("type").Value)

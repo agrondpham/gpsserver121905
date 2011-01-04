@@ -22,6 +22,15 @@ namespace WebsiteGPS.Controls {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// hypForgot control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypForgot;
+        
+        /// <summary>
         /// lblUsername control.
         /// </summary>
         /// <remarks>
@@ -58,15 +67,6 @@ namespace WebsiteGPS.Controls {
         protected global::System.Web.UI.WebControls.TextBox tbxPassword;
         
         /// <summary>
-        /// btnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
-        
-        /// <summary>
         /// lblErr control.
         /// </summary>
         /// <remarks>
@@ -76,12 +76,12 @@ namespace WebsiteGPS.Controls {
         protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
-        /// hypForgot control.
+        /// btnLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypForgot;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
     }
 }
