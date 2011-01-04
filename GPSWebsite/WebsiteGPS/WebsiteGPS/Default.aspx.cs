@@ -63,6 +63,15 @@ namespace WebsiteGPS
         {
             _strThemeURL = pStrThemeURL;
         }
+        private string _strLanguage;
+        public string getStrLanguage()
+        {
+            return _strLanguage;
+        }
+        public void setStrLanguage(string pStrLanguage)
+        {
+            _strLanguage = pStrLanguage;
+        }
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,6 +79,7 @@ namespace WebsiteGPS
             setStrControlURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ControlURL.xml"));
             setStrWebCofigURL(Path.Combine(Request.PhysicalApplicationPath,"App_Data\\WebConfig.xml"));
             setStrThemeURL(Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template"));
+            setStrLanguage("vi-vn");
             LoadPages();
         }
         public void LoadPages() {

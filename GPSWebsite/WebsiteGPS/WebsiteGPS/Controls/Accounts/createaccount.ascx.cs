@@ -30,7 +30,7 @@ namespace WebsiteGPS.Controls.Accounts
         public void LoadLanguage()
         {
             //need move this variable to global variable
-            XElement Modules = _LanguageBLL.loadLanguageForModule("createaccount", _MainPage.getStrThemeURL(), "VI-VN");
+            XElement Modules = _LanguageBLL.loadLanguageForModule("createaccount", _MainPage.getStrThemeURL(), _MainPage.getStrLanguage());
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components)
             {

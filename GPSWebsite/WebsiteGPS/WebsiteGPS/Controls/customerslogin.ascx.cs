@@ -33,8 +33,8 @@ namespace WebsiteGPS.Controls
             aaaa = _MainPage.getThemeConfig();           //get variable from main Page
             LoadLanguage();
         }
-        public void LoadLanguage() { 
-            XElement Modules= _LanguageBLL.loadLanguageForModule("customerslogin", _MainPage.getStrThemeURL(), "VI-VN");
+        public void LoadLanguage() {
+            XElement Modules = _LanguageBLL.loadLanguageForModule("customerslogin", _MainPage.getStrThemeURL(), _MainPage.getStrLanguage());
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components) {
                 switch (cmpn.Element("type").Value)
@@ -148,11 +148,11 @@ namespace WebsiteGPS.Controls
             info = _UsersControl.Get(_UsersInfo.Username, ref sErr);
             if (_UsersInfo.Username == "")
             {
-                lblErr.Text = _ErrorBLL.loadError("401",_MainPage.getStrErrorFileURL(),"VI-VN");
+                lblErr.Text = _ErrorBLL.loadError("401", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
             }
             else if (_UsersInfo.Password != info.Password)
             {
-                lblErr.Text = _ErrorBLL.loadError("401", _MainPage.getStrErrorFileURL(), "VI-VN");
+                lblErr.Text = _ErrorBLL.loadError("401", _MainPage.getStrErrorFileURL(), _MainPage.getStrLanguage());
             }
             else if (_UsersInfo.Password == info.Password)
             {
