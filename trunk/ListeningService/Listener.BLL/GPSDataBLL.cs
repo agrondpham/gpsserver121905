@@ -18,10 +18,12 @@ namespace Listener.BLL
         #region LocalVariable     
 
         private int _intPort = 3306;
+        //private string sErr = "";
         private TcpListener GPSListener;
         //SocketGPS _SocketGPS = new SocketGPS();
         CutingString _CutGPSData = new CutingString();
         //DAL.GPSDataDAO _GPSDataDAO = new DAL.GPSDataDAO();
+        DAL.ErrorLog ErrorLog = new ErrorLog();
         GPS_DataControl _GPS_DataControl = new GPS_DataControl();
         GPS_DataInfo _GPS_DataInfo = new GPS_DataInfo();
         string sErr = "";
@@ -41,6 +43,7 @@ namespace Listener.BLL
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
+                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
         }
         //this method to set listening information
@@ -61,6 +64,7 @@ namespace Listener.BLL
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
+                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
         }
         private void CreateStream(object client)
@@ -84,7 +88,7 @@ namespace Listener.BLL
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
-                //return "Error when recepting data";
+                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
         }
     }
