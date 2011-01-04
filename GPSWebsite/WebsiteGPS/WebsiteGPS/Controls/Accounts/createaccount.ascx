@@ -5,32 +5,28 @@
     <div class="rgcl">
         <asp:TextBox ID="tbxUserName" runat="server" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox>
     </div>
-    <div>
-        <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
+<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
 </div>
 <div class="rw">
     <div class="lfcl">
         <asp:Label runat="server" Text="[Password]" ID="lblPassword"></asp:Label></div>
     <div class="rgcl">
         <asp:TextBox runat="server" ID="tbxPassword" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox></div>
-    <div>
-        <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
+<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
 </div>
 <div class="rw">
     <div class="lfcl">
         <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
     <div class="rgcl">
         <asp:TextBox runat="server" ID="tbxEmail" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox></div>
-    <div>
-        <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
+<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
 </div>
         <div class="rw">
     <div class="lfcl">
         <asp:Label runat="server" Text="[Full Name]" ID="lblFullName"></asp:Label></div>
     <div class="rgcl">
         <asp:TextBox runat="server" ID="tbxFullName" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox></div>
-    <div>
-        <img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>
+<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
 </div>
 <div class="rw-control">
     <div class="lfcl">

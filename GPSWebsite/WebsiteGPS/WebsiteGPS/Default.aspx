@@ -11,15 +11,6 @@
 </style>
 </head>
 <body onload="initialize()">
-    <asp:PlaceHolder ID="BodyHolder" runat="server" />
-<%--    <form id="form1" runat="server">
-    <asp:Label ID="lblWebTitle" runat="server" Text="[GPSSystemTitle]"></asp:Label>
-    <asp:Label ID="lblWebTitle2" runat="server" Text="[GPSSystemTitle]"></asp:Label>
-    <uc1:googlemaps ID="googlemaps" runat="server" />
-        <asp:GridView runat="server" ID="GridView1">
-        </asp:GridView>
-    
-    </form>--%>
-    
+    <asp:PlaceHolder ID="BodyHolder" runat="server" />  
 </body>
 </html>

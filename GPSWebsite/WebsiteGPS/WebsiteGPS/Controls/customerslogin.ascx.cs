@@ -9,6 +9,7 @@ using System.IO;
 using System.Collections;
 using System.Xml;
 using System.Xml.Linq;
+
 using WebsiteGPS.BUS;
 using WebsiteGPS.DTO;
 
@@ -20,38 +21,41 @@ namespace WebsiteGPS.Controls
         UsersControl _UsersControl;
         UsersInfo _UsersInfo;
         BUS.LanguageBLL _LanguageBLL = new BUS.LanguageBLL();
+        BUS.ErrorsBLL _ErrorBLL = new BUS.ErrorsBLL();
+        Default _MainPage; 
         #endregion
         string sErr;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArrayList aaaa;
             //Default defaultPage = new Default();
-            Default mainPage =(Default) this.Page;      //get Page Content UC Control
-            aaaa = mainPage.getThemeConfig();           //get variable from main Page
+            _MainPage =(Default) this.Page;      //get Page Content UC Control
+            aaaa = _MainPage.getThemeConfig();           //get variable from main Page
             LoadLanguage();
         }
         public void LoadLanguage() { 
             string pTemplateURL = Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template");
-            XElement Modules= _LanguageBLL.loadLanguageForModule("customerslogin", pTemplateURL, "EN-US");
-            var components = from xmlModule in Modules.Elements("Compoment") select xmlModule;
+            XElement Modules= _LanguageBLL.loadLanguageForModule("customerslogin", pTemplateURL, "VI-VN");
+            var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components) {
                 switch (cmpn.Element("type").Value)
                 {
                     case "label":
-                        Label label = (Label)FindControl(cmpn.Element("idCompoment").Value);
+                        Label label = (Label)FindControl(cmpn.Element("idComponent").Value);
                         label.Text = cmpn.Element("Content").Value;
                         break;
                     case "button":
-                        Button button = (Button)FindControl(cmpn.Element("idCompoment").Value);
+                        Button button = (Button)FindControl(cmpn.Element("idComponent").Value);
                         button.Text = cmpn.Element("Content").Value;
                         break;
                     case "hyberlink":
-                        HyperLink hyperlink = (HyperLink)FindControl(cmpn.Element("idCompoment").Value);
+                        HyperLink hyperlink = (HyperLink)FindControl(cmpn.Element("idComponent").Value);
                         hyperlink.Text = cmpn.Element("Content").Value;
                         break;
                 }
             }
         }
+        #region Old Code
         //public void LoadLanguage()
         //{
         //    //Code ben no ben do xu ly.
@@ -81,16 +85,16 @@ namespace WebsiteGPS.Controls
         //    //    switch (drow["type"].ToString())
         //    //    {
         //    //        case "label":
-        //    //            string abc = drow["idCompoment"].ToString();
-        //    //            Label label = (Label)Page.FindControl(drow["idCompoment"].ToString());
+        //    //            string abc = drow["idComponent"].ToString();
+        //    //            Label label = (Label)Page.FindControl(drow["idComponent"].ToString());
         //    //            label.Text = drow["Content"].ToString();
         //    //            break;
         //    //        case "button":
-        //    //            Button button = (Button)Page.FindControl(drow["idCompoment"].ToString());
+        //    //            Button button = (Button)Page.FindControl(drow["idComponent"].ToString());
         //    //            button.Text = drow["Content"].ToString();
         //    //            break;
         //    //        case "hyberlink":
-        //    //            HyperLink hyperlink = (HyperLink)Page.FindControl(drow["idCompoment"].ToString());
+        //    //            HyperLink hyperlink = (HyperLink)Page.FindControl(drow["idComponent"].ToString());
         //    //            hyperlink.Text = drow["Content"].ToString();
         //    //            break;
         //    //    }
@@ -136,8 +140,8 @@ namespace WebsiteGPS.Controls
         //    }
 
         //}
-		
-		protected void btnLogin_Click(object sender, EventArgs e)
+        #endregion
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             _UsersControl = new UsersControl();
             GetDataFrom();
@@ -145,11 +149,11 @@ namespace WebsiteGPS.Controls
             info = _UsersControl.Get(_UsersInfo.Username, ref sErr);
             if (_UsersInfo.Username == "")
             {
-                lblErr.Text = "The user does not exist or password do not use !!! ";
+                lblErr.Text = _ErrorBLL.loadError("401",_MainPage.getStrErrorFileURL(),"VI-VN");
             }
             else if (_UsersInfo.Password != info.Password)
             {
-                lblErr.Text = "The user does not exist or password do not use !!!";
+                lblErr.Text = _ErrorBLL.loadError("401", _MainPage.getStrErrorFileURL(), "VI-VN");
             }
             else if (_UsersInfo.Password == info.Password)
             {

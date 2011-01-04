@@ -28,13 +28,39 @@ namespace WebsiteGPS
         {
             _ThemeConfig = pThemeConfig;
         }
-        
-
+        private string _strErrorFileURL;
+        public string getStrErrorFileURL() {
+            return _strErrorFileURL;
+        }
+        public void setStrErrFileURL(string pStrErrFileURL)
+        {
+            _strErrorFileURL = pStrErrFileURL;
+        }
+        private string _strControlURL;
+        public string getStrControlURL()
+        {
+            return _strControlURL;
+        }
+        public void setStrControlURL(string pStrControlURL)
+        {
+            _strControlURL = pStrControlURL;
+        }
+        private string _strWebConfigURL;
+        public string getStrWebConfigURL()
+        {
+            return _strWebConfigURL;
+        }
+        public void setStrWebCofigURL(string pStrWebConfigURL)
+        {
+            _strWebConfigURL = pStrWebConfigURL;
+        }
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
+            setStrErrFileURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ErrorCode.xml"));
+            setStrControlURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ControlURL.xml"));
+            setStrWebCofigURL(Path.Combine(Request.PhysicalApplicationPath,"App_Data\\WebConfig.xml"));
             LoadPages();
-
         }
         public void LoadPages() {
             //Issue
@@ -50,9 +76,7 @@ namespace WebsiteGPS
                 Control ctrMain=null;
                 
                 string strParameterURL = RouteData.Values["pages"].ToString().ToLower();
-                string[] strArrayControlInfo = _ControlBLL.loadControls(strParameterURL,
-                    Path.Combine(Request.PhysicalApplicationPath,
-                            "App_Data\\ControlURL.xml"));
+                string[] strArrayControlInfo = _ControlBLL.loadControls(strParameterURL,_strControlURL);
                 ctrMain = LoadControl(strArrayControlInfo[0].ToString());//load URL Control
                 Page.Title = strArrayControlInfo[1].ToString();//Load Title of Control
                 BodyHolder.Controls.Add(ctrMain);
@@ -61,6 +85,12 @@ namespace WebsiteGPS
             }
         }
 
+        
+        private void ThemeConfig() {
+            _ThemeConfig= _ConfigBLL.loadConfigs("_default", _strWebConfigURL);
+            //setThemeConfig(getTheme.GetThemeConfig(, "Website.config / Config","Theme","name"));     
+        }
+        #region oldCode
         //public void LoadPages()
         //{
         //    //Issue
@@ -103,13 +133,7 @@ namespace WebsiteGPS
         //    }
             
         //}
-        //private ArrayList Theme;
-        private void ThemeConfig() {
-            _ThemeConfig= _ConfigBLL.loadConfigs("_default", Path.Combine(
-                            Request.PhysicalApplicationPath,
-                            "App_Data\\WebConfig.xml"));
-            //setThemeConfig(getTheme.GetThemeConfig(, "Website.config / Config","Theme","name"));     
-        }     
+        //private ArrayList Theme;    
         //public void LoadLanguage()
         //{
         //    //Code ben no ben do xu ly.
@@ -120,10 +144,10 @@ namespace WebsiteGPS
         //                    Request.PhysicalApplicationPath,
         //                    "Themes\\_default\\_default.template"));           
         //    foreach(DataRow drow in ds.Tables[1].Rows){
-        //        Label control = (Label)Page.FindControl(drow["idCompoment"].ToString());
+        //        Label control = (Label)Page.FindControl(drow["idComponent"].ToString());
         //        control.Text = drow["Content"].ToString();
         //    }
         //}
-        
+        #endregion
     }
 }
