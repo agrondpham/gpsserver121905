@@ -35,6 +35,39 @@
     </Component>
   </Module>
   <Module>
+    <PageName>forgotpassword</PageName>
+    <Component>
+      <type>label</type>
+      <idComponent>lblEmail</idComponent>
+      <Content>Email</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblCaptcha</idComponent>
+      <Content>Mã xác nhận</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnSummit</idComponent>
+      <Content>Gửi</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblTitle</idComponent>
+      <Content>Quên mật khẩu</Content>
+    </Component>
+     <!--<Component>
+      <type>button</type>
+      <idComponent>btnCommit</idComponent>
+      <Content>Hoàn thành</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnAddNew</idComponent>
+      <Content>Thêm mới</Content>
+    </Component>-->
+  </Module>
+  <Module>
     <PageName>createaccount</PageName>
     <Component>
       <type>label</type>

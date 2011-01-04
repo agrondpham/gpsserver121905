@@ -18,17 +18,19 @@ namespace WebsiteGPS.Controls.Accounts
         EmailClass _Email;
         DTO.UsersInfo _UsersInfo;
         BUS.LanguageBLL _LanguageBLL = new BUS.LanguageBLL();
+        BUS.ErrorsBLL _ErrorBLL = new BUS.ErrorsBLL();
+        Default _MainPage; 
         string sErr = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _MainPage = (Default)this.Page;
             LoadLanguage();
         }
         public void LoadLanguage()
         {
             //need move this variable to global variable
-            string pTemplateURL = Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template");
-            XElement Modules = _LanguageBLL.loadLanguageForModule("createaccount", pTemplateURL, "VI-VN");
+            XElement Modules = _LanguageBLL.loadLanguageForModule("createaccount", _MainPage.getStrThemeURL(), "VI-VN");
             var components = from xmlModule in Modules.Elements("Component") select xmlModule;
             foreach (var cmpn in components)
             {

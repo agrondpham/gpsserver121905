@@ -54,12 +54,22 @@ namespace WebsiteGPS
         {
             _strWebConfigURL = pStrWebConfigURL;
         }
+        private string _strThemeURL;
+        public string getStrThemeURL()
+        {
+            return _strThemeURL;
+        }
+        public void setStrThemeURL(string pStrThemeURL)
+        {
+            _strThemeURL = pStrThemeURL;
+        }
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
             setStrErrFileURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ErrorCode.xml"));
             setStrControlURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ControlURL.xml"));
             setStrWebCofigURL(Path.Combine(Request.PhysicalApplicationPath,"App_Data\\WebConfig.xml"));
+            setStrThemeURL(Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template"));
             LoadPages();
         }
         public void LoadPages() {
