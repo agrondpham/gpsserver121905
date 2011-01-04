@@ -31,8 +31,14 @@
     <Component>
       <type>hyberlink</type>
       <idComponent>hypForgot</idComponent>
-      <Content>Quên tài khản hoặc mật khẩu</Content>
+      <Content>Quên mật khẩu</Content>
     </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblTitle</idComponent>
+      <Content>Đăng nhập</Content>
+    </Component>
+    
   </Module>
   <Module>
     <PageName>forgotpassword</PageName>
@@ -49,7 +55,7 @@
     <Component>
       <type>button</type>
       <idComponent>btnSummit</idComponent>
-      <Content>Gửi</Content>
+      <Content>Gửi mật khẩu</Content>
     </Component>
     <Component>
       <type>label</type>
@@ -99,5 +105,69 @@
       <idComponent>btnAddNew</idComponent>
       <Content>Thêm mới</Content>
     </Component>
+  </Module>
+  <Module>
+    <PageName>accountmanager</PageName>
+    <Component>
+      <type>label</type>
+      <idComponent>lblWelcome</idComponent>
+      <Content>Chào mừng Người quản trị</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblLogout</idComponent>
+      <Content>Thoát</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblAdminHome</idComponent>
+      <Content>Trang quản lý</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblFullName</idComponent>
+      <Content>Tên đầy đủ</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblSearch</idComponent>
+      <Content>Tìm kiếm</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblName</idComponent>
+      <Content>Tên đăng nhập</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblFullName</idComponent>
+      <Content>Họ và Tên</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblEmail</idComponent>
+      <Content>Email</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblStatus</idComponent>
+      <Content>Tình trạng</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblDelete</idComponent>
+      <Content>Xóa</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblAddnew</idComponent>
+      <Content>Thêm mới</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblDeleteNotification</idComponent>
+      <Content>Tài liệu bị xóa sẽ KHÔNG phục hồi lại được.Bạn có chắc chắn rằng bạn muốn XÓA không ? </Content>
+    </Component>
+    
   </Module>
 </Theme>

@@ -22,6 +22,33 @@ namespace WebsiteGPS.Controls.Manager {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// lblWelcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblWelcome;
+        
+        /// <summary>
+        /// lblLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLogout;
+        
+        /// <summary>
+        /// lblAdminHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAdminHome;
+        
+        /// <summary>
         /// A1 control.
         /// </summary>
         /// <remarks>
@@ -29,6 +56,15 @@ namespace WebsiteGPS.Controls.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+        
+        /// <summary>
+        /// lblSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSearch;
         
         /// <summary>
         /// UpdatePanel2 control.
@@ -103,13 +139,13 @@ namespace WebsiteGPS.Controls.Manager {
         protected global::System.Web.UI.WebControls.DataGrid dtgrid;
         
         /// <summary>
-        /// lbl control.
+        /// lblAddnew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl;
+        protected global::System.Web.UI.WebControls.Label lblAddnew;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -128,5 +164,14 @@ namespace WebsiteGPS.Controls.Manager {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::WebsiteGPS.Controls.Accounts.createaccount createaccount1;
+        
+        /// <summary>
+        /// lblDeleteNotification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDeleteNotification;
     }
 }

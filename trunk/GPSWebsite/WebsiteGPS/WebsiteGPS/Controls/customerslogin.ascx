@@ -12,7 +12,7 @@
      
          <div class="login_form">
          
-         <h3>Admin Panel Login</h3>
+         <h3><asp:Label ID="lblTitle" runat="server" Text="[Admin Panel Login]"></asp:Label></h3>
          
          <asp:HyperLink ID="hypForgot" runat="server" NavigateUrl="../Pages/forgotpassword.html" CssClass="forgot_pass">[Forgot username or password]</asp:HyperLink>
          
