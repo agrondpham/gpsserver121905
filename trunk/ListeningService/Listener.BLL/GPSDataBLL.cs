@@ -88,6 +88,7 @@ namespace Listener.BLL
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
+                sErr = ex.ToString();
                 if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
         }
