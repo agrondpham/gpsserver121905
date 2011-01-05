@@ -76,6 +76,29 @@
     });
 </script>
 
+<style type="text/css">
+    .style1
+    {
+        width: 94px;
+    }
+    .style2
+    {
+        width: 251px;
+    }
+    .style3
+    {
+        width: 184px;
+    }
+    .style5
+    {
+        width: 148px;
+    }
+    .style6
+    {
+        width: 114px;
+    }
+</style>
+
 <div id="main_container"><form runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -149,11 +172,11 @@
         <thead>
     	    <tr>
         	    <th scope="col" class="rounded-company"></th>
-                <th scope="col" class="rounded"><asp:Label ID="lblName" runat="server" Text="[Name]"></asp:Label></th>
-                <th scope="col" class="rounded" style="width:250px"><asp:Label ID="lblFullName" runat="server" Text="[Fullname]"></asp:Label></th>
-                <th scope="col" class="rounded" style="width:250px"><asp:Label ID="lblEmail" runat="server" Text="[email]"></asp:Label></th>
-                <th scope="col" class="rounded" style="width:50px"><asp:Label ID="lblStatus" runat="server" Text="[status]"></asp:Label></th>
-                <th scope="col" class="rounded-q4"><asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
+                <th scope="col" class="style1"><asp:Label ID="lblName" runat="server" Text="[Name]"></asp:Label></th>
+                <th scope="col" class="style2"><asp:Label ID="lblFullName" runat="server" Text="[Fullname]"></asp:Label></th>
+                <th scope="col" class="style3"><asp:Label ID="lblEmail" runat="server" Text="[email]"></asp:Label></th>
+                <th scope="col" class="style5"><asp:Label ID="lblStatus" runat="server" Text="[status]"></asp:Label></th>
+                <th scope="col" class="style6"><asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
             </tr>
         </thead>
     </table>
@@ -190,8 +213,14 @@
             </asp:BoundColumn>
             <asp:BoundColumn HeaderText="Email" DataField="Email" ItemStyle-CssClass="table_email">
             </asp:BoundColumn>
-            <asp:BoundColumn HeaderText="Trang Thái" DataField="Status" ItemStyle-CssClass="table_status">
-            </asp:BoundColumn>
+            <%--<asp:BoundColumn HeaderText="Trang Thái" DataField="Status" ItemStyle-CssClass="table_status">
+            </asp:BoundColumn>--%>
+            <asp:TemplateColumn HeaderText="Trang Thái">
+                            <ItemTemplate>
+                                <asp:Image runat="server" ItemStyle-CssClass="table_email" src='<%# "../../Themes/_default/Images/" + 
+                       DataBinder.Eval(Container.DataItem,"StatusImage")%>' ID="Status" />
+                            </ItemTemplate>
+                        </asp:TemplateColumn>
             <asp:ButtonColumn ButtonType="PushButton" CommandName="Delete" Text="Delete" ItemStyle-CssClass="table_delete">
             </asp:ButtonColumn>
         </Columns>
