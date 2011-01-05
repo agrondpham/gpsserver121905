@@ -156,6 +156,8 @@
     <Content Include="Themes\_default\AdminTemplate\niceforms-default.css" />
     <Content Include="Themes\_default\AdminTemplate\style.css" />
     <Content Include="Themes\_default\Images\account_icon.png" />
+    <Content Include="Themes\_default\Images\cancel-icon24.png" />
+    <Content Include="Themes\_default\Images\check-icon24.png" />
     <Content Include="Themes\_default\Images\gpsStart_icon32.png" />
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
