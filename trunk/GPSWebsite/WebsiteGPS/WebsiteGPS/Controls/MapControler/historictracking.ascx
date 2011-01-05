@@ -1,16 +1,15 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="historictracking.ascx.cs" Inherits="WebsiteGPS.Controls.Controler.HistoricTracking" %>
-<%@ Register src="../Accounts/profile.ascx" tagname="profile" tagprefix="uc1" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="historictracking.ascx.cs"
+    Inherits="WebsiteGPS.Controls.Controler.HistoricTracking" %>
+<%@ Register Src="../Accounts/profile.ascx" TagName="profile" TagPrefix="uc1" %>
 <%--StyleSheet inport--%>
-<link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css"/>
-<link rel="stylesheet" href="../Themes/_default/Styles/Controller.css"/>
-
+<link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
+<link rel="stylesheet" href="../Themes/_default/Styles/Controller.css" />
 <%-- Library Jquery inport--%>
 <script src="../Scripts/jquery-1.4.4.js" type="text/javascript"></script>
-<script src="../Scripts/librarys/jquery-ui-1.8.7.custom.min.js"type="text/javascript"></script>
+<script src="../Scripts/librarys/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker.js" type="text/javascript"></script>
-<script src="../Scripts/librarys/jquery.ui.datepicker-vi.js"type="text/javascript"></script>
-<script src="../Scripts/librarys/jquery.ui.datepicker-en-GB.js"type="text/javascript"></script>
-
+<script src="../Scripts/librarys/jquery.ui.datepicker-vi.js" type="text/javascript"></script>
+<script src="../Scripts/librarys/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
 <%--Date Time Jquery--%>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -203,9 +202,9 @@
 </script>
 <%-- Tab Jquery--%>
 <script type="text/javascript">
-	$(function () {
-	    $("#WidgetControler").tabs();
-	});
+    $(function () {
+        $("#WidgetControler").tabs();
+    });
 </script>
 <%-- Dialog --%>
 <script type="text/javascript">
@@ -229,64 +228,73 @@
 </asp:ScriptManager>
 <div id="WidgetControler" class="ui-controller ui-corner-all">
     <ul>
-		<li><a href="#HistoryTracking">[History Tracking]</a></li>
-		<li><a href="#TrackingOnline">[Tracking Online]</a></li>     
-	    <li><a id="hypProfile"><img alt="" src="../../Themes/_default/Images/account_icon.png" /></a></li>
-        <li><a id="hypHide"><img alt="" src="../../Themes/_default/Images/delete_icon.png" /></a></li>
+        <li><a href="#HistoryTracking">[History Tracking]</a></li>
+        <li><a href="#TrackingOnline">[Tracking Online]</a></li>
+        <li><a id="hypProfile">
+            <img alt="" src="../../Themes/_default/Images/account_icon.png" /></a></li>
+        <li><a id="hypHide">
+            <img alt="" src="../../Themes/_default/Images/delete_icon.png" /></a></li>
     </ul>
     <div id="HistoryTracking" class="ui-controller-maincontent">
-
         <div class="ui-controller-line">
-            <div class="ui-controller-label">[Choice Device]</div>
+            <div class="ui-controller-label">
+                [Choice Device]</div>
             <div class="ui-controller-component">
-                <asp:DropDownList ID="drdDevices" runat="server"><asp:ListItem>Long</asp:ListItem><asp:ListItem>Duong</asp:ListItem>
+                <asp:DropDownList ID="drdDevices" runat="server" AutoPostBack="True">
                 </asp:DropDownList>
             </div>
-            <div style="clear"></div>
+            <div style="clear">
+            </div>
         </div>
         <div class="ui-controller-line">
-            <div class="ui-controller-label">[Choice Time Start]</div>
+            <div class="ui-controller-label">
+                [Choice Time Start]</div>
             <div class="ui-controller-component">
-                <asp:TextBox ID="tbxStartTime" runat="server" class="text ui-corner-all" Enabled=false></asp:TextBox>
+                <asp:TextBox ID="tbxStartTime" runat="server" class="text ui-corner-all" Enabled="false"></asp:TextBox>
             </div>
-            <div style="clear"></div>
+            <div style="clear">
+            </div>
         </div>
         <div class="ui-controller-line">
-            <div class="ui-controller-label">[Choice Time Stop]</div>
+            <div class="ui-controller-label">
+                [Choice Time Stop]</div>
             <div class="ui-controller-component">
-                <asp:TextBox ID="tbxStopTime" runat="server" class="text ui-corner-all" Enabled=false></asp:TextBox>
+                <asp:TextBox ID="tbxStopTime" runat="server" class="text ui-corner-all" Enabled="false"></asp:TextBox>
             </div>
-            <div style="clear"></div>
+            <div style="clear">
+            </div>
         </div>
         <div class="ui-Controller-button">
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <asp:Button ID="btnShowMarkers" runat="server" Text="[Show Data]" 
-                onclick="btnShowMarkers_Click" />
-        </ContentTemplate>
-        </asp:UpdatePanel>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:Button ID="btnShowMarkers" runat="server" Text="[Show Data]" OnClick="btnShowMarkers_Click" />
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
-
     </div>
     <div id="TrackingOnline" class="ui-controller-maincontent">
         <div class="ui-controller-line">
-            <div class="ui-controller-label">[Choice Device]</div>
+            <div class="ui-controller-label">
+                [Choice Device]</div>
             <div class="ui-controller-component">
-                <asp:DropDownList ID="drdDevices2" runat="server"><asp:ListItem>Long2</asp:ListItem><asp:ListItem>Duong2</asp:ListItem>
+                <asp:DropDownList ID="drdDevices2" runat="server">
+                    <asp:ListItem>Long2</asp:ListItem>
+                    <asp:ListItem>Duong2</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div style="clear"></div>
+            <div style="clear">
+            </div>
         </div>
         <div class="ui-Controller-button">
             <asp:Button ID="Button2" runat="server" Text="[Tracking]" />
         </div>
     </div>
 </div>
-<div id="ProfileDialog" title="[View Profile]"><uc1:profile ID="profile1" runat="server" /></div>
+<div id="ProfileDialog" title="[View Profile]">
+    <uc1:profile ID="profile1" runat="server" />
+</div>
 <div class="ui-controller-showPanel">
-    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor:pointer">
+    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor: pointer">
         <img alt="" src="../../Themes/_default/Images/map_icon.png" />
     </a>
 </div>
-
-

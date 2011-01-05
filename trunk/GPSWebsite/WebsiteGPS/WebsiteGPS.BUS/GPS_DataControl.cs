@@ -104,7 +104,15 @@ namespace WebsiteGPS.BUS
             GPS_DataInfo inf = new GPS_DataInfo(row);
             return InsertUpdate(inf);
         }
+        
+        public DataTable Getdata(string IDDevices, string StartTime, string StopTime, ref string sErr)
+        {
+            return _objDAO.Getdata( IDDevices,  StartTime,  StopTime, ref sErr);
+        }
 		#endregion Method
 
+
+
+        
     }
 }

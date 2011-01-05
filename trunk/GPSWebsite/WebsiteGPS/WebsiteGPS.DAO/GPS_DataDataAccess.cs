@@ -269,7 +269,28 @@ namespace WebsiteGPS.DAO
             if (sErr != "") ErrorLog.SetLog(sErr);
             return list;
         }
+        
+        public DataTable Getdata(string IDDevices, string StartTime, string StopTime, ref string sErr)
+        {
+            string query = "[procGPS_Data_get] @StartTime='" + StartTime + "',@StopTime='" + StopTime + "',@IMED_Device='" + IDDevices + "'";
+            DataTable list = new DataTable();
+            connect();
+            try
+            {
+                list = executeSelectQuery(query);
+            }
+            catch (Exception ex)
+            {
+                sErr = ex.Message;
+            }
+            disconnect();
+            //if (dr != null) list = CBO.FillCollection(dr, ref list);
+            //    if (sErr != "") ErrorLog.SetLog(sErr);
+            return list;
+        }
 		#endregion Method
-     
+
+
+        
     }
 }
