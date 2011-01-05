@@ -81,7 +81,7 @@ namespace Listener.BLL
                 bytesRead = networkStream.Read(message, 0, 4096);
                 string strGPSData = encoding.GetString(message, 0, bytesRead);
                 _GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
-                //_GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
+                _GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
                 tcpClient.Close();
                 //return strGPSData;
             }
