@@ -30,24 +30,26 @@ namespace Listener.BLL
         //want to set Port in outsite of SocketGps but cannot call.FAIL!!!
         public void setPort(int pPortValue) { _intPort = pPortValue; }
         public int getPort() { return _intPort; }
-
+        string loi = "";
         #endregion
-        public void ListenToGPS()
+        public string  ListenToGPS()
         {
             try
             {
                 //call method for listening information form devices
 
-                CreateSocket();
+                string err = CreateSocket();
+                return err;
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
                 if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
+                return ex.ToString();
             }
         }
         //this method to set listening information
-        public void CreateSocket()
+        public string CreateSocket()
         {
             try
             {
@@ -56,18 +58,21 @@ namespace Listener.BLL
                 while (true)
                 {
                     TcpClient client = (TcpClient)GPSListener.AcceptTcpClient();//accept connect from device
-                    Thread threadReceiptData = new Thread(new ParameterizedThreadStart(CreateStream));//Open thread to write data while it is continuing to receipt data from device
-                    threadReceiptData.Start(client);
+                    //Thread threadReceiptData = new Thread(new ParameterizedThreadStart(CreateStream));//Open thread to write data while it is continuing to receipt data from device
+                    //threadReceiptData.Start(client);
+                    return CreateStream(client);
                 }
                 //CreateStream();
+                return "vao toi CreateSocket";
             }
             catch (Exception ex)
             {
                 System.Console.WriteLine(ex.ToString());
                 if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
+                return ex.ToString();
             }
         }
-        private void CreateStream(object client)
+        private string CreateStream(object client)
         {
             try
             {
@@ -80,16 +85,19 @@ namespace Listener.BLL
                 int bytesRead;
                 bytesRead = networkStream.Read(message, 0, 4096);
                 string strGPSData = encoding.GetString(message, 0, bytesRead);
-                _GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
-                _GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
+                
+                //_GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
+                //_GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
                 tcpClient.Close();
-                //return strGPSData;
+                
+                return strGPSData;
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
+                //System.Console.WriteLine(ex.ToString());
                 sErr = ex.ToString();
-                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
+                return sErr;
+                //if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
         }
     }
