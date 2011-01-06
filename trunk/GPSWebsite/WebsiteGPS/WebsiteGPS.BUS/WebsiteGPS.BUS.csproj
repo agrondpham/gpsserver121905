@@ -41,6 +41,7 @@
     <Compile Include="AutoPassword.cs" />
     <Compile Include="ConfigBLL.cs" />
     <Compile Include="ControlBLL.cs" />
+    <Compile Include="ConvertDatatableToJson.cs" />
     <Compile Include="DevicesControl.cs" />
     <Compile Include="EmailClass.cs" />
     <Compile Include="ErrorsBLL.cs" />
