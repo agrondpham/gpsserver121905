@@ -22,22 +22,23 @@ namespace WebsiteGPS.DAO
             }
             return strArrayThemeInfor;
         }
-        public string[] LoadEmailConfig(string pFileURL)
-        {
-            string[] strArrayEmailInfor = new string[4];
-            XElement EmailConfigs = XElement.Load(pFileURL);
-            var emailcnfgs = from xmlEmailConfig in EmailConfigs.Elements("Email") select xmlEmailConfig;
-            foreach (var emailconfig in emailcnfgs)
-            {
-                //strArrayEmailInfor[0]=emailconfig.Element("POP3").Value;
-                //strArrayEmailInfor[1]=emailconfig.Element("PortPOP3").Value;
-                strArrayEmailInfor[0]=emailconfig.Element("SMTP").Value;
-                strArrayEmailInfor[1]=emailconfig.Element("PortSMTP").Value;
-                strArrayEmailInfor[2]=emailconfig.Element("EmailAddress").Value;
-                strArrayEmailInfor[3] = emailconfig.Element("EmailName").Value;
-                strArrayEmailInfor[4] = emailconfig.Element("Password").Value;
-            }
-            return strArrayEmailInfor;
-        }
+        //Use config Email by XML
+        //public string[] LoadEmailConfig(string pFileURL)
+        //{
+        //    string[] strArrayEmailInfor = new string[4];
+        //    XElement EmailConfigs = XElement.Load(pFileURL);
+        //    var emailcnfgs = from xmlEmailConfig in EmailConfigs.Elements("Email") select xmlEmailConfig;
+        //    foreach (var emailconfig in emailcnfgs)
+        //    {
+        //        //strArrayEmailInfor[0]=emailconfig.Element("POP3").Value;
+        //        //strArrayEmailInfor[1]=emailconfig.Element("PortPOP3").Value;
+        //        strArrayEmailInfor[0]=emailconfig.Element("SMTP").Value;
+        //        strArrayEmailInfor[1]=emailconfig.Element("PortSMTP").Value;
+        //        strArrayEmailInfor[2]=emailconfig.Element("EmailAddress").Value;
+        //        strArrayEmailInfor[3] = emailconfig.Element("EmailName").Value;
+        //        strArrayEmailInfor[4] = emailconfig.Element("Password").Value;
+        //    }
+        //    return strArrayEmailInfor;
+        //}
     }
 }
