@@ -26,15 +26,23 @@ namespace Listener.Web
             try
             {
                 //open thread to receip data from devices
+                //string err;
 
-                _thread = new Thread(new ThreadStart(_GPSDataBLL.ListenToGPS));
-                _thread.Start();
+                // _thread = new Thread(new ThreadStart(_GPSDataBLL.ListenToGPS));
+
+                //_thread.Start();
+
+                string error = _GPSDataBLL.ListenToGPS();
+                TextWriter streamWr = new StreamWriter(Server.MapPath("duoc.txt"));
+                streamWr.Write(error);
+                streamWr.Close();
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
+                //System.Console.WriteLine(ex.ToString());
                 TextWriter streamWr = new StreamWriter(path);
                 streamWr.Write(ex.ToString());
+                streamWr.Close();
             }
         }
     }
