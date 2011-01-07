@@ -7,7 +7,7 @@ body
 .ui-controller
 {
     background-image: url("../Images/control_bg.jpg");
-    width:400px;
+    width:390px;
     min-height:550px;
     height:99%;
     max-height:600px;
@@ -93,6 +93,16 @@ input .text
     }
 .ui-tabs .ui-tabs-panel 
 {
-    background-image:url("../Images/panel_bg.gif");
+    /*background-image:url("../Images/panel_bg.gif");*/
     padding: 4em 1.4em;
     }
+.ui-tabs .ui-tabs-nav li {
+    border-bottom: 0 none !important;
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 1px 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+    white-space: nowrap;
+}
