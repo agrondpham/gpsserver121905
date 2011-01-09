@@ -95,6 +95,8 @@
     <Content Include="Scripts\css\smoothness\jquery-ui-1.8.7.custom.css" />
     <Content Include="Scripts\jquery-1.4.4.js" />
     <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.vn.js" />
     <Content Include="Scripts\librarys\jquery-ui-1.8.7.custom.min.js" />
     <Content Include="Scripts\librarys\jquery.ui.core.js" />
     <Content Include="Scripts\librarys\jquery.ui.datepicker-en-GB.js" />
@@ -156,13 +158,14 @@
     <Content Include="Themes\_default\AdminTemplate\niceforms-default.css" />
     <Content Include="Themes\_default\AdminTemplate\style.css" />
     <Content Include="Themes\_default\Images\account_icon.png" />
+    <Content Include="Themes\_default\Images\ajax_loadingBarRed.gif" />
     <Content Include="Themes\_default\Images\cancel-icon24.png" />
     <Content Include="Themes\_default\Images\check-icon24.png" />
+    <Content Include="Themes\_default\Images\control_bg.jpg" />
     <Content Include="Themes\_default\Images\gpsStart_icon32.png" />
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon.png" />
-    <Content Include="Themes\_default\Images\control_bg.jpg" />
     <Content Include="Themes\_default\Images\panel_bg.gif" />
     <Content Include="Themes\_default\Images\calendar_icon.png" />
     <Content Include="Themes\_default\Images\delete_icon.png" />
@@ -184,6 +187,10 @@
     <Content Include="Themes\_default\LoginStyle\images\loginpage_13.jpg" />
     <Content Include="Themes\_default\LoginStyle\images\loginpage_14.jpg" />
     <Content Include="Themes\_default\LoginStyle\stylelog.css" />
+    <Content Include="Themes\_default\ReportStyle\images\error.png" />
+    <Content Include="Themes\_default\ReportStyle\images\valid.png" />
+    <Content Include="Themes\_default\ReportStyle\images\warning.png" />
+    <Content Include="Themes\_default\ReportStyle\Style.css" />
     <Content Include="Themes\_default\Styles\accountsmanager.css" />
     <Content Include="Themes\_default\Styles\Controller.css" />
     <Content Include="Themes\_default\Styles\googlemap.css" />

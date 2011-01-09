@@ -1,7 +1,25 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="customerslogin.ascx.cs" Inherits="WebsiteGPS.Controls.CustomersLogin" %>
 <link rel="stylesheet" type="text/css" href="../Themes/_default/AdminTemplate/style.css" />
 <link rel="stylesheet" type="text/css" media="all" href="../Themes/_default/AdminTemplate/niceforms-default.css" />
-<form id="form1" runat="server" class="niceform">
+<script type="text/javascript" src="../Scripts/jquery.validate.vn.js"></script>
+<%--set validation--%>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#loginForm").validate();
+        onsubmit: false;
+    });
+    $("#ctl02_btnLogin").click(function (evt) {
+        // Validate the form and retain the result.
+        var isValid = $("#loginForm").valid();
+
+        // If the form didn't validate, prevent the
+        //  form submission.
+        if (!isValid)
+            evt.preventDefault();
+    });
+    
+</script>
+<form id="loginForm" runat="server" class="niceform">
 <div id="main_container">
 
 	<div class="header_login">
@@ -19,11 +37,11 @@
                 <fieldset>
                     <dl>
                         <dt><asp:Label runat="server" Text="[UserName]" id="lblUsername" CssClass="label"></asp:Label></dt>
-                        <dd><asp:TextBox runat="server" id="tbxUsername" CssClass="ui-corner-all"></asp:TextBox></dd>
+                        <dd><asp:TextBox runat="server" id="tbxUsername" CssClass="ui-corner-all required"></asp:TextBox></dd>
                     </dl>
                     <dl>
                         <dt><asp:Label runat="server" Text="[Password]" id="lblPassword"  CssClass="label"></asp:Label></dt>
-                        <dd><asp:TextBox runat="server" id="tbxPassword" CssClass="ui-corner-all"></asp:TextBox></dd>
+                        <dd><asp:TextBox runat="server" TextMode="Password" id="tbxPassword" CssClass="ui-corner-all required"></asp:TextBox></dd>
                     </dl>
                     
                     <dl>

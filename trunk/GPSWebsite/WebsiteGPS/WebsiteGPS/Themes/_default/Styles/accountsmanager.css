@@ -86,26 +86,47 @@
     clear:both;
     }
 /*New Account*/
-.rw{
+.newaccount_table{
 	width:400px;
-	height:40px;
-	margin:20px 10% 0px 10%;
+	float:left;
+	position:absolute;
+	z-index:0;
+	margin:10px 10% 0px 10%;
 	font-family:Verdana,Arial,sans-serif;
-	font-size:0.8em;
+	font-size:1em;
 }
-.lfcl{
+.newaccount_lf{
 	width:150px;
-	float:left
+	float:left;
+	margin:0 0 10px 0;
 }
-.rgcl{
-	width:200px;
-	float:left
+.newaccount_rg{
+	width:190px;
+	float:left;
+    margin:0 0 10px 0;
 }
 .rw-control
 {
     width:400px;
-	height:40px;
+	float:left;
 	margin:30px 10% 10px 10%;
     font-family:Verdana,Arial,sans-serif;
 	font-size:0.8em;
     }
+.new-account-input
+{
+    height:20px;
+    padding: 2px 5px;
+    }
+.uploadProcess
+{
+    width:70%;
+    height:50%;
+    background: rgba(255, 255, 255, 0.5);
+    position:absolute;
+    z-index:1;
+}
+.uploadProcess_image
+{
+    margin: 20% 0 0 45%;
+}
