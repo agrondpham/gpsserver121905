@@ -7,12 +7,20 @@
     var map;
     var poly;
     //windown info
-    var contentString = 'test';
+    var speedString ='<div class="infowindows_table">'+
+                     '<div class="infowindows_table_lf">[speed]:</div>'+
+                     '<div class="infowindows_table_rg">';
+    var dateString  = ' km/h </div'+
+                      '<div class="infowindows_table_lf">[Date]:</div>'+
+                      '<div class="infowindows_table_rg">';
+    var timeString  = '</div'+
+                      '<div class="infowindows_table_lf">[Time]:</div>'+
+                      '<div class="infowindows_table_rg">';
+    var footerString = '</div><div style="clear"></div></div>';  
+    var contentString;
     var markersArray = [];
-    var infowindow = new google.maps.InfoWindow({
-        content: contentString,
-        size: new google.maps.Size(50, 50)
-    });
+    var infowindow ;
+
     function initialize() {
         var Long = new google.maps.LatLng(10.8292, 106.63903333333333);
         var Duong = new google.maps.LatLng(10.812233333333333, 106.69376666666666);
@@ -71,6 +79,10 @@
                 icon: image
             });
             path.push(latlng); //dua cac diem len de noi
+            var strDateTime=data.marker[i].date;
+            var dateStringValue= strDateTime.substring(0,10);
+            var timeStringValue = strDateTime.substring(11, 19);
+            contentString = speedString + data.marker[i].speed + dateString + dateStringValue + timeString + timeStringValue + footerString;
             addInforWindow(marker); //bat buoc phai tach ra lam mot ham rieng
             markersArray.push(marker);
         }
@@ -78,6 +90,10 @@
     }
     function addInforWindow(marker) {
         //add info window
+        infowindow= new google.maps.InfoWindow({
+            content: contentString,
+            size: new google.maps.Size(200, 100)
+        });
         google.maps.event.addListener(marker, 'click', function () {
             infowindow.open(map, marker);
         });
@@ -98,11 +114,16 @@
 
 </script>
 <link href="../../Themes/_default/Styles/googlemap.css" rel="stylesheet" type="text/css" />
-
+<link href="../../Themes/_default/Styles/Style.css" rel="stylesheet" type="text/css" />
 <div id="map_canvas" style="height:100%;min-height:605px;min-width:405px;width:100%;float:left">
 </div>
 
 <form id="form1" runat="server">
 <uc1:historictracking ID="historictracking1" runat="server"/>
+<asp:UpdateProgress ID="UpdateProgress1" runat="server">
+<ProgressTemplate>
+    <div class="uploadProcess"><img alt="" class="uploadProcess_image" src="../../Themes/_default/Images/ajax_loadingBarRed.gif" /></div>
+</ProgressTemplate>
+</asp:UpdateProgress>
 </form>
 

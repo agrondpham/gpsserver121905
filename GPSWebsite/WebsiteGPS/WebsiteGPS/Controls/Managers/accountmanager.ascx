@@ -3,9 +3,9 @@
 <%@ Register Src="../Accounts/createaccount.ascx" TagName="createaccount" TagPrefix="uc1" %>
 <%--StyleSheet inport--%>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
-<link href="../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
+<link href="../../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
+<link href="../../Themes/_default/ReportStyle/Style.css" rel="stylesheet" type="text/css" />
 <%-- Library Jquery inport--%>
-<script src="../Scripts/jquery-1.4.4.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker-vi.js" type="text/javascript"></script>
@@ -18,10 +18,7 @@
             resizable: false,
             height: 500,
             width: 650,
-            modal: true,
-            close: function () {
-                allFields.val("").removeClass("ui-state-error");
-            }
+            modal: true
         });
         $("#add-user-dialog").parent().appendTo(jQuery("form:first")); //Move form of dialog become the first Form(Dua Form cua New Account len xu ly dau)
         //add Listener open dialog new AddUser
@@ -75,31 +72,7 @@
         $('.jclock').jclock();
     });
 </script>
-
-<style type="text/css">
-    .style1
-    {
-        width: 94px;
-    }
-    .style2
-    {
-        width: 251px;
-    }
-    .style3
-    {
-        width: 184px;
-    }
-    .style5
-    {
-        width: 148px;
-    }
-    .style6
-    {
-        width: 114px;
-    }
-</style>
-
-<div id="main_container"><form runat="server">
+<div id="main_container"><form runat="server" id="accountmanagerForm">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 	<div class="header">
@@ -172,11 +145,11 @@
         <thead>
     	    <tr>
         	    <th scope="col" class="rounded-company"></th>
-                <th scope="col" class="style1"><asp:Label ID="lblName" runat="server" Text="[Name]"></asp:Label></th>
-                <th scope="col" class="style2"><asp:Label ID="lblFullName" runat="server" Text="[Fullname]"></asp:Label></th>
-                <th scope="col" class="style3"><asp:Label ID="lblEmail" runat="server" Text="[email]"></asp:Label></th>
-                <th scope="col" class="style5"><asp:Label ID="lblStatus" runat="server" Text="[status]"></asp:Label></th>
-                <th scope="col" class="style6"><asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
+                <th scope="col" class="table_username"><asp:Label ID="lblName" runat="server" Text="[Name]"></asp:Label></th>
+                <th scope="col" class="table_fullname"><asp:Label ID="lblFullName" runat="server" Text="[Fullname]"></asp:Label></th>
+                <th scope="col" class="table_email"><asp:Label ID="lblEmail" runat="server" Text="[email]"></asp:Label></th>
+                <th scope="col" class="table_status"><asp:Label ID="lblStatus" runat="server" Text="[status]"></asp:Label></th>
+                <th scope="col" class="table_delete"><asp:Label ID="lblDelete" runat="server" Text="[delete]"></asp:Label></th>
             </tr>
         </thead>
     </table>
@@ -227,7 +200,7 @@
         <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
     </asp:DataGrid>
 
-	<a id="hypAddUser" href="#" class="bt_green">
+	<a id="hypAddUser" class="bt_green">
         <span class="bt_green_lft"></span>
             <strong><asp:Label ID="lblAddnew" runat="server" Text="[Add New]"></asp:Label></strong></asp:Label>
         <span class="bt_green_r"></span></a>
@@ -287,6 +260,7 @@
     	<div class="right_footer"><a href="http://indeziner.com"><img src="images/indeziner_logo.gif" alt="" title=""/></a></div>
     
     </div>
+
     </form>
 </div>		
 

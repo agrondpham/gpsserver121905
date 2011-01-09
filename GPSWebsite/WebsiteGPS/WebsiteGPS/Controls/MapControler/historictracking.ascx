@@ -267,9 +267,10 @@
         <div class="ui-Controller-button">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:Button ID="btnShowMarkers" runat="server" Text="[Show Data]" OnClick="btnShowMarkers_Click" />
+                    <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" ID="btnShowMarkers" runat="server" Text="[Show Data]" OnClick="btnShowMarkers_Click" />
                 </ContentTemplate>
             </asp:UpdatePanel>
+            
         </div>
     </div>
     <div id="TrackingOnline" class="ui-controller-maincontent">
@@ -286,7 +287,7 @@
             </div>
         </div>
         <div class="ui-Controller-button">
-            <asp:Button ID="Button2" runat="server" Text="[Tracking]" />
+            <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" ID="btnTracking" runat="server" Text="[Tracking]" />
         </div>
     </div>
 </div>
