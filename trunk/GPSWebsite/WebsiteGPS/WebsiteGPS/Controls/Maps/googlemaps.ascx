@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GoogleMaps.ascx.cs" Inherits="WebsiteGPS.Controls.Maps.GoogleMaps" %>
-
 <%@ Register src="../MapControler/historictracking.ascx" tagname="historictracking" tagprefix="uc1" %>
+
+<script type="text/javascript" src="../Scripts/jquery.validate.vn.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <%--code Map--%>
 <script type="text/javascript">
@@ -113,16 +114,34 @@
     }
 
 </script>
+<%--validation--%>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#controlForm").validate();
+        onsubmit: false;
+    });
+    $("#ctl02_historictracking1_btnShowMarkers").click(function (evt) {
+        // Validate the form and retain the result.
+        var isValid = $("#controlForm").valid();
+
+        // If the form didn't validate, prevent the
+        //  form submission.
+        if (!isValid)
+            evt.preventDefault();
+    });
+    
+</script>
 <link href="../../Themes/_default/Styles/googlemap.css" rel="stylesheet" type="text/css" />
-<link href="../../Themes/_default/Styles/Style.css" rel="stylesheet" type="text/css" />
-<div id="map_canvas" style="height:100%;min-height:605px;min-width:405px;width:100%;float:left">
+
+<div id="map_canvas" style="height:100%;min-height:605px;min-width:405px;width:100%;float:left;">
 </div>
 
-<form id="form1" runat="server">
+<form id="controlForm" runat="server">
 <uc1:historictracking ID="historictracking1" runat="server"/>
 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
 <ProgressTemplate>
     <div class="uploadProcess"><img alt="" class="uploadProcess_image" src="../../Themes/_default/Images/ajax_loadingBarRed.gif" /></div>
+    <%--<div id="loading-panel-js" style="border: 1px solid rgb(255, 255, 255); font: 12px/46px 'Segoe UI','Trebuchet MS',Arial,Verdana,Serif; -moz-border-radius: 6px 6px 6px 6px; -moz-box-shadow: 0pt 0pt 10px rgb(0, 0, 0); text-align: center; color: rgb(255, 255, 255); background-color: rgb(59, 59, 59); background-image: url('../../Themes/_default/Images/Loading_00.gif'); background-position: center center; width: 200px; height: 46px; margin-left: -100px; margin-top: -23px; visibility: hidden;">Contacting Server. Please, wait...</div>--%>
 </ProgressTemplate>
 </asp:UpdateProgress>
 </form>

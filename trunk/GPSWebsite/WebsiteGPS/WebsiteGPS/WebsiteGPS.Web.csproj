@@ -166,6 +166,7 @@
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon.png" />
+    <Content Include="Themes\_default\Images\Loading_00.gif" />
     <Content Include="Themes\_default\Images\panel_bg.gif" />
     <Content Include="Themes\_default\Images\calendar_icon.png" />
     <Content Include="Themes\_default\Images\delete_icon.png" />

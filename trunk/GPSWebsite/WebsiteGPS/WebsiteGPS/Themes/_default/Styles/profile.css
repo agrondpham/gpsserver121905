@@ -1,20 +1,32 @@
-﻿.pf-rw
+﻿.profile_table{
+	width:400px;
+	float:left;
+	position:absolute;
+	z-index:-1;
+	margin:10px 10px;
+	font-family:Verdana,Arial,sans-serif;
+	font-size:1em;
+}
+.profile_lf{
+	width:150px;
+	float:left;
+	margin:0 0 10px 0;
+}
+.profile_rg{
+	width:190px;
+	float:left;
+    margin:0 0 10px 0;
+}
+.rw-control
 {
-    height:30px;
+    width:400px;
+	float:left;
+	margin:30px 10% 10px 10%;
+    font-family:Verdana,Arial,sans-serif;
+	font-size:0.8em;
     }
-.pf-rw-changepass
+.new-account-input
 {
-    height:150px;
-    }
-.pf-cl-lf
-{
-    width:150px;
-    float:left;
-    margin:5px;
-    }
-.pf-cl-rg
-{
-    width:200px;
-    float:left;
-    margin:5px;
+    height:20px;
+    padding: 2px 5px;
     }

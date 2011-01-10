@@ -5,6 +5,7 @@
     $(document).ready(function () {
         $("#accountmanagerForm").validate();
         onsubmit: false;
+        $(".valid_box").hide();
     });
     $("#ctl02_createaccount1_btnCommit").click(function (evt) {
         // Validate the form and retain the result.
@@ -21,8 +22,10 @@
 
         // If the form didn't validate, prevent the
         //  form submission.
-        if (!isValid)
+        if (!isValid) {
             evt.preventDefault();
+            $(".valid_box").show();
+        }
     });
     
 </script>

@@ -212,11 +212,10 @@
         $("#ProfileDialog").dialog({
             autoOpen: false,
             height: 500,
-            width: 450,
+            width: 500,
             modal: true,
-            close: function () {
-                allFields.val("").removeClass("ui-state-error");
-            }
+            stack: false,
+            zIndex: 2
         });
         $("#hypProfile")
 			.click(function () {
@@ -224,6 +223,7 @@
 			});
     });
 </script>
+
 <asp:ScriptManager ID="ScriptManager1" runat="server">
 </asp:ScriptManager>
 <div id="WidgetControler" class="ui-controller ui-corner-all">
@@ -240,7 +240,7 @@
             <div class="ui-controller-label">
                 [Choice Device]</div>
             <div class="ui-controller-component">
-                <asp:DropDownList ID="drdDevices" runat="server" AutoPostBack="True">
+                <asp:DropDownList ID="drdDevices" runat="server" AutoPostBack="True" CssClass="required">
                 </asp:DropDownList>
             </div>
             <div style="clear">
@@ -250,7 +250,7 @@
             <div class="ui-controller-label">
                 [Choice Time Start]</div>
             <div class="ui-controller-component">
-                <asp:TextBox ID="tbxStartTime" runat="server" class="text ui-corner-all" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="tbxStartTime" runat="server" CssClass="text ui-corner-all required" Enabled="false"></asp:TextBox>
             </div>
             <div style="clear">
             </div>
@@ -259,7 +259,7 @@
             <div class="ui-controller-label">
                 [Choice Time Stop]</div>
             <div class="ui-controller-component">
-                <asp:TextBox ID="tbxStopTime" runat="server" class="text ui-corner-all" Enabled="false"></asp:TextBox>
+                <asp:TextBox ID="tbxStopTime" runat="server" CssClass="text ui-corner-all required" Enabled="false"></asp:TextBox>
             </div>
             <div style="clear">
             </div>

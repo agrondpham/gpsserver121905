@@ -1,13 +1,1 @@
-﻿/*Upload Process*/
-.uploadProcess
-{
-    width:100%;
-    height:100%;
-    background: rgba(255, 255, 255, 0.5);
-    position:absolute;
-    z-index:1;
-}
-.uploadProcess_image
-{
-    margin: 20% 0 0 45%;
-}
+﻿

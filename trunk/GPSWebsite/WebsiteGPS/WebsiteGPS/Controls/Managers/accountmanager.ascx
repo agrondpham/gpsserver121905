@@ -2,7 +2,7 @@
     Inherits="WebsiteGPS.Controls.Manager.accountmanager" %>
 <%@ Register Src="../Accounts/createaccount.ascx" TagName="createaccount" TagPrefix="uc1" %>
 <%--StyleSheet inport--%>
-<link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
+<link href="../../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" rel="stylesheet" type="text/css" />
 <link href="../../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
 <link href="../../Themes/_default/ReportStyle/Style.css" rel="stylesheet" type="text/css" />
 <%-- Library Jquery inport--%>
