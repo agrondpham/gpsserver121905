@@ -14,11 +14,13 @@ body
     max-height:600px;
     float:left;
     position:absolute;
+
     }
 .ui-controller-showPanel
 {
     float:left;
     position:absolute;
+
     }
 .ui-corner-all
 {
