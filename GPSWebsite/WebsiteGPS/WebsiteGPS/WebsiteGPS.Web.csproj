@@ -61,6 +61,7 @@
     <Content Include="App_Data\ErrorCode.xml" />
     <None Include="App_Data\InfoMailServer" />
     <Content Include="App_Data\WebConfig.xml" />
+    <Content Include="Controls\Accounts\ChangePassword.ascx" />
     <Content Include="Controls\Accounts\createaccount.ascx" />
     <Content Include="Controls\Accounts\Forgotpassword.ascx" />
     <Content Include="Controls\Accounts\profile.ascx" />
@@ -210,6 +211,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Accounts\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Accounts\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Accounts\createaccount.ascx.cs">
       <DependentUpon>createaccount.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
