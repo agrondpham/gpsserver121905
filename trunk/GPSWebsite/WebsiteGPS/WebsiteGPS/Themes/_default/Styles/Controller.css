@@ -54,6 +54,9 @@ body
 {
     padding:10px 10px 30px 50px;
     }
+.close-icon
+{
+    }
 /*--------------------Override------------------*/
             /*Common--------------------------*/
 input .text    
@@ -110,3 +113,13 @@ input .text
     top: 1px;
     white-space: nowrap;
 }
+ .ui-widget-header .ui-state-default {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 solid #D3D3D3;
+    color: #555555;
+    font-weight: normal;
+}
+.ui-widget-header .ui-state-active
+{
+    background: url("../Images/shortcut_icon48.png") no-repeat scroll 0 0 transparent;
+    }

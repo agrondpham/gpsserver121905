@@ -228,12 +228,14 @@
 </asp:ScriptManager>
 <div id="WidgetControler" class="ui-controller ui-corner-all">
     <ul>
-        <li><a href="#HistoryTracking">[History Tracking]</a></li>
-        <li><a href="#TrackingOnline">[Tracking Online]</a></li>
+        <li><a href="#HistoryTracking">
+            <img style="border:0px" title="[History]" alt="" src="../../Themes/_default/Images/historytracking_icon48.png" /></a></li>
+        <li><a href="#TrackingOnline">
+            <img style="border:0px" title="[Tracking]" alt="" src="../../Themes/_default/Images/tracking_icon48.png" /></a></li>
         <li><a id="hypProfile">
-            <img alt="" src="../../Themes/_default/Images/account_icon.png" /></a></li>
-        <li><a id="hypHide">
-            <img alt="" src="../../Themes/_default/Images/delete_icon.png" /></a></li>
+            <img title="[Profile]" alt="" src="../../Themes/_default/Images/account_icon48.png" /></a></li>
+        <li><a id="hypHide" class="close-icon">
+            <img title="[Close]" alt="" src="../../Themes/_default/Images/delete_icon48.png" /></a></li>
     </ul>
     <div id="HistoryTracking" class="ui-controller-maincontent">
         <div class="ui-controller-line">
