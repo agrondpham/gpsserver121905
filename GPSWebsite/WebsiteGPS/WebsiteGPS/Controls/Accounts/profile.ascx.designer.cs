@@ -55,7 +55,7 @@ namespace WebsiteGPS.Controls.Accounts {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        //protected global::WebsiteGPS.Controls.Accounts.ChangePassword ChangePassword;
+        protected global::WebsiteGPS.Controls.Accounts.ChangePassword ChangePassword;
         
         /// <summary>
         /// Label3 control.
