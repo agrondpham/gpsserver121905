@@ -1,8 +1,7 @@
 ﻿.profile_table{
 	width:400px;
 	float:left;
-	position:absolute;
-	z-index:-1;
+	position:relative;
 	margin:10px 10px;
 	font-family:Verdana,Arial,sans-serif;
 	font-size:1em;

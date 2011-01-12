@@ -68,7 +68,7 @@
         //poly.setMap(null);
         poly.setMap(map);
         var path = poly.getPath(); //dung cho ve duong di
-        for (i = 0; i < 23; i++) {
+        for (i = 0; i < data.marker.length; i++) {
             var image = "../../Themes/_default/Images/gpsPoint_icon24.png"
             if (i == 0) { image = "../../Themes/_default/Images/gpsStart_icon32.png"; }
             if (1 == 22) { image = "../../Themes/_default/Images/gpsStop_icon32.png"; }
