@@ -31,7 +31,7 @@ namespace Listener.BLL
             int strLength = 0;
             switch (pType.ToLower())
             {
-                case "longtitude":
+                case "longitude":
                     strLength = 3;
                     break;
                 case "latitude":
@@ -39,7 +39,7 @@ namespace Listener.BLL
                     break;
             }
             strDegrees = Int32.Parse(pCoordinates.Substring(0, strLength));
-            strMinimutes = float.Parse(pCoordinates.Substring(2));
+            strMinimutes = float.Parse(pCoordinates.Substring(strLength));
             if (strDegrees > 180 || strDegrees < 0)
             {
                 //alert("Degrees should be between 0 and 180.");
@@ -59,6 +59,10 @@ namespace Listener.BLL
             double KmPerHr = float.Parse(pSpeed) * 1.852;
             return Convert.ToInt32(KmPerHr).ToString();
         }
+         public string ConvertIMEI(string pimei) {
+             string imei = pimei.Substring(5);
+             return imei;
+         }
         #endregion
     }
 }

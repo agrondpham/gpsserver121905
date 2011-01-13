@@ -52,10 +52,10 @@ namespace Listener.BLL
         private GPS_DataInfo resultObj(ArrayList strCutGPSData)
         {
             _GPS_DataInfo.Received_Data = _ConvertGPS.CutStrDateTime(strCutGPSData[9].ToString(),'/') + " " + _ConvertGPS.CutStrDateTime(strCutGPSData[9].ToString(), ':');
-            _GPS_DataInfo.Latitude = _ConvertGPS.CutStrCoordinates(strCutGPSData[3].ToString(), "latitude");
-            _GPS_DataInfo.Longitude = _ConvertGPS.CutStrCoordinates(strCutGPSData[5].ToString(), "longtitude");
-            _GPS_DataInfo.Speed = _ConvertGPS.ConvertSpeed(strCutGPSData[7].ToString());
-            _GPS_DataInfo.IMED_Device = strCutGPSData[13].ToString();
+            _GPS_DataInfo.Latitude = float.Parse(_ConvertGPS.CutStrCoordinates(strCutGPSData[3].ToString(), "latitude"));
+            _GPS_DataInfo.Longitude = float.Parse(_ConvertGPS.CutStrCoordinates(strCutGPSData[5].ToString(), "longitude"));
+            _GPS_DataInfo.Speed = float.Parse( _ConvertGPS.ConvertSpeed(strCutGPSData[7].ToString()));
+            _GPS_DataInfo.IMED_Device = _ConvertGPS.ConvertIMEI(strCutGPSData[13].ToString());
             _GPS_DataInfo.Status = 1;
 
             return _GPS_DataInfo;
