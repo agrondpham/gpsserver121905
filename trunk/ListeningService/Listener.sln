@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listener.Console", "Listene
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listener.Service", "Listener.Service\Listener.Service.csproj", "{29B75851-BCC6-4692-8B48-474DA9AF25F8}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ListenerGPSSetup", "ListenerGPSSetup\ListenerGPSSetup.vdproj", "{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,12 @@ Global
 		{29B75851-BCC6-4692-8B48-474DA9AF25F8}.Release|Mixed Platforms.Build.0 = Release|x86
 		{29B75851-BCC6-4692-8B48-474DA9AF25F8}.Release|x86.ActiveCfg = Release|x86
 		{29B75851-BCC6-4692-8B48-474DA9AF25F8}.Release|x86.Build.0 = Release|x86
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Debug|Any CPU.ActiveCfg = Debug
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Debug|x86.ActiveCfg = Debug
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Release|Any CPU.ActiveCfg = Release
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Release|Mixed Platforms.ActiveCfg = Release
+		{D3DBEFB8-D5E1-47F3-B541-F2EE4EAB47F2}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
