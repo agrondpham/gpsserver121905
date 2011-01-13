@@ -22,22 +22,22 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
-        /// Label2 control.
+        /// lblUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblUser;
         
         /// <summary>
-        /// lblAddnew control.
+        /// lblChangePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddnew;
+        protected global::System.Web.UI.WebControls.Label lblChangePass;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -58,15 +58,6 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::WebsiteGPS.Controls.Accounts.ChangePassword ChangePassword;
         
         /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -76,13 +67,13 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// Label4 control.
+        /// lblEmailValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lblEmailValue;
         
         /// <summary>
         /// lblFullName control.
@@ -92,6 +83,15 @@ namespace WebsiteGPS.Controls.Accounts {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFullName;
+        
+        /// <summary>
+        /// lblFullNameValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFullNameValue;
         
         /// <summary>
         /// btnCommit control.

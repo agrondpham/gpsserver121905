@@ -22,6 +22,15 @@ namespace WebsiteGPS.Controls.Controler {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// lblDevices control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDevices;
+        
+        /// <summary>
         /// drdDevices control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace WebsiteGPS.Controls.Controler {
         protected global::System.Web.UI.WebControls.DropDownList drdDevices;
         
         /// <summary>
+        /// lblStartTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStartTime;
+        
+        /// <summary>
         /// tbxStartTime control.
         /// </summary>
         /// <remarks>
@@ -38,6 +56,15 @@ namespace WebsiteGPS.Controls.Controler {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbxStartTime;
+        
+        /// <summary>
+        /// lblStopTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStopTime;
         
         /// <summary>
         /// tbxStopTime control.
@@ -65,6 +92,15 @@ namespace WebsiteGPS.Controls.Controler {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnShowMarkers;
+        
+        /// <summary>
+        /// lblDevices2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDevices2;
         
         /// <summary>
         /// drdDevices2 control.

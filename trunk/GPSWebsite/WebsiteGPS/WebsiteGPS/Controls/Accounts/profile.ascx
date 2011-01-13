@@ -26,11 +26,11 @@
 
 <div class="profile_table">
     <div class="profile_lf">
-        <asp:Label runat="server" Text="[UserName]" ID="Label2"></asp:Label>
+        <asp:Label runat="server" Text="[UserName]" ID="lblUser"></asp:Label>
     </div>
     <div class="profile_lf">
         <a id="hypChanePass" href="#" class="bt_green">
-            <asp:Label ID="lblAddnew" runat="server" Text="[Change Password]"></asp:Label>
+            <asp:Label ID="lblChangePass" runat="server" Text="[Change Password]"></asp:Label>
             </a>
     </div>
     <div id="profile-changePass-dialog" title="[Change Password]" class="profile_rg">
@@ -41,14 +41,14 @@
             </asp:UpdatePanel>
     </div>
     <div class="profile_lf">
-        <asp:Label runat="server" Text="[Email]" ID="Label3"></asp:Label></div>
+        <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
     <div class="profile_rg">
-        <asp:Label runat="server" Text="[Email]" ID="lblEmail" CssClass="text ui-widget-content ui-corner-all"></asp:Label>
+        <asp:Label runat="server" Text="[Email]" ID="lblEmailValue" CssClass="text ui-widget-content ui-corner-all"></asp:Label>
     </div>
     <div class="profile_lf">
-        <asp:Label runat="server" Text="[Full Name]" ID="Label4"></asp:Label></div>
+        <asp:Label runat="server" Text="[Full Name]" ID="lblFullName"></asp:Label></div>
     <div class="profile_rg">
-        <asp:Label runat="server" Text="[Full Name]" ID="lblFullName" CssClass="text ui-widget-content ui-corner-all"></asp:Label></div>
+        <asp:Label runat="server" Text="[Full Name]" ID="lblFullNameValue" CssClass="text ui-widget-content ui-corner-all"></asp:Label></div>
     <div class="rw-control">
         <div class="profile_lf">
             <asp:Button runat="server" Text="[Commit]" ID="btnCommit" CssClass="ui-button ui-widget ui-state-default ui-corner-all button">

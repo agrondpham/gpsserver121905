@@ -7,7 +7,7 @@
 <%-- Library Jquery inport--%>
 <script src="../Scripts/jquery-1.4.4.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery-ui-1.8.7.custom.min.js" type="text/javascript"></script>
-<script src="../Scripts/librarys/jquery.ui.datepicker.js" type="text/javascript"></script>
+<%--<script src="../Scripts/librarys/jquery.ui.datepicker.js" type="text/javascript"></script>--%>
 <script src="../Scripts/librarys/jquery.ui.datepicker-vi.js" type="text/javascript"></script>
 <script src="../Scripts/librarys/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
 <%--Date Time Jquery--%>
@@ -240,7 +240,7 @@
     <div id="HistoryTracking" class="ui-controller-maincontent">
         <div class="ui-controller-line">
             <div class="ui-controller-label">
-                [Choice Device]</div>
+                <asp:Label ID="lblDevices" runat="server" Text="[Choice Device]"></asp:Label></div>
             <div class="ui-controller-component">
                 <asp:DropDownList ID="drdDevices" runat="server" AutoPostBack="True" CssClass="required">
                 </asp:DropDownList>
@@ -250,7 +250,7 @@
         </div>
         <div class="ui-controller-line">
             <div class="ui-controller-label">
-                [Choice Time Start]</div>
+                <asp:Label ID="lblStartTime" runat="server" Text="[Choice Time Start]"></asp:Label></div>
             <div class="ui-controller-component">
                 <asp:TextBox ID="tbxStartTime" runat="server" CssClass="text ui-corner-all required" Enabled="false"></asp:TextBox>
             </div>
@@ -259,7 +259,7 @@
         </div>
         <div class="ui-controller-line">
             <div class="ui-controller-label">
-                [Choice Time Stop]</div>
+                <asp:Label ID="lblStopTime" runat="server" Text="[Choice Time Stop]"></asp:Label></div>
             <div class="ui-controller-component">
                 <asp:TextBox ID="tbxStopTime" runat="server" CssClass="text ui-corner-all required" Enabled="false"></asp:TextBox>
             </div>
@@ -278,7 +278,7 @@
     <div id="TrackingOnline" class="ui-controller-maincontent">
         <div class="ui-controller-line">
             <div class="ui-controller-label">
-                [Choice Device]</div>
+                <asp:Label ID="lblDevices2" runat="server" Text="[Choice Device]"></asp:Label></div>
             <div class="ui-controller-component">
                 <asp:DropDownList ID="drdDevices2" runat="server">
                     <asp:ListItem>Long2</asp:ListItem>
