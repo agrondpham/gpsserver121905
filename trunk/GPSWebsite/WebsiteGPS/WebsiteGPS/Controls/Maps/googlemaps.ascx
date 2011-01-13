@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="GoogleMaps.ascx.cs" Inherits="WebsiteGPS.Controls.Maps.GoogleMaps" %>
-<%@ Register src="../MapControler/historictracking.ascx" tagname="historictracking" tagprefix="uc1" %>
+<%@ Register src="../MapControler/controller.ascx" tagname="controller" tagprefix="uc1" %>
 
 <script type="text/javascript" src="../Scripts/jquery.validate.vn.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
@@ -120,7 +120,7 @@
         $("#controlForm").validate();
         onsubmit: false;
     });
-    $("#ctl02_historictracking1_btnShowMarkers").click(function (evt) {
+    $("#ctl02_controller1_btnShowMarkers").click(function (evt) {
         // Validate the form and retain the result.
         var isValid = $("#controlForm").valid();
 
@@ -137,7 +137,7 @@
 </div>
 
 <form id="controlForm" runat="server">
-<uc1:historictracking ID="historictracking1" runat="server"/>
+<uc1:controller ID="controller1" runat="server"/>
 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
 <ProgressTemplate>
     <div class="uploadProcess"><img alt="" class="uploadProcess_image" src="../../Themes/_default/Images/ajax_loadingBarRed.gif" /></div>
