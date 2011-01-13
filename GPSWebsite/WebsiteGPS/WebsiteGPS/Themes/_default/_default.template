@@ -170,4 +170,90 @@
     </Component>
     
   </Module>
+  
+  <Module>
+    <PageName>controller</PageName>
+    <Component>
+      <type>label</type>
+      <idComponent>lblDevices</idComponent>
+      <Content>Thiết bị</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblStartTime</idComponent>
+      <Content>Bắt đầu</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblStopTime</idComponent>
+      <Content>Kết thúc</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnShowMarkers</idComponent>
+      <Content>Hiện thị</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblDevices2</idComponent>
+      <Content>Thiết bị</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnTracking</idComponent>
+      <Content>Theo dõi</Content>
+    </Component>
+  </Module>
+  <Module>
+    <PageName>changePass</PageName>
+    <Component>
+      <type>label</type>
+      <idComponent>lblOldPassword</idComponent>
+      <Content>Mật khẩu cũ</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblNewPassword</idComponent>
+      <Content>Mật khẩu mới</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblRePassword</idComponent>
+      <Content>Lập lại mật khẩu</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnUpdate</idComponent>
+      <Content>Đổi</Content>
+    </Component>
+  </Module>
+  <Module>
+    <PageName>profile</PageName>
+        <!--Profile-->
+    <Component>
+      <type>label</type>
+      <idComponent>lblUser</idComponent>
+      <Content>Tên đăng nhập</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblChangePass</idComponent>
+      <Content>Đổi mật khẩu</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblEmail</idComponent>
+      <Content>Email</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblFullName</idComponent>
+      <Content>Tên đầy đủ</Content>
+    </Component>
+    <Component>
+      <type>button</type>
+      <idComponent>btnCommit</idComponent>
+      <Content>Đóng</Content>
+    </Component>-->
+  </Module>
 </Theme>
