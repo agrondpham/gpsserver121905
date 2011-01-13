@@ -68,7 +68,7 @@
     <Content Include="Controls\Errors\errors.ascx" />
     <Content Include="Controls\Managers\accountmanager.ascx" />
     <Content Include="Controls\Managers\devicesmanager.ascx" />
-    <Content Include="Controls\MapControler\historictracking.ascx" />
+    <Content Include="Controls\MapControler\controller.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
     <Content Include="Controls\Maps\googlemaps.ascx" />
     <Content Include="Default.aspx" />
@@ -196,7 +196,7 @@
     <Content Include="Themes\_default\ReportStyle\images\warning.png" />
     <Content Include="Themes\_default\ReportStyle\Style.css" />
     <Content Include="Themes\_default\Styles\accountsmanager.css" />
-    <Content Include="Themes\_default\Styles\Controller.css" />
+    <Content Include="Themes\_default\Styles\controller.css" />
     <Content Include="Themes\_default\Styles\googlemap.css" />
     <Content Include="Themes\_default\Styles\profile.css" />
     <Content Include="Themes\_default\Styles\Style.css" />
@@ -260,12 +260,12 @@
     <Compile Include="Controls\Managers\devicesmanager.ascx.designer.cs">
       <DependentUpon>devicesmanager.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MapControler\historictracking.ascx.cs">
-      <DependentUpon>historictracking.ascx</DependentUpon>
+    <Compile Include="Controls\MapControler\controller.ascx.cs">
+      <DependentUpon>controller.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\MapControler\historictracking.ascx.designer.cs">
-      <DependentUpon>historictracking.ascx</DependentUpon>
+    <Compile Include="Controls\MapControler\controller.ascx.designer.cs">
+      <DependentUpon>controller.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\customerslogin.ascx.cs">
       <DependentUpon>customerslogin.ascx</DependentUpon>
