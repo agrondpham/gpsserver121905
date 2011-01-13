@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using Listener.DTO;
 using Listener.DAL;
@@ -17,7 +16,7 @@ namespace Listener.BLL
     {
         #region LocalVariable     
 
-        private int _intPort = 3306;
+        private int _intPort = 8282;
         //private string sErr = "";
         private TcpListener GPSListener;
         //SocketGPS _SocketGPS = new SocketGPS();
@@ -32,25 +31,25 @@ namespace Listener.BLL
         public int getPort() { return _intPort; }
         string loi = "";
         #endregion
-        public string  ListenToGPS()
+        public void  ListenToGPS()
         {
             try
             {
                 //call method for listening information form devices
-
-                string err = CreateSocket();
-                return err;
+                CreateSocket();
+                //string err = testTCPIP();
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
-                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
-                return ex.ToString();
+                //System.Console.WriteLine(ex.ToString());
+                //if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
+                //return ex.ToString();
             }
         }
         //this method to set listening information
-        public string CreateSocket()
+        public void CreateSocket()
         {
+            //return testTCPIP();
             try
             {
                 GPSListener = new TcpListener(IPAddress.Any, _intPort);//Create Listener with IPAddress and Port
@@ -58,25 +57,27 @@ namespace Listener.BLL
                 while (true)
                 {
                     TcpClient client = (TcpClient)GPSListener.AcceptTcpClient();//accept connect from device
-                    //Thread threadReceiptData = new Thread(new ParameterizedThreadStart(CreateStream));//Open thread to write data while it is continuing to receipt data from device
-                    //threadReceiptData.Start(client);
-                    return CreateStream(client);
+                    Thread threadReceiptData = new Thread(new ParameterizedThreadStart(CreateStream));//Open thread to write data while it is continuing to receipt data from device
+                    threadReceiptData.Start(client);
+                    //return CreateStream(client);
                 }
                 //CreateStream();
-                return "vao toi CreateSocket";
+                //return "vao toi CreateSocket";
             }
             catch (Exception ex)
             {
-                System.Console.WriteLine(ex.ToString());
-                if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
-                return ex.ToString();
+                //System.Console.WriteLine(ex.ToString());
+                //if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
+                //return ex.ToString();
+                //return "loi khong tao duoc socket do bi dung:" + ex.ToString() + "PORT:" + _intPort;
             }
         }
-        private string CreateStream(object client)
+        private void CreateStream(object client)
         {
+            TcpClient tcpClient = (TcpClient)client;
             try
             {
-                TcpClient tcpClient = (TcpClient)client;
+                
                 NetworkStream networkStream = tcpClient.GetStream();//Create networkSteam to hold data in byecode
 
                 //need to replace by getout the string to insert to database
@@ -85,20 +86,71 @@ namespace Listener.BLL
                 int bytesRead;
                 bytesRead = networkStream.Read(message, 0, 4096);
                 string strGPSData = encoding.GetString(message, 0, bytesRead);
-                
-                //_GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
-                //_GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
+
+                _GPS_DataInfo = _CutGPSData.CutStringGPSData(strGPSData, "GPRMC");
+                _GPS_DataControl.Add(_GPS_DataInfo, ref sErr);                
                 tcpClient.Close();
                 
-                return strGPSData;
+                //return strGPSData;
             }
             catch (Exception ex)
             {
+                tcpClient.Close();
                 //System.Console.WriteLine(ex.ToString());
-                sErr = ex.ToString();
-                return sErr;
+                //sErr = ex.ToString();
+                //return sErr;
                 //if (sErr != "") ErrorLog.SetLog(sErr);//return "Error when recepting data";
             }
+        }
+        public string testTCPIP()
+        {
+            string data = "";
+            //string error = "";
+            byte[] bytes = new byte[1024];
+            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());
+            IPAddress ipAddress = ipHostInfo.AddressList[0];
+            IPEndPoint localEndPoint = new IPEndPoint(0, 0);
+
+            //create tcp/ip
+            Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            Socket handler = listener;
+            try
+            {
+                listener.Bind(localEndPoint);
+                listener.Listen(10);
+                while (true)
+                {
+                    //Console.WriteLine("cho ket noi");
+                    handler = listener.Accept();
+                    data = null;
+                    while (true)
+                    {
+                        bytes = new byte[1024];
+                        int bytesRec = handler.Receive(bytes);
+                        data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                        if (data.IndexOf("<EOF>") > -1)
+                        {
+                            break;
+                        }
+                    }
+                    //Console.WriteLine("test received:{0}", data);
+
+                    //byte[] msg = Encoding.ASCII.GetBytes(data);
+                    //handler.Send(msg);
+                    handler.Shutdown(SocketShutdown.Both);
+                    handler.Close();
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                handler.Shutdown(SocketShutdown.Both);
+                handler.Close();
+                return "fail:" + ex.ToString();
+            }
+
         }
     }
 }
