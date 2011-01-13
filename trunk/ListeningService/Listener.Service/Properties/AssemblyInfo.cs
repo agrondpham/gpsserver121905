@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Listener.Service")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("The Service is used to listen data from devices. ")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("dinhvigps.net")]
 [assembly: AssemblyProduct("Listener.Service")]
 [assembly: AssemblyCopyright("Copyright ©  2011")]
 [assembly: AssemblyTrademark("")]
