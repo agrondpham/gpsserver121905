@@ -3,7 +3,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_ad
 drop procedure dbo.[procUsers_add]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_add] (
 @Username as varchar(100),
 @Password as varchar(100),
@@ -45,7 +45,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_up
 drop procedure dbo.[procUsers_update]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_update](
 @Username as varchar(100),
 @Password as varchar(100),
@@ -77,7 +77,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_de
 drop procedure dbo.[procUsers_delete]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_delete](
 @Username as varchar(100)
 )
@@ -94,7 +94,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_is
 drop procedure dbo.[procUsers_isexist]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_isexist](
 @Username as varchar(100)
 )
@@ -114,7 +114,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_ge
 drop procedure dbo.[procUsers_get]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_get](
 @Username as varchar(100)
 )
@@ -142,7 +142,7 @@ drop procedure dbo.[procUsers_getall]
 
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_getall]
 AS
 BEGIN
@@ -164,7 +164,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procUsers_ge
 drop procedure dbo.[procUsers_getpaged]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procUsers_getpaged](
 @WhereClause nvarchar (4000)  ,
 @OrderBy varchar (2000)  ,
