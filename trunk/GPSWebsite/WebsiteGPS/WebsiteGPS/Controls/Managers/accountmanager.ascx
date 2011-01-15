@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="accountmanager.ascx.cs"
     Inherits="WebsiteGPS.Controls.Manager.accountmanager" %>
 <%@ Register Src="../Accounts/createaccount.ascx" TagName="createaccount" TagPrefix="uc1" %>
+<%@ Register src="../footer.ascx" tagname="footer" tagprefix="uc2" %>
 <%--StyleSheet inport--%>
 <link href="../../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" rel="stylesheet" type="text/css" />
 <link href="../../Themes/_default/Styles/accountsmanager.css" rel="stylesheet" type="text/css" />
@@ -76,10 +77,10 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 	<div class="header">
-    <div class="logo"><a href="#"><img src="images/logo.gif" alt="" title=""/></a></div>
+    <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></a></div>
     
     <div class="right_header">
-        <asp:Label ID="lblWelcome" runat="server" Text="[Welcome Admin]"></asp:Label>, <a href="#">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout"><asp:Label ID="lblLogout" runat="server" Text="[Logout]"></asp:Label></a></div>
+        <asp:Label ID="lblWelcome" runat="server" Text="[Welcome Admin]"></asp:Label>, <a href="www.dinhvigps.net">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout"><asp:Label ID="lblLogout" runat="server" Text="[Logout]"></asp:Label></a></div>
     <div class="jclock"></div>
     </div>
     
@@ -254,12 +255,7 @@
     </div> <!--end of main content-->
 	
     
-    <div class="footer">
-    
-    	<div class="left_footer">IN ADMIN PANEL | Powered by <a href="http://indeziner.com">INDEZINER</a></div>
-    	<div class="right_footer"><a href="http://indeziner.com"><img src="images/indeziner_logo.gif" alt="" title=""/></a></div>
-    
-    </div>
+    <uc2:footer ID="footer1" runat="server" />
 
     </form>
 </div>		

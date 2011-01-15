@@ -57,6 +57,10 @@ body
 .close-icon
 {
     }
+.logo
+{
+    margin:100px 10px 10px 10px;
+    }
 /*--------------------Override------------------*/
             /*Common--------------------------*/
 input .text    

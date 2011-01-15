@@ -23,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ExcludeApp_Data>true</ExcludeApp_Data>
+    <DesktopBuildPackageLocation>..\..\..\publish\gpsWeb\WebsiteGPS.Web.zip</DesktopBuildPackageLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DesktopBuildPackageLocation>..\..\..\publish\gpsWeb\WebsiteGPS.Web.zip</DesktopBuildPackageLocation>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +68,7 @@
     <Content Include="Controls\Accounts\Forgotpassword.ascx" />
     <Content Include="Controls\Accounts\profile.ascx" />
     <Content Include="Controls\Errors\errors.ascx" />
+    <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\Managers\accountmanager.ascx" />
     <Content Include="Controls\Managers\devicesmanager.ascx" />
     <Content Include="Controls\MapControler\controller.ascx" />
@@ -136,6 +139,7 @@
     <Content Include="Themes\_default\AdminTemplate\images\list_bullet.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\login_bg.png" />
     <Content Include="Themes\_default\AdminTemplate\images\logo.gif" />
+    <Content Include="Themes\_default\AdminTemplate\images\logo.png" />
     <Content Include="Themes\_default\AdminTemplate\images\menu_bg.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\menu_bg.jpg" />
     <Content Include="Themes\_default\AdminTemplate\images\menu_bg_a.gif" />
@@ -162,16 +166,15 @@
     <Content Include="Themes\_default\Images\ajax_loadingBarRed.gif" />
     <Content Include="Themes\_default\Images\cancel-icon24.png" />
     <Content Include="Themes\_default\Images\check-icon24.png" />
-    <Content Include="Themes\_default\Images\control_bg.jpg" />
     <Content Include="Themes\_default\Images\account_icon48.png" />
     <Content Include="Themes\_default\Images\gpsStart_icon32.png" />
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon48.png" />
+    <Content Include="Themes\_default\AdminTemplate\images\logo_footer.png" />
     <Content Include="Themes\_default\Images\shortcut_icon48.png" />
     <Content Include="Themes\_default\Images\tracking_icon48.png" />
     <Content Include="Themes\_default\Images\Loading_00.gif" />
-    <Content Include="Themes\_default\Images\panel_bg.gif" />
     <Content Include="Themes\_default\Images\calendar_icon.png" />
     <Content Include="Themes\_default\Images\notifi16px.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon24.png" />
@@ -245,6 +248,13 @@
     </Compile>
     <Compile Include="Controls\Errors\errors.ascx.designer.cs">
       <DependentUpon>errors.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Managers\accountmanager.ascx.cs">
       <DependentUpon>accountmanager.ascx</DependentUpon>

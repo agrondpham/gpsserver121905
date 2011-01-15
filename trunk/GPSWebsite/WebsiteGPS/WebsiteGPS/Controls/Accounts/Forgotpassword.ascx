@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Forgotpassword.ascx.cs" Inherits="WebsiteGPS.Controls.Accounts.Forgotpassword" %>
 <%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
+<%@ Register src="../footer.ascx" tagname="footer" tagprefix="uc1" %>
 <script type="text/javascript" src="../Scripts/jquery.validate.vn.js"></script>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
 <link rel="stylesheet" type="text/css" href="../Themes/_default/AdminTemplate/style.css" />
@@ -25,7 +26,7 @@
 <div id="main_container">
 
 	<div class="header_login">
-    <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.gif" alt="" title=""/></div>
+    <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></div>
     
     </div>
          <div class="forgotPass_form">
@@ -55,14 +56,8 @@
                 
          </div>  
           
-	
-    
-<%--    <div class="footer_login">
-    
-    	<div class="left_footer_login">Chương trình quản lý | Powered by INDEZINER</div>
-    	<div class="right_footer_login"><img src="../Themes/_default/AdminTemplate/images/indeziner_logo.gif" alt="" title="" /></div>
-    
-    </div>--%>
+	<uc1:footer ID="footer1" runat="server" />
 
 </div>		
 </form>
+
