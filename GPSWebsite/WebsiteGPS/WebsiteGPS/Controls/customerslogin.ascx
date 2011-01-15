@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="customerslogin.ascx.cs" Inherits="WebsiteGPS.Controls.CustomersLogin" %>
+<%@ Register src="footer.ascx" tagname="footer" tagprefix="uc1" %>
 <link rel="stylesheet" href="../Scripts/css/smoothness/jquery-ui-1.8.7.custom.css" />
 <link rel="stylesheet" type="text/css" href="../Themes/_default/AdminTemplate/style.css" />
 <link rel="stylesheet" type="text/css" media="all" href="../Themes/_default/AdminTemplate/niceforms-default.css" />
@@ -23,7 +24,7 @@
 <form id="loginForm" runat="server" class="niceform">
 <div id="main_container">
 	<div class="header_login">
-        <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.gif" alt="" title=""/></div>
+        <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></div>
     </div>
          <div class="login_form"> 
             <h3><asp:Label ID="lblTitle" runat="server" Text="[Admin Panel Login]"></asp:Label></h3>
@@ -52,16 +53,10 @@
                     </dl>
                     
             </fieldset>       
-         </div>  
-          
-	
-    
-<%--    <div class="footer_login">
-    
-    	<div class="left_footer_login">Chương trình quản lý | Powered by INDEZINER</div>
-    	<div class="right_footer_login"><a href="http://indeziner.com"><img src="../Themes/_default/AdminTemplate/images/indeziner_logo.gif" alt="" title="" /></a></div>
-    
-    </div>--%>
+         </div>           
+	<uc1:footer ID="footer1" runat="server" />
 </div>		
 </form>
+   
+
    

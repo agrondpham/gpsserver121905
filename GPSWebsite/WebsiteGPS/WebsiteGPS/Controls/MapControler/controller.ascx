@@ -238,6 +238,7 @@
         <li><a id="hypHide" class="close-icon">
             <img title="[Close]" alt="" src="../../Themes/_default/Images/delete_icon48.png" /></a></li>
     </ul>
+    
     <div id="HistoryTracking" class="ui-controller-maincontent">
         <div class="ui-controller-line">
             <div class="ui-controller-label">
@@ -293,6 +294,7 @@
             <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" ID="btnTracking" runat="server" Text="[Tracking]" />
         </div>
     </div>
+    <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></div>
 </div>
 <div id="ProfileDialog" title="[View Profile]">
     <uc1:profile ID="profile1" runat="server" />
