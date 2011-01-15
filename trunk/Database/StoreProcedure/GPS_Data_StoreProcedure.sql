@@ -3,7 +3,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_add]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_add] (
 @IMED_Device as int,
 @Longitude as float,
@@ -39,7 +39,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_update]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_update](
 @ID_Data as int,
 @IMED_Device as int,
@@ -69,7 +69,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_delete]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_delete](
 @ID_Data as int
 )
@@ -86,7 +86,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_isexist]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_isexist](
 @ID_Data as int
 )
@@ -106,7 +106,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_get]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_get](
 @ID_Data as int
 )
@@ -133,7 +133,7 @@ drop procedure dbo.[procGPS_Data_getall]
 
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_getall]
 AS
 BEGIN
@@ -154,7 +154,7 @@ if exists (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'dbo.[procGPS_Data
 drop procedure dbo.[procGPS_Data_getpaged]
 GO
 --CREATEd:02/08/2010
---Author: nnamthach@gmail.com
+--Author: daiduong19051986@gmail.com
 CREATE procedure dbo.[procGPS_Data_getpaged](
 @WhereClause nvarchar (4000)  ,
 @OrderBy varchar (2000)  ,
