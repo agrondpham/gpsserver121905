@@ -90,9 +90,15 @@ namespace WebsiteGPS
             }
             else
             {
-                string strParameterURL = RouteData.Values["pages"].ToString().ToLower();
-                ConnectPages(strParameterURL);
-                //LoadLanguage();
+                //if (Session["Username"] != null) {
+                //    Response.RedirectToRoute("Login_Page", new { pages = "googlemap.html" });
+                //}
+                //else
+                //{
+                    string strParameterURL = RouteData.Values["pages"].ToString().ToLower();
+                    ConnectPages(strParameterURL);
+                    //LoadLanguage();
+                //}
             }
         }
 

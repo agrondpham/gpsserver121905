@@ -51,6 +51,7 @@ namespace WebsiteGPS
             //ignore
             routes.Ignore("{resource}.xml");
             routes.Ignore("{resource}.js");
+            routes.Ignore("{resource}.axd");
             //root page
             //routes.MapPageRoute("Default", "Pages/index.html", "~/Default.aspx",true);
             //
