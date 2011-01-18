@@ -32,7 +32,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DesktopBuildPackageLocation>..\..\..\publish\gpsWeb\WebsiteGPS.Web.zip</DesktopBuildPackageLocation>
+    <DesktopBuildPackageLocation>..\..\..\publish\gpsWeb</DesktopBuildPackageLocation>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -67,7 +72,6 @@
     <Content Include="Controls\Accounts\createaccount.ascx" />
     <Content Include="Controls\Accounts\Forgotpassword.ascx" />
     <Content Include="Controls\Accounts\profile.ascx" />
-    <Content Include="Controls\Errors\errors.ascx" />
     <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\Managers\accountmanager.ascx" />
     <Content Include="Controls\Managers\devicesmanager.ascx" />
@@ -79,6 +83,7 @@
     <None Include="Themes\_default\_default.template">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\css\jquery.ui.all.css" />
     <Content Include="Scripts\css\jquery.ui.base.css" />
@@ -133,12 +138,10 @@
     <Content Include="Themes\_default\AdminTemplate\images\green_bt.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\green_bt_a.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\help.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\indeziner_logo.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\info.png" />
     <Content Include="Themes\_default\AdminTemplate\images\left.jpg" />
     <Content Include="Themes\_default\AdminTemplate\images\list_bullet.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\login_bg.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\logo.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\logo.png" />
     <Content Include="Themes\_default\AdminTemplate\images\menu_bg.gif" />
     <Content Include="Themes\_default\AdminTemplate\images\menu_bg.jpg" />
@@ -242,13 +245,6 @@
     <Compile Include="Controls\Accounts\profile.ascx.designer.cs">
       <DependentUpon>profile.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Errors\errors.ascx.cs">
-      <DependentUpon>errors.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\Errors\errors.ascx.designer.cs">
-      <DependentUpon>errors.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Controls\footer.ascx.cs">
       <DependentUpon>footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -297,6 +293,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
