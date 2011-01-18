@@ -12,7 +12,7 @@ namespace Listener.DAL
 {
     public class Connection
     {
-        protected static string _connectionString = "Data Source=.;Initial Catalog=GPSDatabase;User ID=sa;Password=123456;Connect Timeout=500";
+        protected static string _connectionString = "Data Source=112.78.2.58;Initial Catalog=nhanduc_GPSDatabase;User ID=nhanduc_gps;Password=duonglong;Connect Timeout=500";
         //protected static string _connectionString = ConfigurationSettings.AppSettings["strConnection"].ToString();
         protected SqlConnection connection;
         protected SqlDataAdapter adapter;

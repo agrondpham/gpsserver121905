@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 namespace Listener.DAL
 {
 	/// <summary> 
-	///Author: nnamthach@gmail.com 
+	///Author: daiduong19051986@gmail.com 
 	/// <summary>
     public class GPS_DataDataAccess : Connection
     {
