@@ -114,18 +114,21 @@ namespace WebsiteGPS.BUS
         /// <returns></returns>
         public string EncodePassword(string originalPassword)
         {
-            //Declarations
-            Byte[] originalBytes;
-            Byte[] encodedBytes;
-            MD5 md5;
+            ////Declarations
+            //Byte[] originalBytes;
+            //Byte[] encodedBytes;
+            //MD5 md5;
 
-            //Instantiate MD5CryptoServiceProvider, get bytes for original password and compute hash (encoded password)
-            md5 = new MD5CryptoServiceProvider();
-            originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
-            encodedBytes = md5.ComputeHash(originalBytes);
+            ////Instantiate MD5CryptoServiceProvider, get bytes for original password and compute hash (encoded password)
+            //md5 = new MD5CryptoServiceProvider();
+            //originalBytes = ASCIIEncoding.Default.GetBytes(originalPassword);
+            //encodedBytes = md5.ComputeHash(originalBytes);
 
-            //Convert encoded bytes back to a 'readable' string
-            return BitConverter.ToString(encodedBytes);
+            ////Convert encoded bytes back to a 'readable' string
+            string passwordMD5;
+            md5HashCode md5Encode=new md5HashCode();
+            passwordMD5 = md5Encode.getMd5Hash(originalPassword);
+            return passwordMD5;
         }   
 		#endregion Method
 
