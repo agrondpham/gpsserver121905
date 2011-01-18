@@ -77,6 +77,7 @@ namespace WebsiteGPS.Controls.Accounts
                         if (_EmailClass.Send_Email("BodyForgot", Path.Combine(Request.PhysicalApplicationPath, "App_Data\\InfoMailServer"), _UsersInfo.Email, _UsersInfo.Fullname, "Username : " + _UsersInfo.Username + " ; " + "Password: " + Password.Trim() + " ;") == true)
                         {
                             _UsersControl.Update(_UsersInfo);
+                            Response.Redirect("~/Pages/index.html");
                         }
                         else
                         {

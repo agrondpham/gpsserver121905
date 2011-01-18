@@ -29,7 +29,8 @@ namespace WebsiteGPS
             _ThemeConfig = pThemeConfig;
         }
         private string _strErrorFileURL;
-        public string getStrErrorFileURL() {
+        public string getStrErrorFileURL()
+        {
             return _strErrorFileURL;
         }
         public void setStrErrFileURL(string pStrErrFileURL)
@@ -77,12 +78,13 @@ namespace WebsiteGPS
         {
             setStrErrFileURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ErrorCode.xml"));
             setStrControlURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\ControlURL.xml"));
-            setStrWebCofigURL(Path.Combine(Request.PhysicalApplicationPath,"App_Data\\WebConfig.xml"));
+            setStrWebCofigURL(Path.Combine(Request.PhysicalApplicationPath, "App_Data\\WebConfig.xml"));
             setStrThemeURL(Path.Combine(Request.PhysicalApplicationPath, "Themes\\_default\\_default.template"));
             setStrLanguage("vi-vn");
             LoadPages();
         }
-        public void LoadPages() {
+        public void LoadPages()
+        {
             //Issue
             //strParameterURL can be null if load with nomal direct
             //if XML do not contain data ctrMain canbe get error
@@ -93,21 +95,40 @@ namespace WebsiteGPS
             }
             else
             {
-                Control ctrMain=null;
-                
+
+
                 string strParameterURL = RouteData.Values["pages"].ToString().ToLower();
-                string[] strArrayControlInfo = _ControlBLL.loadControls(strParameterURL,_strControlURL);
-                ctrMain = LoadControl(strArrayControlInfo[0].ToString());//load URL Control
-                Page.Title = strArrayControlInfo[1].ToString();//Load Title of Control
-                BodyHolder.Controls.Add(ctrMain);
-                ThemeConfig();
+                if (strParameterURL == "index.html" || strParameterURL == "forgotpassword.html")
+                {
+                    if (Session["Username"] != null)
+                    {
+                        Response.RedirectToRoute("Login_Page", new { pages = "googlemap.html" });
+                        strParameterURL = RouteData.Values["pages"].ToString().ToLower();
+                        ConnectPages(strParameterURL);
+                    }
+                    else
+                    {
+                        ConnectPages(strParameterURL);
+                    }
+                }
+
                 //LoadLanguage();
             }
         }
 
-        
-        private void ThemeConfig() {
-            _ThemeConfig= _ConfigBLL.loadConfigs("_default", _strWebConfigURL);
+        private void ConnectPages(string strParameterURL)
+        {
+            Control ctrMain = null;
+            string[] strArrayControlInfo = _ControlBLL.loadControls(strParameterURL, _strControlURL);
+            ctrMain = LoadControl(strArrayControlInfo[0].ToString());//load URL Control
+            Page.Title = strArrayControlInfo[1].ToString();//Load Title of Control
+            BodyHolder.Controls.Add(ctrMain);
+            ThemeConfig();
+        }
+
+        private void ThemeConfig()
+        {
+            _ThemeConfig = _ConfigBLL.loadConfigs("_default", _strWebConfigURL);
             //setThemeConfig(getTheme.GetThemeConfig(, "Website.config / Config","Theme","name"));     
         }
         #region oldCode
@@ -151,7 +172,7 @@ namespace WebsiteGPS
         //        ThemeConfig();
         //        //LoadLanguage();
         //    }
-            
+
         //}
         //private ArrayList Theme;    
         //public void LoadLanguage()
