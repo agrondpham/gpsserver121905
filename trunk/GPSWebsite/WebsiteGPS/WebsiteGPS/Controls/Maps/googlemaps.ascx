@@ -2,6 +2,7 @@
 <%@ Register src="../MapControler/controller.ascx" tagname="controller" tagprefix="uc1" %>
 
 <script type="text/javascript" src="../Scripts/jquery.validate.vn.js"></script>
+<%--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAJCnUvnxeaVCKKYLhaMGzSxRm1ARfQFbvxUcbu13wOqOx30MQhxQwOFQBUooA1oZopax-Nick7H_WIA" type="text/javascript"></script>--%>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <%--code Map--%>
 <script type="text/javascript">
