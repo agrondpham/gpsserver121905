@@ -73,6 +73,7 @@ namespace WebsiteGPS.Controls.Accounts
                         _UsersInfo.Username = dt.Rows[0]["Username"].ToString();
                         _UsersInfo.Email = dt.Rows[0]["Email"].ToString();
                         _UsersInfo.Fullname = dt.Rows[0]["Fullname"].ToString();
+                        _UsersInfo.Password = "1";
                         _EmailClass = new EmailClass();
                         if (_EmailClass.Send_Email("BodyForgot", Path.Combine(Request.PhysicalApplicationPath, "App_Data\\InfoMailServer"), _UsersInfo.Email, _UsersInfo.Fullname, "Username : " + _UsersInfo.Username + " ; " + "Password: " + Password.Trim() + " ;") == true)
                         {
