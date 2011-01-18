@@ -14,11 +14,11 @@ namespace Listener.DAL
         {
             
             //string path = Server.MapPath;
-            string result = DateTime.Now.ToString() + ": " + sErr;
-            string fileName = HttpContext.Current.Server.MapPath("~//loi.txt");// "LogError.txt";
-            TextWriter streamWr = new StreamWriter(fileName);
-            streamWr.Write(result);
-            streamWr.Close();
+            //string result = DateTime.Now.ToString() + ": " + sErr;
+            //string fileName = HttpContext.Current.Server.MapPath("~//loi.txt");// "LogError.txt";
+            //TextWriter streamWr = new StreamWriter(fileName);
+            //streamWr.Write(result);
+            //streamWr.Close();
         }
     }
 }
