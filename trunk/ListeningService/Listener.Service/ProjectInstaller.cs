@@ -18,10 +18,13 @@ namespace Listener.Service
             //... Installer code here
             this.AfterInstall += new InstallEventHandler(ServiceInstaller_AfterInstall);
         }
-
+        //protected override void OnCommitted(System.Collections.IDictionary savedState)
+        //{
+        //    new ServiceController(serviceInstaller1.ServiceName).Start();
+        //}
         void ServiceInstaller_AfterInstall(object sender, InstallEventArgs e)
         {
-            ServiceController sc = new ServiceController("DinhviGPSSvc");
+            ServiceController sc = new ServiceController(serviceInstaller1.ServiceName);
             sc.Start();
         }
 
