@@ -22,14 +22,14 @@ namespace WebsiteGPS.Controls
         UsersInfo _UsersInfo;
         BUS.LanguageBLL _LanguageBLL = new BUS.LanguageBLL();
         BUS.ErrorsBLL _ErrorBLL = new BUS.ErrorsBLL();
-        Default _MainPage; 
+        index _MainPage; 
         #endregion
         string sErr;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArrayList aaaa;
             //Default defaultPage = new Default();
-            _MainPage =(Default) this.Page;      //get Page Content UC Control
+            _MainPage =(index) this.Page;      //get Page Content UC Control
             aaaa = _MainPage.getThemeConfig();           //get variable from main Page
             LoadLanguage();
         }

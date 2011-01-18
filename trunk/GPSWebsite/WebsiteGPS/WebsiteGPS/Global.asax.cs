@@ -55,6 +55,7 @@ namespace WebsiteGPS
             //routes.MapPageRoute("Default", "Pages/index.html", "~/Default.aspx",true);
             //
             //Routes Pages
+            routes.MapPageRoute("Index_Page", "{pages}", "~/index.aspx", true);
             routes.MapPageRoute("Login_Page", "Pages/{pages}", "~/Default.aspx",true);
             routes.MapPageRoute("Admin_Page", "Admin/{pages}", "~/Default.aspx", true);
             routes.MapPageRoute("TestJQuery", "Jquery.html", "~/Test.aspx", true);
