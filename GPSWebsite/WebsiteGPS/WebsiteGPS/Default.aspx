@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script src="../Scripts/jquery-1.4.4.js" type="text/javascript"></script>
 <style type="text/css">
   html { height: 100% }

@@ -85,6 +85,7 @@
     </None>
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
     <Content Include="Scripts\css\jquery.ui.all.css" />
     <Content Include="Scripts\css\jquery.ui.base.css" />
     <Content Include="Scripts\css\jquery.ui.theme.css" />
@@ -303,6 +304,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
