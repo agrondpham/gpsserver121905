@@ -22,6 +22,15 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblErr;
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// lblUser control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::WebsiteGPS.Controls.Accounts.ChangePassword ChangePassword;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -67,13 +85,13 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblEmail;
         
         /// <summary>
-        /// lblEmailValue control.
+        /// tbxEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailValue;
+        protected global::System.Web.UI.WebControls.TextBox tbxEmail;
         
         /// <summary>
         /// lblFullName control.
@@ -85,13 +103,13 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblFullName;
         
         /// <summary>
-        /// lblFullNameValue control.
+        /// tbxFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFullNameValue;
+        protected global::System.Web.UI.WebControls.TextBox tbxFullName;
         
         /// <summary>
         /// btnCommit control.
