@@ -26,7 +26,10 @@
 
 <div class="profile_table">
     <div class="profile_lf">
-        <asp:Label runat="server" Text="[UserName]" ID="lblUser"></asp:Label>
+        <asp:Label runat="server" Text="[UserName]" ID="Label1"></asp:Label>        
+    </div>
+    <div class="profile_rg">
+        <asp:Label runat="server" Text="[UserName]" ID="lblUser" CssClass="text ui-widget-content ui-corner-all"></asp:Label>
     </div>
     <div class="profile_lf">
         <a id="hypChanePass" href="#" class="bt_green">
@@ -41,17 +44,23 @@
             </asp:UpdatePanel>
     </div>
     <div class="profile_lf">
+        <asp:Label runat="server" Text="[Email]" ID="Label2" Visible="False"></asp:Label></div>
+    <div class="profile_rg">
+    <div class="profile_lf">
         <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
     <div class="profile_rg">
-        <asp:Label runat="server" Text="[Email]" ID="lblEmailValue" CssClass="text ui-widget-content ui-corner-all"></asp:Label>
+        <asp:TextBox runat="server" ID="tbxEmail" 
+            CssClass="text ui-widget-content ui-corner-all"></asp:TextBox>
     </div>
     <div class="profile_lf">
         <asp:Label runat="server" Text="[Full Name]" ID="lblFullName"></asp:Label></div>
     <div class="profile_rg">
-        <asp:Label runat="server" Text="[Full Name]" ID="lblFullNameValue" CssClass="text ui-widget-content ui-corner-all"></asp:Label></div>
+        <asp:TextBox runat="server" ID="tbxFullName" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox></div>
     <div class="rw-control">
         <div class="profile_lf">
-            <asp:Button runat="server" Text="[Commit]" ID="btnCommit" CssClass="ui-button ui-widget ui-state-default ui-corner-all button">
+            <asp:Button runat="server" Text="[Commit]" ID="btnCommit" 
+                 
+                onclick="btnCommit_Click">
             </asp:Button>
         </div>
     </div>
