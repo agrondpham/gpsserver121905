@@ -8,7 +8,7 @@ using System.Data;
 namespace Listener.BLL
 {
 	/// <summary> 
-	///Author: nnamthach@gmail.com 
+	///Author: daiduong19051986@gmail.com 
 	/// <summary>
     public class GPS_DataControl
     {
