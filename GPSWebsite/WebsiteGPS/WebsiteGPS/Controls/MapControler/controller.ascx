@@ -84,7 +84,7 @@
     <uc1:profile ID="profile1" runat="server" />
 </div>
 <div class="ui-controller-showPanel">
-    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor: pointer;background:url("../AdminTemplate/images/bg.jpg") no-repeat scroll 90% 0 #320B28">
+    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor: pointer;background:url('../AdminTemplate/images/bg.jpg') no-repeat scroll 90% 0 #320B28">
         <img alt="" src="../../Themes/_default/Images/map_icon.png" />
     </a>
 </div>
