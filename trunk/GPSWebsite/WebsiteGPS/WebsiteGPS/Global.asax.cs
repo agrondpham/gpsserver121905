@@ -52,6 +52,7 @@ namespace WebsiteGPS
             routes.Ignore("{resource}.xml");
             routes.Ignore("{resource}.js");
             routes.Ignore("{resource}.axd");
+            routes.Ignore("favicon.ico");
             //root page
             //routes.MapPageRoute("Default", "Pages/index.html", "~/Default.aspx",true);
             //

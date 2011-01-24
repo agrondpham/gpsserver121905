@@ -49,13 +49,13 @@ namespace WebsiteGPS.Controls.Accounts {
         protected global::System.Web.UI.WebControls.Label lblChangePass;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// UpdatePanel_changePass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel_changePass;
         
         /// <summary>
         /// ChangePassword control.

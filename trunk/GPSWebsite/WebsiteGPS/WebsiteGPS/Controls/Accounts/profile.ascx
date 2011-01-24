@@ -37,7 +37,7 @@
             </a>
     </div>
     <div id="profile-changePass-dialog" title="[Change Password]" class="profile_rg">
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <asp:UpdatePanel ID="UpdatePanel_changePass" runat="server">
                 <ContentTemplate>
                     <uc1:ChangePassword ID="ChangePassword" runat="server" />
                 </ContentTemplate>
@@ -58,8 +58,7 @@
         <asp:TextBox runat="server" ID="tbxFullName" CssClass="text ui-widget-content ui-corner-all"></asp:TextBox></div>
     <div class="rw-control">
         <div class="profile_lf">
-            <asp:Button runat="server" Text="[Commit]" ID="btnCommit" 
-                 
+            <asp:Button runat="server" Text="[Commit]" ID="btnCommit"    
                 onclick="btnCommit_Click">
             </asp:Button>
         </div>

@@ -8,21 +8,21 @@
   <Page>
     <NameUC>login.html</NameUC>
     <URL>Controls/customerslogin.ascx</URL>
-    <Title>Login Page</Title>
+    <Title>GPS Website!Trang đăng nhập</Title>
   </Page>
   <Page>
     <NameUC>googlemap.html</NameUC>
     <URL>Controls/Maps/googlemaps.ascx</URL>
-    <Title>Google Map</Title>
+    <Title>GPS Website!Google Map</Title>
   </Page>
   <Page>
     <NameUC>accountmanager.html</NameUC>
     <URL>Controls/Managers/accountmanager.ascx</URL>
-    <Title>Admin Page</Title>
+    <Title>GPS Website! Trang quản lý</Title>
   </Page>
   <Page>
     <NameUC>forgotpassword.html</NameUC> <!--request lower word(Yeu cau viet chu thuong vi ben trong co convert)-->
     <URL>Controls/Accounts/Forgotpassword.ascx</URL>
-    <Title>Admin Page</Title>
+    <Title>GPS Website!Quên mật khẩu</Title>
   </Page>
 </Pages>

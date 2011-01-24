@@ -72,7 +72,7 @@
         for (i = 0; i < data.marker.length; i++) {
             var image = "../../Themes/_default/Images/gpsPoint_icon24.png"
             if (i == 0) { image = "../../Themes/_default/Images/gpsStart_icon32.png"; }
-            if (1 == 22) { image = "../../Themes/_default/Images/gpsStop_icon32.png"; }
+            if (i == (data.marker.length-1)) { image = "../../Themes/_default/Images/gpsStop_icon32.png"; }
             var latlng = new google.maps.LatLng(data.marker[i].latitude, data.marker[i].longitude);
             var marker = new google.maps.Marker({
                 map: map,
