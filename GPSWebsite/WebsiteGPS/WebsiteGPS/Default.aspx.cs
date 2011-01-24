@@ -111,7 +111,7 @@ namespace WebsiteGPS
         {
             Control ctrMain = null;
             string[] strArrayControlInfo = _ControlBLL.loadControls(strParameterURL, _strControlURL);
-            ctrMain = LoadControl(strArrayControlInfo[0].ToString());//load URL Control
+           ctrMain = LoadControl(strArrayControlInfo[0].ToString());//load URL Control
             Page.Title = strArrayControlInfo[1].ToString();//Load Title of Control
             BodyHolder.Controls.Add(ctrMain);
             ThemeConfig();
