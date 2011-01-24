@@ -1,0 +1,75 @@
+beeline
+
+APN:Internet
+
+
+cach cai dat qua SMS
+
+begin123456
+
+apn123456 Internet
+
+adminip123456 210.86.239.176 19125
+
+
+Thiet lap tra ve tu dong
+
+t030s005n123456
+cai nay la 30s tra ve 5 lan
+
+t001m001n123456
+cai nay la 1 phut tra ve 1 lan
+
+t030s001n123456
+cai nay la 30giay tra ve 1 lan
+
+
+Thong tin cho cac mang khac
+
+Mobiphone
+
+APN:m-wap
+ID:mms
+pass:mms
+
+
+Vinaphone
+APN: m3-world
+ID:mms
+Pass:mms
+
+Viettel
+APN:v-internet
+
+Thiet lap id va pass cho thiet bi.(cho mang Mobi va vina)
+apnuser123456[khoang trong][id]
+apnpasswd123456[khoang trong][matkhau]
+
+
+
+
+tai Khoan quan tri
+
+server 210.86.239.176
+
+user:administrator
+pass:Caonguyen1
+
+
+tai khoan plesk quan tri
+user:admin
+pass:caonguyen
+
+
+
+tai khoan plesk dinhvigps.net(hinh nhu chua Login vao dc)
+user:dinhvigps
+pass:duonglong
+
+tai khoan database ben nhanduc
+
+ip:112.78.2.58
+database:nhanduc_GPSDatabase
+pass:duonglong
+
+
