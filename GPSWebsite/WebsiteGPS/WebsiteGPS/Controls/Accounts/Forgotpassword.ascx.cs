@@ -23,13 +23,13 @@ namespace WebsiteGPS.Controls.Accounts
         EmailClass _EmailClass;
         BUS.LanguageBLL _LanguageBLL = new BUS.LanguageBLL();
         BUS.ErrorsBLL _ErrorBLL = new BUS.ErrorsBLL();
-        Default _MainPage; 
+        Index _MainPage; 
         #endregion
         string sErr = "";
         string Password = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            _MainPage = (Default)this.Page;
+            _MainPage = (Index)this.Page;
             LoadLanguage();
         }
         public void LoadLanguage()

@@ -75,17 +75,16 @@
     <Content Include="Controls\footer.ascx" />
     <Content Include="Controls\Managers\accountmanager.ascx" />
     <Content Include="Controls\Managers\devicesmanager.ascx" />
-    <Content Include="Controls\MapControler\controller.ascx" />
     <Content Include="Controls\customerslogin.ascx" />
+    <Content Include="Controls\MapControler\controller.ascx" />
     <Content Include="Controls\Maps\googlemaps.ascx" />
     <Content Include="Default.aspx" />
-    <None Include="Themes\_default\LoginStyle\images\Thumbs.db" />
     <None Include="Themes\_default\_default.template">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="index.aspx" />
+    <Content Include="Index.aspx" />
     <Content Include="Scripts\css\jquery.ui.all.css" />
     <Content Include="Scripts\css\jquery.ui.base.css" />
     <Content Include="Scripts\css\jquery.ui.theme.css" />
@@ -104,7 +103,6 @@
     <Content Include="Scripts\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Scripts\css\smoothness\jquery-ui-1.8.7.custom.css" />
     <Content Include="Scripts\jquery-1.4.4.js" />
-    <Content Include="Scripts\jquery-1.4.4.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.vn.js" />
     <Content Include="Scripts\librarys\jquery-ui-1.8.7.custom.min.js" />
@@ -113,59 +111,7 @@
     <Content Include="Scripts\librarys\jquery.ui.datepicker-vi.js" />
     <Content Include="Scripts\librarys\jquery.ui.datepicker.js" />
     <Content Include="Scripts\librarys\jquery.ui.widget.js" />
-    <Content Include="Themes\_default\AdminTemplate\clockh.js" />
-    <Content Include="Themes\_default\AdminTemplate\clockp.js" />
-    <Content Include="Themes\_default\AdminTemplate\images\arrow.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bg.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\botleft.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\botright.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_blue_center.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_blue_left.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_blue_r.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_green_center.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_green_left.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_green_r.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_red_center.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_red_left.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bt_red_r.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\bubble.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\button.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\buttonn.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\buttony.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\comment.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\error.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\footer_bg.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\forgotPass_bg.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\green_bt.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\green_bt_a.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\help.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\info.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\left.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\list_bullet.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\login_bg.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\logo.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\menu_bg.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\menu_bg.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\menu_bg_a.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\minus.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\notice.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\photo.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\plus.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\red_bt.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\red_bt_a.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\right.jpg" />
-    <Content Include="Themes\_default\AdminTemplate\images\search.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\sidebar_box_bottom.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\sidebar_box_top.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\sidebar_menu_top.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\sidebar_menu_top_a.gif" />
-    <Content Include="Themes\_default\AdminTemplate\images\trash.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\user_edit.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\user_logout.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\valid.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\warning.png" />
-    <Content Include="Themes\_default\AdminTemplate\niceforms-default.css" />
-    <Content Include="Themes\_default\AdminTemplate\style.css" />
+    <Content Include="Scripts\pageScripts\controler.js" />
     <Content Include="Themes\_default\Images\delete_icon48.png" />
     <Content Include="Themes\_default\Images\ajax_loadingBarRed.gif" />
     <Content Include="Themes\_default\Images\cancel-icon24.png" />
@@ -175,7 +121,6 @@
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon48.png" />
-    <Content Include="Themes\_default\AdminTemplate\images\logo_footer.png" />
     <Content Include="Themes\_default\Images\shortcut_icon48.png" />
     <Content Include="Themes\_default\Images\tracking_icon48.png" />
     <Content Include="Themes\_default\Images\Loading_00.gif" />
@@ -185,19 +130,14 @@
     <Content Include="Themes\_default\Images\trash_icon.png" />
     <Content Include="Themes\_default\Images\map_icon.png" />
     <Content Include="Themes\_default\Images\user_add.png" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_02.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_03.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_04.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_06.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_07.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_08.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_09.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_10.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_11.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_12.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_13.jpg" />
-    <Content Include="Themes\_default\LoginStyle\images\loginpage_14.jpg" />
-    <Content Include="Themes\_default\LoginStyle\stylelog.css" />
+    <Content Include="Themes\_default\LoginStyle\images\beta_icon.gif" />
+    <Content Include="Themes\_default\LoginStyle\images\bg.jpg" />
+    <Content Include="Themes\_default\LoginStyle\images\forgotPass_bg.png" />
+    <Content Include="Themes\_default\LoginStyle\images\help.png" />
+    <Content Include="Themes\_default\LoginStyle\images\login_bg.png" />
+    <Content Include="Themes\_default\LoginStyle\images\logo.png" />
+    <Content Include="Themes\_default\LoginStyle\images\logo_footer.png" />
+    <Content Include="Themes\_default\LoginStyle\Style.css" />
     <Content Include="Themes\_default\ReportStyle\images\error.png" />
     <Content Include="Themes\_default\ReportStyle\images\valid.png" />
     <Content Include="Themes\_default\ReportStyle\images\warning.png" />
@@ -267,19 +207,19 @@
     <Compile Include="Controls\Managers\devicesmanager.ascx.designer.cs">
       <DependentUpon>devicesmanager.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MapControler\controller.ascx.cs">
-      <DependentUpon>controller.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Controls\MapControler\controller.ascx.designer.cs">
-      <DependentUpon>controller.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Controls\customerslogin.ascx.cs">
       <DependentUpon>customerslogin.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\customerslogin.ascx.designer.cs">
       <DependentUpon>customerslogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapControler\controller.ascx.cs">
+      <DependentUpon>controller.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MapControler\controller.ascx.designer.cs">
+      <DependentUpon>controller.ascx</DependentUpon>
     </Compile>
     <Compile Include="Controls\Maps\googlemaps.ascx.cs">
       <DependentUpon>googlemaps.ascx</DependentUpon>
@@ -305,12 +245,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

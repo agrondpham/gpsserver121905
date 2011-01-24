@@ -75,7 +75,7 @@ namespace WebsiteGPS.Controls.Manager
         {
             string _user = dtgrid.Items[e.Item.ItemIndex].Cells[0].Text.Trim();
 
-            if (Session["Username"] != _user)
+            if (Session["Username"].ToString() != _user)
             {
                 _UsersControl.Delete(_user);
                 LoadGrid();
