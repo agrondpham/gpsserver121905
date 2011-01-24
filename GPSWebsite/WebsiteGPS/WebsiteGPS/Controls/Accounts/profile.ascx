@@ -39,13 +39,13 @@
     <div id="profile-changePass-dialog" title="[Change Password]" class="profile_rg">
             <asp:UpdatePanel ID="UpdatePanel_changePass" runat="server">
                 <ContentTemplate>
-                    <uc1:ChangePassword ID="ChangePassword" runat="server" />
+                    <uc1:ChangePassword id="ChangePassword" runat="server" />
                 </ContentTemplate>
             </asp:UpdatePanel>
     </div>
     <div class="profile_lf">
         <asp:Label runat="server" Text="[Email]" ID="Label2" Visible="False"></asp:Label></div>
-    <div class="profile_rg">
+    <div class="profile_rg"></div>
     <div class="profile_lf">
         <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
     <div class="profile_rg">
