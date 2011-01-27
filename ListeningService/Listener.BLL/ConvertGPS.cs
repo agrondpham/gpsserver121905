@@ -7,18 +7,46 @@ namespace Listener.BLL
      public class ConvertGPS
     {
         #region Convert Data
-         public string CutStrDateTime(string pDateTimeData, char separate)
+         public string CutStrDateTime(string pDateTimeData, char pSeparate,char pType)
         {
             string strCutDateTime = "";
-            for (int i = 0; i < pDateTimeData.Length; i = i + 2)
+            for (int i = 0; i < 6; i = i + 2)
             {
                 if (i == 0)
                 {
-                    strCutDateTime = pDateTimeData.Substring(i, 2);
+                    if (pType == 't')
+                    {
+                        Int32 tempTime = Convert.ToInt32(pDateTimeData.Substring(i, 2)) + 7;
+                        if (tempTime < 10)
+                        {
+                            strCutDateTime = '0' + tempTime.ToString();
+                        }
+                        else
+                        {
+                            if (tempTime >= 17)
+                            {
+                                strCutDateTime = '0' + (tempTime - 24).ToString();
+                            }
+                            else
+                            {
+                                strCutDateTime = tempTime.ToString();
+                            }
+                        }
+                    }
+                    else{
+                        strCutDateTime = pDateTimeData.Substring(i, 2);
+                    }
                 }
                 else
                 {
-                    strCutDateTime = strCutDateTime + separate + pDateTimeData.Substring(i, 2);
+                    if (i == 4 && pType == 'd')
+                    {
+                        strCutDateTime = strCutDateTime + pSeparate + (Convert.ToInt32(pDateTimeData.Substring(i, 2)) + 2000).ToString();
+                    }
+                    else
+                    {
+                        strCutDateTime = strCutDateTime + pSeparate + pDateTimeData.Substring(i, 2);
+                    }
                 }
             }
             return strCutDateTime;

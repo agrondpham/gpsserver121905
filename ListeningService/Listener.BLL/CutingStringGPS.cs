@@ -51,7 +51,7 @@ namespace Listener.BLL
 
         private GPS_DataInfo resultObj(ArrayList strCutGPSData)
         {
-            _GPS_DataInfo.Received_Data = _ConvertGPS.CutStrDateTime(strCutGPSData[9].ToString(),'/') + " " + _ConvertGPS.CutStrDateTime(strCutGPSData[9].ToString(), ':');
+            _GPS_DataInfo.Received_Data = _ConvertGPS.CutStrDateTime(strCutGPSData[9].ToString(),'/','d') + " " + _ConvertGPS.CutStrDateTime(strCutGPSData[1].ToString(), ':','t');
             _GPS_DataInfo.Latitude = _ConvertGPS.CutStrCoordinates(strCutGPSData[3].ToString(), "latitude").ToString();
             _GPS_DataInfo.Longitude = _ConvertGPS.CutStrCoordinates(strCutGPSData[5].ToString(), "longitude");
             _GPS_DataInfo.Speed = _ConvertGPS.ConvertSpeed(strCutGPSData[7].ToString());
