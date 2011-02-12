@@ -37,18 +37,17 @@
                 position: google.maps.ControlPosition.TOP_RIGHT
             }
         };
-        map = new google.maps.Map(document.getElementById("map_canvas"),
-        myOptions);
-        var markerDuong = new google.maps.Marker({
-            map: map,
-            position: Duong,
-            title: "Duong House"
-        });
-        var markerLong = new google.maps.Marker({
-            map: map,
-            position: Long,
-            title: "Long House"
-        });
+        map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+//        var markerDuong = new google.maps.Marker({
+//            map: map,
+//            position: Duong,
+//            title: "Duong House"
+//        });
+//        var markerLong = new google.maps.Marker({
+//            map: map,
+//            position: Long,
+//            title: "Long House"
+//        });
         //loadMarker();
 
         google.maps.event.addListener(map, 'click', function () {
@@ -71,15 +70,16 @@
         var path = poly.getPath(); //dung cho ve duong di
         for (i = 0; i < data.marker.length; i++) {
             var image = "../../Themes/_default/Images/gpsPoint_icon24.png"
-            if (i == 0) { image = "../../Themes/_default/Images/gpsStart_icon32.png"; }
-            if (i == (data.marker.length-1)) { image = "../../Themes/_default/Images/gpsStop_icon32.png"; }
+            if (i == 0) { image = "../../Themes/_default/Images/StartPoint32.png"; }
+            if (i == (data.marker.length - 1)) { image = "../../Themes/_default/Images/CurrentPoint32.png"; }
             var latlng = new google.maps.LatLng(data.marker[i].latitude, data.marker[i].longitude);
             var marker = new google.maps.Marker({
                 map: map,
                 position: latlng,
-                title: "Marker2",
+                title: "Marker"+i,
                 icon: image
             });
+            map.setCenter(latlng);//chinh ve center ve diem cuoi cung
             path.push(latlng); //dua cac diem len de noi
             var strDateTime=data.marker[i].date;
             var dateStringValue= strDateTime.substring(0,10);

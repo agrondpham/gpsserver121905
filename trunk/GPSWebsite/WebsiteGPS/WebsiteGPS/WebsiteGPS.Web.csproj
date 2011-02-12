@@ -103,6 +103,7 @@
     <Content Include="Scripts\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Scripts\css\smoothness\jquery-ui-1.8.7.custom.css" />
     <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery.countdown.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.vn.js" />
     <Content Include="Scripts\librarys\jquery-ui-1.8.7.custom.min.js" />
@@ -112,6 +113,10 @@
     <Content Include="Scripts\librarys\jquery.ui.datepicker.js" />
     <Content Include="Scripts\librarys\jquery.ui.widget.js" />
     <Content Include="Scripts\pageScripts\controler.js" />
+    <Content Include="Themes\_default\AccountManagerStyle\niceforms-default.css" />
+    <Content Include="Themes\_default\AccountManagerStyle\style.css" />
+    <Content Include="Themes\_default\Images\bg.jpg" />
+    <Content Include="Themes\_default\Images\CurrentPoint32.png" />
     <Content Include="Themes\_default\Images\delete_icon48.png" />
     <Content Include="Themes\_default\Images\ajax_loadingBarRed.gif" />
     <Content Include="Themes\_default\Images\cancel-icon24.png" />
@@ -121,6 +126,8 @@
     <Content Include="Themes\_default\Images\gpsStop_icon32.png" />
     <Content Include="Themes\_default\Images\gpsPoint_icon16.png" />
     <Content Include="Themes\_default\Images\historytracking_icon48.png" />
+    <Content Include="Themes\_default\Images\logo.png" />
+    <Content Include="Themes\_default\Images\logo_footer.png" />
     <Content Include="Themes\_default\Images\shortcut_icon48.png" />
     <Content Include="Themes\_default\Images\tracking_icon48.png" />
     <Content Include="Themes\_default\Images\Loading_00.gif" />
@@ -142,6 +149,7 @@
     <Content Include="Themes\_default\ReportStyle\images\valid.png" />
     <Content Include="Themes\_default\ReportStyle\images\warning.png" />
     <Content Include="Themes\_default\ReportStyle\Style.css" />
+    <Content Include="Themes\_default\Images\StartPoint32.png" />
     <Content Include="Themes\_default\Styles\accountsmanager.css" />
     <Content Include="Themes\_default\Styles\controller.css" />
     <Content Include="Themes\_default\Styles\googlemap.css" />

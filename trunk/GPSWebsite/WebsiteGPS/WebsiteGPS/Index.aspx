@@ -15,7 +15,7 @@
 <body>
     <div id="main_container">
 	    <div class="header_login">
-            <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></div>
+            <div class="logo"><img src="../Themes/_default/Images/logo.png" alt="" title=""/></div>
         </div>
         <asp:PlaceHolder ID="BodyHolder" runat="server" />           
 	    <uc1:footer ID="footer1" runat="server" />
