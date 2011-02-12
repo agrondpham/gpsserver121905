@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="shortcut icon" href="Themes/_default/AdminTemplate/images/logo.png" />
+    <link rel="shortcut icon" href="Themes/_default/Images/logo.png" />
 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="../Scripts/jquery-1.4.4.js" ></script>

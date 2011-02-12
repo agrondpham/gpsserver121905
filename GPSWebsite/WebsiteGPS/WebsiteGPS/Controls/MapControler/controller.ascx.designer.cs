@@ -112,6 +112,24 @@ namespace WebsiteGPS.Controls.Controler {
         protected global::System.Web.UI.WebControls.DropDownList drdDevices2;
         
         /// <summary>
+        /// UpdatePanel_trackingOnline control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel_trackingOnline;
+        
+        /// <summary>
+        /// Timer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.Timer Timer1;
+        
+        /// <summary>
         /// btnTracking control.
         /// </summary>
         /// <remarks>
@@ -119,6 +137,24 @@ namespace WebsiteGPS.Controls.Controler {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnTracking;
+        
+        /// <summary>
+        /// btnStopTracking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStopTracking;
+        
+        /// <summary>
+        /// img_waiting control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_waiting;
         
         /// <summary>
         /// profile1 control.

@@ -64,10 +64,10 @@
     });
 </script>
 <%-- style for admin login--%>
-
-<link rel="stylesheet" type="text/css" href="../Themes/_default/AdminTemplate/style.css" />
-<script src="../Themes/_default/AdminTemplate/jquery.jclock-1.2.0.js.txt" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" media="all" href="../Themes/_default/AdminTemplate/niceforms-default.css" />
+<link href="../Themes/_default/AccountManagerStyle/style.css" rel="stylesheet" type="text/css" />
+<%--<link rel="stylesheet" type="text/css" href="../Themes/_default/AdminTemplate/style.css" />--%>
+<%--<script src="../Themes/_default/AdminTemplate/jquery.jclock-1.2.0.js.txt" type="text/javascript"></script>--%>
+<link rel="stylesheet" type="text/css" media="all" href="../Themes/_default/AccountManagerStyle/niceforms-default.css" />
 <script type="text/javascript">
     $(function ($) {
         $('.jclock').jclock();
@@ -77,7 +77,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 	<div class="header">
-    <div class="logo"><img src="../Themes/_default/AdminTemplate/images/logo.png" alt="" title=""/></a></div>
+    <div class="logo"><img src="../Themes/_default/Images/logo.png" alt="" title=""/></a></div>
     
     <div class="right_header">
         <asp:Label ID="lblWelcome" runat="server" Text="[Welcome Admin]"></asp:Label>, <a href="www.dinhvigps.net">Visit site</a> | <a href="#" class="messages">(3) Messages</a> | <a href="#" class="logout"><asp:Label ID="lblLogout" runat="server" Text="[Logout]"></asp:Label></a></div>

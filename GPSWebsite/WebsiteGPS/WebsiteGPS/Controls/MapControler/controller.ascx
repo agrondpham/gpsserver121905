@@ -52,7 +52,8 @@
         <div class="ui-Controller-button">
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
-                    <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" ID="btnShowMarkers" runat="server" Text="[Show Data]" OnClick="btnShowMarkers_Click" />
+                    <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" 
+                    ID="btnShowMarkers" runat="server" Text="[Show Data]" OnClick="btnShowMarkers_Click" />
                 </ContentTemplate>
             </asp:UpdatePanel>
             
@@ -71,9 +72,22 @@
             <div style="clear">
             </div>
         </div>
-        <div class="ui-Controller-button">
-            <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" ID="btnTracking" runat="server" Text="[Tracking]" />
-        </div>
+        <asp:UpdatePanel ID="UpdatePanel_trackingOnline" runat="server">
+            <ContentTemplate>
+                <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="30000">
+                </asp:Timer>
+                <div class="ui-Controller-button">
+                    <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" 
+                        ID="btnTracking" runat="server" Text="[Tracking]" onclick="btnTracking_Click" />
+                    <asp:Button CssClass="ui-button ui-widget ui-state-default ui-corner-all ui-state-hover" 
+                        ID="btnStopTracking" runat="server" Text="[Stop]" 
+                        onclick="btnStopTracking_Click" />
+                </div>
+                <div id="countdown_dashboard" style="color:#ffffff">
+                    <asp:Image ID="img_waiting" runat="server" ImageUrl="../Themes/_default/Images/Loading_00.gif"/>
+		        </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
     <div class="logo">
         <img src="../Themes/_default/LoginStyle/images/logo.png" alt="" title=""/>
@@ -84,7 +98,7 @@
     <uc1:profile ID="profile1" runat="server" />
 </div>
 <div class="ui-controller-showPanel">
-    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor: pointer;background:url('../AdminTemplate/images/bg.jpg') no-repeat scroll 90% 0 #320B28">
+    <a id="hypShow" class="ui-state-default ui-corner-all" style="cursor: pointer;background:url('../Images/bg.jpg') no-repeat scroll 90% 0 #320B28">
         <img alt="" src="../../Themes/_default/Images/map_icon.png" />
     </a>
 </div>
