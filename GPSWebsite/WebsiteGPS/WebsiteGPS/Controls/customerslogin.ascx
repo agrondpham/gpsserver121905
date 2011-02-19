@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="customerslogin.ascx.cs" Inherits="WebsiteGPS.Controls.CustomersLogin" %>
-<%@ Register src="footer.ascx" tagname="footer" tagprefix="uc1" %>
 <%--set validation--%>
 <script type="text/javascript">
     $(document).ready(function () {

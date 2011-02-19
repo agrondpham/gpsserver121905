@@ -40,22 +40,30 @@
     <div class="newaccount_rg">
         <asp:TextBox ID="tbxUserName" runat="server" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox>
     </div>
-<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
     <div class="newaccount_lf">
         <asp:Label runat="server" Text="[Password]" ID="lblPassword"></asp:Label></div>
     <div class="newaccount_rg">
         <asp:TextBox runat="server" ID="tbxPassword" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox></div>
-<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
     <div class="newaccount_lf">
         <asp:Label runat="server" Text="[Email]" ID="lblEmail"></asp:Label></div>
     <div class="newaccount_rg">
         <asp:TextBox runat="server" ID="tbxEmail" CssClass="text ui-widget-content ui-corner-all new-account-input required email"></asp:TextBox></div>
-<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
     <div class="newaccount_lf">
         <asp:Label runat="server" Text="[Full Name]" ID="lblFullName"></asp:Label></div>
     <div class="newaccount_rg">
         <asp:TextBox runat="server" ID="tbxFullName" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox></div>
-<%--    <div><img alt="" class="style1" src="../../Themes/_default/Images/notifi16px.png" /></div>--%>
+    <div class="newaccount_lf">
+        <asp:Label runat="server" Text="[Mobile]" ID="lblMobile"></asp:Label></div>
+    <div class="newaccount_rg">
+        <asp:TextBox runat="server" ID="tbxMobile" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox></div>
+    <div class="newaccount_lf">
+        <asp:Label runat="server" Text="[Company]" ID="lblCompany"></asp:Label></div>
+    <div class="newaccount_rg">
+        <asp:TextBox runat="server" ID="tbxCompany" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox></div>
+    <div class="newaccount_lf">
+        <asp:Label runat="server" Text="[Company Phone]" ID="lblCopPhone"></asp:Label></div>
+    <div class="newaccount_rg">
+        <asp:TextBox runat="server" ID="tbxCopPhone" CssClass="text ui-widget-content ui-corner-all new-account-input required"></asp:TextBox></div>
 <div class="rw-control">
     <div class="newaccount_lf">
         <asp:Button runat="server" Text="[Commit]" ID="btnCommit" OnClick="btnCommit_Click" CssClass="ui-button ui-widget ui-state-default ui-corner-all button">
@@ -70,6 +78,6 @@
 
 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
 <ProgressTemplate>
-    <div class="uploadProcess"><img alt="" class="uploadProcess_image" src="../../Themes/_default/Images/ajax_loadingBarRed.gif" /></div>
+    <div class="uploadProcess">LoAdiNg.....<br /><img alt="" class="uploadProcess_image" src="../../Themes/_default/Images/ajax_loadingBarRed.gif" /></div>
 </ProgressTemplate>
 </asp:UpdateProgress>

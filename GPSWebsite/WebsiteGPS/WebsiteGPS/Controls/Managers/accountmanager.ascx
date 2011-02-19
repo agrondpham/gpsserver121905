@@ -108,10 +108,6 @@
                     Sys.Application.add_load(function () {
                         $("button, input:submit, a", ".demo").button();
                         $("input:submit", ".table_delete").click(function () { $("#delete-confirm").dialog("open"); });
-                        //Delete config
-                        //                    $("#hypDelete").click(function () {
-                        //                        $("#delete-confirm").dialog("open");
-                        //                    });
                         $("#delete-confirm").dialog({
                             autoOpen: false,
                             resizable: false,

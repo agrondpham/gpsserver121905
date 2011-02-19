@@ -78,22 +78,37 @@
     <Component>
       <type>label</type>
       <idComponent>lblUsername</idComponent>
-      <Content>Tên tài khoản</Content>
+      <Content>Tên tài khoản (*)</Content>
     </Component>
     <Component>
       <type>label</type>
       <idComponent>lblPassword</idComponent>
-      <Content>Mật khẩu</Content>
+      <Content>Mật khẩu (*)</Content>
     </Component>
     <Component>
       <type>label</type>
       <idComponent>lblEmail</idComponent>
-      <Content>Email</Content>
+      <Content>Email (*)</Content>
     </Component>
     <Component>
       <type>label</type>
       <idComponent>lblFullName</idComponent>
-      <Content>Tên đầy đủ</Content>
+      <Content>Tên đầy đủ (*)</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblMobile</idComponent>
+      <Content>Mobile</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblCompany</idComponent>
+      <Content>Công ty</Content>
+    </Component>
+    <Component>
+      <type>label</type>
+      <idComponent>lblCopPhone</idComponent>
+      <Content>Điện thoại cty</Content>
     </Component>
     <Component>
       <type>button</type>
@@ -103,7 +118,7 @@
     <Component>
       <type>button</type>
       <idComponent>btnAddNew</idComponent>
-      <Content>Thêm mới</Content>
+      <Content>Tạo thêm ACC</Content>
     </Component>
   </Module>
   <Module>

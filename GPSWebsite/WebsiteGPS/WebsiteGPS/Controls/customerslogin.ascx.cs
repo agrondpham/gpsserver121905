@@ -27,10 +27,10 @@ namespace WebsiteGPS.Controls
         string sErr;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList aaaa;
+            //ArrayList aaaa;
             //Default defaultPage = new Default();
             _MainPage =(Index) this.Page;      //get Page Content UC Control
-            aaaa = _MainPage.getThemeConfig();           //get variable from main Page
+            //aaaa = _MainPage.getThemeConfig();           //get variable from main Page
             LoadLanguage();
         }
         public void LoadLanguage() {
