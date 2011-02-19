@@ -79,6 +79,9 @@ namespace WebsiteGPS.Controls.Accounts
             _UsersInfo.Password = _UsersControl.EncodePassword(tbxPassword.Text.Trim());
             _UsersInfo.Email = tbxEmail.Text.Trim();
             _UsersInfo.Fullname = tbxFullName.Text.Trim();
+            _UsersInfo.Mobile = Int32.Parse(tbxMobile.Text.Trim());
+            _UsersInfo.Company = tbxCompany.Text.Trim();
+            _UsersInfo.Cop_Phone = Int32.Parse(tbxCopPhone.Text.Trim());
             _UsersInfo.Status = 1;
         }
 
@@ -93,6 +96,9 @@ namespace WebsiteGPS.Controls.Accounts
             tbxPassword.Text = "";
             tbxEmail.Text = "";
             tbxFullName.Text = "";
+            tbxCompany.Text = "";
+            tbxCopPhone.Text = "";
+            tbxMobile.Text = "";
             lblErr.Text = "";
         }
     }
